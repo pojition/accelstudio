@@ -1,0 +1,32 @@
+{
+  "routeId" : "q-list",
+  "categoryId" : "as_q",
+  "url" : "accel-studio-app/q/list",
+  "method" : "GET",
+  "contentId" : "q-list",
+  "contentVersion" : -1,
+  "routeName" : "qqq 一覧画面",
+  "description" : "「マスタメンテナンス」テンプレートから作成された一覧画面のルーティング定義です。",
+  "sortNumber" : 3,
+  "localizes" : {
+    "zh_CN" : {
+      "routeId" : "q-list",
+      "locale" : "zh_CN",
+      "routeName" : "qqq 列表页面",
+      "description" : "根据「主数据维护」模板创建的列表页面的路由定义。"
+    },
+    "en" : {
+      "routeId" : "q-list",
+      "locale" : "en",
+      "routeName" : "qqq List Screen",
+      "description" : "This list screen routing definition is created from the \"Master Maintenance\" template."
+    },
+    "ja" : {
+      "routeId" : "q-list",
+      "locale" : "ja",
+      "routeName" : "qqq 一覧画面",
+      "description" : "「マスタメンテナンス」テンプレートから作成された一覧画面のルーティング定義です。"
+    }
+  },
+  "preprocesses" : [ ]
+}

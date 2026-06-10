@@ -1,0 +1,114 @@
+{
+  "categories" : [ {
+    "parentId" : null,
+    "reserved" : false,
+    "sortNumber" : 0,
+    "categoryId" : "im_accel_studio",
+    "names" : {
+      "zh_CN" : {
+        "locale" : "zh_CN",
+        "value" : "根据业务模板进行创建"
+      },
+      "en" : {
+        "locale" : "en",
+        "value" : "Create from Business Template"
+      },
+      "ja" : {
+        "locale" : "ja",
+        "value" : "業務テンプレートから作成"
+      }
+    },
+    "descriptions" : {
+      "zh_CN" : {
+        "locale" : "zh_CN",
+        "value" : "根据业务模板创建的实体类别。"
+      },
+      "en" : {
+        "locale" : "en",
+        "value" : "This entity category was created from a business template."
+      },
+      "ja" : {
+        "locale" : "ja",
+        "value" : "業務テンプレートから作成されたエンティティカテゴリです。"
+      }
+    },
+    "defaultName" : "業務テンプレートから作成",
+    "description" : "業務テンプレートから作成されたエンティティカテゴリです。",
+    "type" : "entityset-entity-category",
+    "defaultDescription" : "業務テンプレートから作成されたエンティティカテゴリです。"
+  } ],
+  "entities" : [ {
+    "parentId" : "im_accel_studio",
+    "reserved" : false,
+    "sortNumber" : 0,
+    "id" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819",
+    "names" : {
+      "zh_CN" : {
+        "locale" : "zh_CN",
+        "value" : null
+      },
+      "en" : {
+        "locale" : "en",
+        "value" : null
+      },
+      "ja" : {
+        "locale" : "ja",
+        "value" : null
+      }
+    },
+    "descriptions" : {
+      "zh_CN" : {
+        "locale" : "zh_CN",
+        "value" : "根据「主数据维护」模板创建的实体。"
+      },
+      "en" : {
+        "locale" : "en",
+        "value" : "This is the entity created from a \"Master Maintenance\" template."
+      },
+      "ja" : {
+        "locale" : "ja",
+        "value" : "「マスタメンテナンス」テンプレートから作成されたエンティティです。"
+      }
+    },
+    "enabled" : true,
+    "items" : [ {
+      "id" : "qq",
+      "type" : "dictionary-item",
+      "sortNumber" : 0,
+      "primaryKey" : true,
+      "required" : true,
+      "relationId" : null,
+      "variableName" : null,
+      "array" : false
+    }, {
+      "id" : "qqqq",
+      "type" : "dictionary-item",
+      "sortNumber" : 1,
+      "primaryKey" : false,
+      "required" : false,
+      "relationId" : null,
+      "variableName" : null,
+      "array" : false
+    } ],
+    "defaultName" : "qq",
+    "description" : "「マスタメンテナンス」テンプレートから作成されたエンティティです。",
+    "name" : "qq",
+    "type" : "entityset-entity",
+    "defaultDescription" : "「マスタメンテナンス」テンプレートから作成されたエンティティです。"
+  } ],
+  "relations" : [ ],
+  "tableDefinitions" : [ {
+    "entityId" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819",
+    "databaseKind" : "tenant",
+    "connectionId" : "",
+    "tableName" : "qqqq",
+    "enableChangeLog" : false,
+    "disableDifferenceTable" : false,
+    "optimisticLockId" : null,
+    "optimisticLockType" : null,
+    "disableAutoNumbering" : false,
+    "entitySearchDefinitions" : null,
+    "externalReferenceDefinitions" : null
+  } ],
+  "displaysets" : null
+}

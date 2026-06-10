@@ -1,0 +1,56 @@
+[ {
+  "route" : "accel-studio-app/q",
+  "method" : "DELETE",
+  "flowId" : "q-delete",
+  "version" : -1,
+  "authentication" : "IMAuthentication",
+  "authenticationParam" : null,
+  "authzUri" : "im-logic-rest://accel-studio-app/q-DELETE",
+  "secured" : true,
+  "responseType" : "imJsonResponse",
+  "responseHeader" : { }
+}, {
+  "route" : "accel-studio-app/q",
+  "method" : "GET",
+  "flowId" : "q-refer",
+  "version" : -1,
+  "authentication" : "IMAuthentication",
+  "authenticationParam" : null,
+  "authzUri" : "im-logic-rest://accel-studio-app/q-GET",
+  "secured" : false,
+  "responseType" : "imJsonResponse",
+  "responseHeader" : { }
+}, {
+  "route" : "accel-studio-app/q/list",
+  "method" : "POST",
+  "flowId" : "q-list",
+  "version" : -1,
+  "authentication" : "IMAuthentication",
+  "authenticationParam" : null,
+  "authzUri" : "im-logic-rest://accel-studio-app/q/list-POST",
+  "secured" : true,
+  "responseType" : "imJsonResponse",
+  "responseHeader" : { }
+}, {
+  "route" : "accel-studio-app/q",
+  "method" : "POST",
+  "flowId" : "q-register",
+  "version" : -1,
+  "authentication" : "IMAuthentication",
+  "authenticationParam" : null,
+  "authzUri" : "im-logic-rest://accel-studio-app/q-POST",
+  "secured" : true,
+  "responseType" : "imJsonResponse",
+  "responseHeader" : { }
+}, {
+  "route" : "accel-studio-app/q",
+  "method" : "PUT",
+  "flowId" : "q-edit",
+  "version" : -1,
+  "authentication" : "IMAuthentication",
+  "authenticationParam" : null,
+  "authzUri" : "im-logic-rest://accel-studio-app/q-PUT",
+  "secured" : true,
+  "responseType" : "imJsonResponse",
+  "responseHeader" : { }
+} ]

@@ -1,0 +1,34 @@
+[ {
+  "categoryId" : "im_accel_studio",
+  "parentId" : null,
+  "categoryName" : "業務テンプレートから作成",
+  "description" : "業務テンプレートから作成されたルーティング定義カテゴリです。",
+  "sortNumber" : 999,
+  "localizes" : {
+    "zh_CN" : {
+      "categoryId" : "im_accel_studio",
+      "locale" : "zh_CN",
+      "categoryName" : "根据业务模板进行创建",
+      "description" : "根据业务模板创建的路由定义分类。"
+    },
+    "en" : {
+      "categoryId" : "im_accel_studio",
+      "locale" : "en",
+      "categoryName" : "Created from business template",
+      "description" : "This category is for routing definitions created from a business template."
+    },
+    "ja" : {
+      "categoryId" : "im_accel_studio",
+      "locale" : "ja",
+      "categoryName" : "業務テンプレートから作成",
+      "description" : "業務テンプレートから作成されたルーティング定義カテゴリです。"
+    }
+  }
+}, {
+  "categoryId" : "as_q",
+  "parentId" : "im_accel_studio",
+  "categoryName" : "qqq",
+  "description" : "業務テンプレートから作成されたルーティング定義カテゴリです。",
+  "sortNumber" : 999,
+  "localizes" : { }
+} ]

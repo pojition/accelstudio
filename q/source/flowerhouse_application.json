@@ -1,0 +1,2369 @@
+{
+  "application" : {
+    "applicationId" : "q",
+    "applicationName" : "qqq",
+    "description" : "",
+    "enabledFlag" : "1",
+    "categoryId" : "aaa",
+    "sortNumber" : 0,
+    "localizedApplicationName" : { },
+    "localizedDescription" : { },
+    "resourceRelations" : [ {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://contents/q-crud",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://contents/q-list",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://flows/q-delete",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://flows/q-edit",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://flows/q-list",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://flows/q-refer",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://flows/q-register",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "tagIds" : [ ]
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-repository://entity/q_qqqq_ENTITY_000_8i1h7rv7fptw819",
+      "tagIds" : [ ]
+    } ],
+    "resources" : [ {
+      "resourceId" : "im-bloommaker://contents/q-crud",
+      "description" : "「マスタメンテナンス」テンプレートから作成された登録・編集・参照画面のコンテンツです。",
+      "definitionCategory" : "im-bloommaker://contents",
+      "resourceName" : "qqq 登録・編集・参照画面",
+      "resourceKey1" : "q-crud",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 登记/编辑/参照页面",
+        "en" : "qqq Registration/Edit/Reference Screen",
+        "ja" : "qqq 登録・編集・参照画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的登记/编辑/参照页面的内容。",
+        "en" : "This registration/edit/reference screen content is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された登録・編集・参照画面のコンテンツです。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://contents/q-list",
+      "description" : "「マスタメンテナンス」テンプレートから作成された一覧画面のコンテンツです。",
+      "definitionCategory" : "im-bloommaker://contents",
+      "resourceName" : "qqq 一覧画面",
+      "resourceKey1" : "q-list",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 列表页面",
+        "en" : "qqq List Screen",
+        "ja" : "qqq 一覧画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的列表页面的内容。",
+        "en" : "This list screen content is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された一覧画面のコンテンツです。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "description" : "「マスタメンテナンス」テンプレートから作成された編集画面のルーティング定義です。",
+      "definitionCategory" : "im-bloommaker://routes",
+      "resourceName" : "qqq 編集画面",
+      "resourceKey1" : "q-edit",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 编辑页面",
+        "en" : "qqq Edit Screen",
+        "ja" : "qqq 編集画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的编辑页面的路由定义。",
+        "en" : "This edit screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された編集画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "description" : "「マスタメンテナンス」テンプレートから作成された一覧画面のルーティング定義です。",
+      "definitionCategory" : "im-bloommaker://routes",
+      "resourceName" : "qqq 一覧画面",
+      "resourceKey1" : "q-list",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 列表页面",
+        "en" : "qqq List Screen",
+        "ja" : "qqq 一覧画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的列表页面的路由定义。",
+        "en" : "This list screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された一覧画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "description" : "「マスタメンテナンス」テンプレートから作成された参照画面のルーティング定義です。",
+      "definitionCategory" : "im-bloommaker://routes",
+      "resourceName" : "qqq 参照画面",
+      "resourceKey1" : "q-refer",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 参照页面",
+        "en" : "qqq Reference Screen",
+        "ja" : "qqq 参照画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的参照页面的路由定义。",
+        "en" : "This reference screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された参照画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "description" : "「マスタメンテナンス」テンプレートから作成された登録画面のルーティング定義です。",
+      "definitionCategory" : "im-bloommaker://routes",
+      "resourceName" : "qqq 登録画面",
+      "resourceKey1" : "q-register",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 登记页面",
+        "en" : "qqq Registration Screen",
+        "ja" : "qqq 登録画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的登记页面的路由定义。",
+        "en" : "This registration screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された登録画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-logic://flows/q-delete",
+      "description" : "「マスタメンテナンス」テンプレートから作成された削除処理です。",
+      "definitionCategory" : "im-logic://flows",
+      "resourceName" : "qqq 削除処理",
+      "resourceKey1" : "q-delete",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 删除处理",
+        "en" : "qqq deletion process",
+        "ja" : "qqq 削除処理"
+      },
+      "localizedDescription" : {
+        "zh_CN" : null,
+        "en" : null,
+        "ja" : null
+      }
+    }, {
+      "resourceId" : "im-logic://flows/q-edit",
+      "description" : "「マスタメンテナンス」テンプレートから作成された編集処理です。",
+      "definitionCategory" : "im-logic://flows",
+      "resourceName" : "qqq 編集処理",
+      "resourceKey1" : "q-edit",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 编辑处理",
+        "en" : "qqq edit process",
+        "ja" : "qqq 編集処理"
+      },
+      "localizedDescription" : {
+        "zh_CN" : null,
+        "en" : null,
+        "ja" : null
+      }
+    }, {
+      "resourceId" : "im-logic://flows/q-list",
+      "description" : "「マスタメンテナンス」テンプレートから作成された一覧取得処理です。",
+      "definitionCategory" : "im-logic://flows",
+      "resourceName" : "qqq 一覧取得処理",
+      "resourceKey1" : "q-list",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 列表获取处理",
+        "en" : "qqq list acquisition process",
+        "ja" : "qqq 一覧取得処理"
+      },
+      "localizedDescription" : {
+        "zh_CN" : null,
+        "en" : null,
+        "ja" : null
+      }
+    }, {
+      "resourceId" : "im-logic://flows/q-refer",
+      "description" : "「マスタメンテナンス」テンプレートから作成された参照処理です。",
+      "definitionCategory" : "im-logic://flows",
+      "resourceName" : "qqq 参照処理",
+      "resourceKey1" : "q-refer",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 参照处理",
+        "en" : "qqq reference process",
+        "ja" : "qqq 参照処理"
+      },
+      "localizedDescription" : {
+        "zh_CN" : null,
+        "en" : null,
+        "ja" : null
+      }
+    }, {
+      "resourceId" : "im-logic://flows/q-register",
+      "description" : "「マスタメンテナンス」テンプレートから作成された登録処理です。",
+      "definitionCategory" : "im-logic://flows",
+      "resourceName" : "qqq 登録処理",
+      "resourceKey1" : "q-register",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : "qqq 登记处理",
+        "en" : "qqq registration process",
+        "ja" : "qqq 登録処理"
+      },
+      "localizedDescription" : {
+        "zh_CN" : null,
+        "en" : null,
+        "ja" : null
+      }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "description" : null,
+      "definitionCategory" : "im-logic://routes",
+      "resourceName" : "DELETE accel-studio-app/q",
+      "resourceKey1" : "accel-studio-app/q",
+      "resourceKey2" : "DELETE",
+      "resourceKey3" : null,
+      "localizedResourceName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "description" : null,
+      "definitionCategory" : "im-logic://routes",
+      "resourceName" : "GET accel-studio-app/q",
+      "resourceKey1" : "accel-studio-app/q",
+      "resourceKey2" : "GET",
+      "resourceKey3" : null,
+      "localizedResourceName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "description" : null,
+      "definitionCategory" : "im-logic://routes",
+      "resourceName" : "POST accel-studio-app/q/list",
+      "resourceKey1" : "accel-studio-app/q/list",
+      "resourceKey2" : "POST",
+      "resourceKey3" : null,
+      "localizedResourceName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "description" : null,
+      "definitionCategory" : "im-logic://routes",
+      "resourceName" : "POST accel-studio-app/q",
+      "resourceKey1" : "accel-studio-app/q",
+      "resourceKey2" : "POST",
+      "resourceKey3" : null,
+      "localizedResourceName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "description" : null,
+      "definitionCategory" : "im-logic://routes",
+      "resourceName" : "PUT accel-studio-app/q",
+      "resourceKey1" : "accel-studio-app/q",
+      "resourceKey2" : "PUT",
+      "resourceKey3" : null,
+      "localizedResourceName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-repository://entity/q_qqqq_ENTITY_000_8i1h7rv7fptw819",
+      "description" : "「マスタメンテナンス」テンプレートから作成されたエンティティです。",
+      "definitionCategory" : "im-repository://entity",
+      "resourceName" : "qq",
+      "resourceKey1" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819",
+      "resourceKey2" : null,
+      "resourceKey3" : null,
+      "localizedResourceName" : {
+        "zh_CN" : null,
+        "en" : null,
+        "ja" : null
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的实体。",
+        "en" : "This is the entity created from a \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成されたエンティティです。"
+      }
+    } ],
+    "applicationRoutes" : [ {
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "description" : "「マスタメンテナンス」テンプレートから作成された編集画面のルーティング定義です。",
+      "applicationId" : "q",
+      "method" : "GET",
+      "url" : "accel-studio-app/q/edit",
+      "resourceUri" : "im-bloommaker-content://contents/route/q-edit",
+      "routeName" : "qqq 編集画面",
+      "localizedRouteName" : {
+        "zh_CN" : "qqq 编辑页面",
+        "en" : "qqq Edit Screen",
+        "ja" : "qqq 編集画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的编辑页面的路由定义。",
+        "en" : "This edit screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された編集画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "description" : "「マスタメンテナンス」テンプレートから作成された一覧画面のルーティング定義です。",
+      "applicationId" : "q",
+      "method" : "GET",
+      "url" : "accel-studio-app/q/list",
+      "resourceUri" : "im-bloommaker-content://contents/route/q-list",
+      "routeName" : "qqq 一覧画面",
+      "localizedRouteName" : {
+        "zh_CN" : "qqq 列表页面",
+        "en" : "qqq List Screen",
+        "ja" : "qqq 一覧画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的列表页面的路由定义。",
+        "en" : "This list screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された一覧画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "description" : "「マスタメンテナンス」テンプレートから作成された参照画面のルーティング定義です。",
+      "applicationId" : "q",
+      "method" : "GET",
+      "url" : "accel-studio-app/q/refer",
+      "resourceUri" : "im-bloommaker-content://contents/route/q-refer",
+      "routeName" : "qqq 参照画面",
+      "localizedRouteName" : {
+        "zh_CN" : "qqq 参照页面",
+        "en" : "qqq Reference Screen",
+        "ja" : "qqq 参照画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的参照页面的路由定义。",
+        "en" : "This reference screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された参照画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "description" : "「マスタメンテナンス」テンプレートから作成された登録画面のルーティング定義です。",
+      "applicationId" : "q",
+      "method" : "GET",
+      "url" : "accel-studio-app/q/register",
+      "resourceUri" : "im-bloommaker-content://contents/route/q-register",
+      "routeName" : "qqq 登録画面",
+      "localizedRouteName" : {
+        "zh_CN" : "qqq 登记页面",
+        "en" : "qqq Registration Screen",
+        "ja" : "qqq 登録画面"
+      },
+      "localizedDescription" : {
+        "zh_CN" : "根据「主数据维护」模板创建的登记页面的路由定义。",
+        "en" : "This registration screen routing definition is created from the \"Master Maintenance\" template.",
+        "ja" : "「マスタメンテナンス」テンプレートから作成された登録画面のルーティング定義です。"
+      }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "description" : null,
+      "applicationId" : "q",
+      "method" : "DELETE",
+      "url" : "logic/api/accel-studio-app/q",
+      "resourceUri" : "im-logic-rest://accel-studio-app/q-DELETE",
+      "routeName" : "DELETE accel-studio-app/q",
+      "localizedRouteName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "description" : null,
+      "applicationId" : "q",
+      "method" : "GET",
+      "url" : "logic/api/accel-studio-app/q",
+      "resourceUri" : "im-logic-rest://accel-studio-app/q-GET",
+      "routeName" : "GET accel-studio-app/q",
+      "localizedRouteName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "description" : null,
+      "applicationId" : "q",
+      "method" : "POST",
+      "url" : "logic/api/accel-studio-app/q/list",
+      "resourceUri" : "im-logic-rest://accel-studio-app/q/list-POST",
+      "routeName" : "POST accel-studio-app/q/list",
+      "localizedRouteName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "description" : null,
+      "applicationId" : "q",
+      "method" : "POST",
+      "url" : "logic/api/accel-studio-app/q",
+      "resourceUri" : "im-logic-rest://accel-studio-app/q-POST",
+      "routeName" : "POST accel-studio-app/q",
+      "localizedRouteName" : { },
+      "localizedDescription" : { }
+    }, {
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "description" : null,
+      "applicationId" : "q",
+      "method" : "PUT",
+      "url" : "logic/api/accel-studio-app/q",
+      "resourceUri" : "im-logic-rest://accel-studio-app/q-PUT",
+      "routeName" : "PUT accel-studio-app/q",
+      "localizedRouteName" : { },
+      "localizedDescription" : { }
+    } ],
+    "categories" : [ {
+      "categoryId" : "aaa",
+      "categoryName" : "aa",
+      "sortNumber" : 0,
+      "parentId" : null,
+      "localizedCategoryName" : { }
+    } ],
+    "policies" : [ {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-edit",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-list",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-refer",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-bloommaker://routes/q-register",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/DELETE",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/GET",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/list/POST",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/POST",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "00872807a20907c4bb06510df31cf7687f784e4d80d3a7e349993c79d1b85346",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "01b9a67f47b5a259674504e25ae1bed325899a8e1b246d4cb8e17f72a48ef2a3",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "0fb58458dec2765a5c7ee69bd2a0009c56ca8d8dabddaffd5e4bf30da077406f",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "111875f4c75127b5b85c889ad727db5ee9f6a97a4537a598cdf824d5cd73f747",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "1244917a86fe314438360ce9e6d6ab1f123491c54ce56e0b1fc645c0ee6468fb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "23e85909277e9ab6be2b51d59c9a4b0f4f71041f88a3ba1730e2b612486aba6f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "2895c71c00dd4c58f6ed7ef019b447e7dbe07a3d9bfb598de808dca42d63f81c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "28f374d9d040f59e8fd95cc48b07c5cdb82c57056713630198d89f7ef9af9efb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "2b3925aafabf066cbf487a0013abe7bcd7bb769d99ac117ef388e507b47ccd31",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "2c481f98a0d3ff274e6859e74465ffe24cf9eaa4c8914c63e73237ce14f1d838",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "2ed889443223157d2f479beb37fb9038613bd78fd54ace4e9c5729540bfd1e4b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "30c224029af28dfa4247b21f1433e394e19a73bad85bd9c765cd295242c61afa",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "35243d3cab031812d21c65764711cea68ea8ea5c08e4068afe75125a8020df8c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "360eeff19e266fe697533543408d4c59e8cd7a3f39a6fa3b30714e5b8cd284eb",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "362c9e3332f55eae2f5c54d0f443e81522204f7e15bb3a8d4269fe37b7af379a",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "3ba8abbf229e6846bc28cbd129fb873987c2fdd74fb6c4a8ece7428449707931",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "3c6991b2e434f510b312d32ab4567a579838c05392269cc37c245eb31e10014b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "42560b4cb4dbfe62b37e9d9946160f284c74994a4d6524da53c0e36838c3fc98",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "53e4d32965f6047703744e7b788f59510d02289a059d46782c037e15d5aca556",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "56e4a7b132d15aa1877f48aea74d312c8878d176dc8b51e4ffa019f21d1ef1f0",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "5a5424f0c04660d418f4ec0f9c78a4032886a8aebc8ec07350a66425ef2fc8f7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "5ab7058d953b5a2368ab3f8716a774df0c2a15dfe09a301f0b5b570c8d89f1b6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "5e9ae38b5f0dc6378bb9ecaa3291c149ff62dc3204f25d9dacb501d1650a3cca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "6a4f612e68b3ac9e2a2e9b20a589b616cc28f1a1abd6829fcd125a69a632db49",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "6c71303d03642fff535c5ee6686c14f8c266f902aae8db8dec0f44df08151cb1",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "6f326283ee715d40f53e4e767ceb63ed53159e90a8dc3e4166c0fdd5bc28a740",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "757505e4f28d2916f2a700ceec5511237039de05878ff28426f89ee94ea4efc8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "8b6804b41e97fec4b8ee3fe8ea38a77ec6dcc80aa0c0a648e8638f1f1e733dae",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "8e9fb1deee3c47046a617540d41c00995fc8d505b22d6236267966f813ee3c37",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "91b1e0d30f77ea53e79cf3b37441c049da5371bd51bc057fb526cf6bf9462562",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "9b2303addeee2a236dd6bdb2cd9a83dbad054d59b407d61dbe95bedce07e4dca",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "9bcf5bc44e19138c73d8ee89d3c7ae7047ee6b890ac6302ed8164b3271e3d40f",
+      "effect" : "PERMIT"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "9da8726181d3b8b2e5293d7b7a4c20a1aab8886d1a4c22a016cb248d18f74365",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "aae749661075fd09fb4514f1115b5ed8913d199c4d0ba96407819a51f2a45f8d",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "b2716ec5f815f0b9cab8004859a84fc989d8574fb45d6f9a920b9e89e19df845",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "b2972f4974e9adbc8a2f1ef4802cf1da3a638a01d0f5e0ef40018ca58c802c6c",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "b83a326b8fbfd78c15be88d9fef0db1addc752f7a795783062476e023ecf56d6",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "c8b9a12510ceb4b38cf34f2c53b195ba0b0833dcc1298a05c73da603bbea68d8",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "d89088166282664bdb9d5ff8b7672f4fba774e802849cf60e6abc79a2503654b",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "ee12eced218ee396611eadaa422f84fa05e1faa58d8ad23d8a25d8e60c4e99c7",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "f168026788766ae9aceaaf3511025243101b16a0c108b29420c44b5dbf5ee114",
+      "effect" : "DENY"
+    }, {
+      "applicationId" : "q",
+      "resourceId" : "im-logic://routes/accel-studio-app/q/PUT",
+      "subjectGroupId" : "fda8c38f3382c2d3e4c3c5325fa48c58ad9215f20aca1ca0719cfbbe693a0a98",
+      "effect" : "DENY"
+    } ]
+  }
+}

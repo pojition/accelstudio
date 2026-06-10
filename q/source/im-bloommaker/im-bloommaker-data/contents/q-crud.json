@@ -1,0 +1,4960 @@
+[ {
+  "contentId" : "q-crud",
+  "version" : 1,
+  "categoryId" : "as_q",
+  "contentName" : "qqq 登録・編集・参照画面",
+  "description" : "「マスタメンテナンス」テンプレートから作成された登録・編集・参照画面のコンテンツです。",
+  "cssFramework" : "bulma_theme_color",
+  "contentData" : {
+    "version" : 1,
+    "uuid" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+    "properties" : {
+      "version" : 1,
+      "values" : {
+        "onLoad" : {
+          "version" : 1,
+          "uuid" : "f8134c04-6a10-4d1b-bd41-606341212301",
+          "type" : "string",
+          "value" : "44526f24-a9b8-4d65-b66c-6b8d82d37061"
+        },
+        "mainPage" : {
+          "version" : 1,
+          "uuid" : "abaca519-fcb7-42f9-baf9-7dba20002463",
+          "type" : "string",
+          "value" : "c7a4a885-9e0a-4455-8894-b7ac149bb9ff"
+        },
+        "userStyle" : {
+          "version" : 1,
+          "uuid" : "68b2c44e-0e5d-4f42-ab35-058b1fe29f95",
+          "type" : "string",
+          "value" : "@import url(\"im_design_system/v0.1.0/css/common.css\");\n@import url('im_design_system/imds-iconfont/css/imds-iconfont.min.css');\n\nhtml {\n  font-size: 14px;\n  overflow-y: auto;\n}\n\n.imds-page-title {\n  min-height: 3.572rem;\n  padding: 0 1.14rem 0 0;\n  border-bottom: 1px solid #d5d5d5;\n}\n\n.imds-page-title .subtitle {\n  font-size: 0.86rem;\n}\n\n.imds-page-title .imds-back .button,\n.imds-page-title .imds-refresh .button {\n  width: 3.22rem;\n  height: 3.22rem;\n  font-size: 1.43rem;\n}\n\n.imds-form-area {\n  position: relative;\n  border-radius: 4px;\n}\n\n@media screen and (max-width: 768px) {\n  .imds-form-area > div > div {\n    padding-left: 1.5rem !important;\n    padding-right: 1.5rem !important;\n    margin-top: 1rem !important;\n  }\n}\n\n/* common */\n.im-hichee-container input[type=\"date\"] {\n  min-width: 10em;\n}\n\n.im-hichee-container input::-webkit-date-and-time-value {\n  text-align: left;\n}\n\n.im-hichee-container input[type=\"date\"][disabled]::-webkit-calendar-picker-indicator {\n  display: none;\n}\n\n.im-hichee-container select {\n  min-width: 10em;\n}\n\n.im-hichee-container select:disabled {\n  opacity: 1;\n}\n\n/* table layout fixed */\n.imds-table-fixed table {\n  table-layout: fixed;\n}\n\n.imds-table-fixed th {\n  vertical-align: middle;\n}\n\n.imds-table-fixed th label,\n.imds-table-fixed td label {\n  max-width: 100%;\n  overflow-wrap: break-word;\n}\n\n.imds-table-fixed input[type=\"date\"] {\n  min-width: 4em;\n  max-width: 12em;\n}\n\n.imds-table-fixed select {\n  min-width: 4em;\n}\n\n/* refer field */\n.imds-field.imds-pull-down.imds-static-field select:disabled {\n  border: 0;\n  padding-right: 0;\n  padding-left: 0;\n  cursor: default;\n  background: transparent;\n  color: #363636;\n}\n\n.imds-field.imds-pull-down.imds-static-field .select::after {\n  display: none;\n}\n\n.imds-field.imds-checkbox-horizon.imds-static-field .checkbox[disabled] {\n  cursor: default;\n  color: #363636;\n}\n\n.imds-field.imds-textbox.imds-textbox-date.imds-static-field input[type=\"date\"][readonly] {\n  cursor: default;\n}\n\n.imds-field.imds-textbox.imds-textbox-date.imds-static-field input[type=\"date\"][readonly]::-webkit-calendar-picker-indicator {\n  display: none;\n}\n\n.field > .control > label.imds-refer-field,\nlabel.imds-refer-field {\n  border-bottom: 1px solid #eee;\n  margin-bottom: 0.5em;\n  min-width: 6em;\n  max-width: 100%;\n  padding-bottom: calc(0.5em - 1px);\n  overflow-wrap: break-word;\n  min-height: calc(2.5rem + 1px);\n}\n\n.imds-field.imds-static-field .imds-refer-field > .input,\n.imds-field.imds-static-field .imds-refer-field select:disabled,\n.imds-field.imds-static-field.imds-checkbox-horizon .imds-refer-field {\n  border-bottom: 1px solid #eee;\n  border-radius: 0;\n}\n\n.imds-detail-datetime .field.is-grouped > .control {\n  flex-shrink: 1;\n  min-width: 0;\n}\n"
+        },
+        "pageTitle" : {
+          "version" : 1,
+          "uuid" : "8ad4de2b-9e15-41c7-b516-68f4d46aafeb",
+          "type" : "formula",
+          "value" : {
+            "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+            "formula" : " $i18n.cap_page_header_label + ' ' + ($input.__mode__ == $constant.mode.register ? $i18n.cap_page_header_title_register : $input.__mode__ == $constant.mode.edit ? $i18n.cap_page_header_title_edit : $input.__mode__ == 'refer' ? $i18n.cap_page_header_title_refer : '')"
+          }
+        }
+      }
+    },
+    "parameters" : {
+      "constant" : {
+        "version" : 1,
+        "uuid" : "8c2781e5-153a-4600-b8d4-d8969d96b759",
+        "name" : "$constant",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "b94b457f-1995-443c-aef6-c15442aa78de",
+          "name" : "mode",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "ea401be1-fd93-4439-a8ea-45a1c3a43cea",
+            "name" : "register",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "e49e5415-ba28-4823-9b6f-1352b0945b55",
+            "name" : "refer",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "bbc75490-a115-4336-9730-8e9f254cb7d7",
+            "name" : "edit",
+            "valueType" : "string",
+            "readonly" : false
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "7b344c14-8ed0-4fd3-ab5c-be7c818f77a0",
+          "name" : "screenUrl",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "cf081ea1-bef4-4ffe-950e-1088b8b91f9d",
+            "name" : "list",
+            "valueType" : "string",
+            "readonly" : false
+          } ]
+        } ]
+      },
+      "variable" : {
+        "version" : 1,
+        "uuid" : "6b929cf1-3ccc-4311-a2cd-dca3bc224368",
+        "name" : "$variable",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "be97f2e7-26a2-4b5e-b9e0-c1602fa216ab",
+          "name" : "state",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "3f75bbb3-bd30-4b91-91fb-1a9f33a4b06a",
+            "name" : "entity",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "6bd62603-1140-41ae-a082-273a5877fdda",
+              "name" : "qqqq",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "f8d76206-b172-4e89-975d-6c24e1e9f491",
+                "name" : "qq",
+                "valueType" : "string",
+                "readonly" : false,
+                "validationRules" : [ {
+                  "version" : 1,
+                  "type" : "required"
+                } ],
+                "repository" : {
+                  "definitionType" : "item",
+                  "identify" : "qq"
+                }
+              }, {
+                "version" : 1,
+                "uuid" : "6911d27e-95b2-4450-8e26-4e7a606edcc1",
+                "name" : "qqqq",
+                "valueType" : "double",
+                "readonly" : false,
+                "validationRules" : [ ],
+                "repository" : {
+                  "definitionType" : "item",
+                  "identify" : "qqqq"
+                }
+              } ],
+              "repository" : {
+                "definitionType" : "entityset",
+                "identify" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819"
+              }
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "833b72ec-2013-4bfa-aa8c-474f75f8c21e",
+            "name" : "confirmResult",
+            "valueType" : "boolean",
+            "readonly" : false,
+            "arraySize" : [ 0 ]
+          }, {
+            "version" : 1,
+            "uuid" : "4bda0a8e-7955-4531-a9ef-ed6fc41f4f99",
+            "name" : "isChanged",
+            "valueType" : "boolean",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "f5443c1e-5561-4485-b8af-0b8c5baaaec3",
+            "name" : "isLocked",
+            "valueType" : "boolean",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "4f66169d-ad83-48f0-9399-a9ec987fd0df",
+            "name" : "key",
+            "valueType" : "object",
+            "readonly" : false,
+            "arraySize" : [ 0 ],
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "6dff36e6-4f40-4f80-827b-7719aa6ed39e",
+              "name" : "qq",
+              "valueType" : "string",
+              "readonly" : false,
+              "validationRules" : [ ],
+              "repository" : {
+                "definitionType" : "item",
+                "identify" : "qq"
+              }
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "60b60bd8-1fb4-478d-a752-8c7ad411588b",
+          "name" : "endPoint",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "e3970e54-77b1-4812-883d-5a37a3bf954e",
+            "name" : "refer",
+            "valueType" : "object",
+            "readonly" : false,
+            "arraySize" : [ 0 ],
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "ccf023a3-949a-47c0-aa94-10cfebfca065",
+              "name" : "requestParameter",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "9382965b-5894-4d68-9300-804f8a775e6a",
+                "name" : "qq",
+                "valueType" : "string",
+                "readonly" : false,
+                "validationRules" : [ ],
+                "repository" : {
+                  "definitionType" : "item",
+                  "identify" : "qq"
+                }
+              } ]
+            }, {
+              "version" : 1,
+              "uuid" : "427fc9f1-cb89-429b-9df1-d2a6123c5727",
+              "name" : "responseData",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "bd7399cb-bc6a-4fec-984f-e577cd0a383c",
+                "name" : "entity",
+                "valueType" : "object",
+                "readonly" : false,
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "7239e464-5cc9-4916-8fc7-d76e0dcfd430",
+                  "name" : "qqqq",
+                  "valueType" : "object",
+                  "readonly" : false,
+                  "children" : [ {
+                    "version" : 1,
+                    "uuid" : "9907749f-5638-441a-9588-c6be1f83e6c6",
+                    "name" : "qq",
+                    "valueType" : "string",
+                    "readonly" : false,
+                    "validationRules" : [ {
+                      "version" : 1,
+                      "type" : "required"
+                    } ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qq"
+                    }
+                  }, {
+                    "version" : 1,
+                    "uuid" : "4784fb38-7380-4303-942b-5e1f03a91f7f",
+                    "name" : "qqqq",
+                    "valueType" : "double",
+                    "readonly" : false,
+                    "validationRules" : [ ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qqqq"
+                    }
+                  } ],
+                  "repository" : {
+                    "definitionType" : "entityset",
+                    "identify" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "a0a48037-c30a-4219-bd13-51a7d88df59a",
+            "name" : "edit",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "8cb347e0-24e5-4f4d-b45f-ec7a7b0e00d3",
+              "name" : "requestParameter",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "deaa5ba1-a117-4a36-a796-f718e36c6a41",
+                "name" : "entity",
+                "valueType" : "object",
+                "readonly" : false,
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "741a0543-99d4-402b-9bfa-b75209981d25",
+                  "name" : "qqqq",
+                  "valueType" : "object",
+                  "readonly" : false,
+                  "children" : [ {
+                    "version" : 1,
+                    "uuid" : "8740db1a-0e72-4cf1-9bed-6c1d8d0e389f",
+                    "name" : "qq",
+                    "valueType" : "string",
+                    "readonly" : false,
+                    "validationRules" : [ {
+                      "version" : 1,
+                      "type" : "required"
+                    } ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qq"
+                    }
+                  }, {
+                    "version" : 1,
+                    "uuid" : "898a9b8c-ac7f-43aa-92f0-9596e07de13e",
+                    "name" : "qqqq",
+                    "valueType" : "double",
+                    "readonly" : false,
+                    "validationRules" : [ ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qqqq"
+                    }
+                  } ],
+                  "repository" : {
+                    "definitionType" : "entityset",
+                    "identify" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819"
+                  }
+                } ]
+              } ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "a0a48037-c30a-4219-bd13-51a7d88df59a",
+            "name" : "register",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "8cb347e0-24e5-4f4d-b45f-ec7a7b0e00d3",
+              "name" : "requestParameter",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "deaa5ba1-a117-4a36-a796-f718e36c6a41",
+                "name" : "entity",
+                "valueType" : "object",
+                "readonly" : false,
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "3c47d066-f22c-4e9f-85e3-c9b19d327d7b",
+                  "name" : "qqqq",
+                  "valueType" : "object",
+                  "readonly" : false,
+                  "children" : [ {
+                    "version" : 1,
+                    "uuid" : "fced9eb1-c4a7-483c-8694-7c6cc68b1f73",
+                    "name" : "qq",
+                    "valueType" : "string",
+                    "readonly" : false,
+                    "validationRules" : [ {
+                      "version" : 1,
+                      "type" : "required"
+                    } ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qq"
+                    }
+                  }, {
+                    "version" : 1,
+                    "uuid" : "816832ff-247e-4665-89e9-69269370e9e8",
+                    "name" : "qqqq",
+                    "valueType" : "double",
+                    "readonly" : false,
+                    "validationRules" : [ ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qqqq"
+                    }
+                  } ],
+                  "repository" : {
+                    "definitionType" : "entityset",
+                    "identify" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819"
+                  }
+                } ]
+              } ]
+            }, {
+              "version" : 1,
+              "uuid" : "381ef09b-a23b-49fc-8097-65ccd252c0ab",
+              "name" : "responseData",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "112f9e90-7c9c-4b07-875b-45e0bf3ceca0",
+                "name" : "duplicate",
+                "valueType" : "boolean",
+                "readonly" : false,
+                "arraySize" : [ 0 ]
+              } ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "0b66efd2-32fe-44f3-a28f-fa1e0ccb5696",
+            "name" : "delete",
+            "valueType" : "object",
+            "readonly" : false,
+            "arraySize" : [ 0 ],
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "c4429eb5-25e4-41e8-a677-84c73aa77d8f",
+              "name" : "requestParameter",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "29145f54-760e-4011-8e58-1052e41d52a4",
+                "name" : "qq",
+                "valueType" : "string",
+                "readonly" : false,
+                "validationRules" : [ ],
+                "repository" : {
+                  "definitionType" : "item",
+                  "identify" : "qq"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "1e4abc32-dd0f-4b0c-a094-93ed1fdc7181",
+          "name" : "businessKey",
+          "valueType" : "object",
+          "readonly" : false,
+          "arraySize" : [ 0 ],
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "86af3462-6df5-455e-b298-0745b837dc22",
+            "name" : "qq",
+            "valueType" : "string",
+            "readonly" : false,
+            "validationRules" : [ ],
+            "repository" : {
+              "definitionType" : "item",
+              "identify" : "qq"
+            }
+          } ]
+        } ]
+      },
+      "input" : {
+        "version" : 1,
+        "uuid" : "66eb1872-bcb2-416d-99f4-8c5a6cf7ca5e",
+        "name" : "$input",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "75e46cd9-e4b0-4cbe-9f55-da432cbb1e3c",
+          "name" : "__mode__",
+          "valueType" : "string",
+          "readonly" : false
+        }, {
+          "version" : 1,
+          "uuid" : "a233dda6-05b7-4867-be63-2ba2b4fb0840",
+          "name" : "qq",
+          "valueType" : "string",
+          "readonly" : false,
+          "repository" : {
+            "definitionType" : "item",
+            "identify" : "qq"
+          }
+        } ]
+      },
+      "i18n" : {
+        "version" : 1,
+        "uuid" : "b3d0ff6c-6b80-462a-99c5-8d4f3563e046",
+        "name" : "$i18n",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "d31e07c0-c77d-48cb-87e8-369abd111918",
+          "name" : "cap_register_button_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "2931aeae-fdae-46c3-9950-cc6edcbd9a3f",
+          "name" : "cap_delete_button_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "7860ef51-ad55-41bc-aa67-024605dd86b8",
+          "name" : "cap_update_button_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "7f6dcb33-9a98-4206-8450-fbbf7533f485",
+          "name" : "cap_page_header_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "d1c088fb-22bc-49a4-9874-4a48d3a35fd0",
+          "name" : "cap_page_header_title_register",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "9a55114c-8b55-4f4a-90e5-f2373b240f7d",
+          "name" : "cap_page_header_title_edit",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "a501dedd-2dac-4f81-bf90-58e3abd1b451",
+          "name" : "cap_page_header_title_refer",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "fcd73c64-82c9-4f56-a317-1441cfd01b6c",
+          "name" : "entity_label_qq",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "3a6707d0-3e75-4ea0-9682-f3c0dd3542cb",
+          "name" : "entity_label_qqqq",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "398814a6-fe7f-41de-b5a9-3e260283160a",
+          "name" : "msg_screen_transition_confirm",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "2bbb6131-6ead-4d8c-99f6-6751858ef27f",
+          "name" : "msg_register_confirm",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "adb46fa7-b270-4a97-99b2-826390a66675",
+          "name" : "msg_update_confirm",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "ee7148df-48b6-4d3f-86d1-6494d677b79e",
+          "name" : "msg_delete_confirm",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "c098d542-79e9-4b00-a389-710243abf7f5",
+          "name" : "msg_register_record_failed",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "b4fe5f31-beb1-4523-8c36-d2d929d37cff",
+          "name" : "msg_update_record_failed",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "9b289a58-cb91-4bfa-96fc-88ed6932624c",
+          "name" : "msg_delete_record_failed",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "bccadcc8-ec0a-4922-8877-722c68725425",
+          "name" : "msg_load_record_failed",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "cb42f701-938e-4b1e-9aa9-26ab863ab086",
+          "name" : "msg_duplicate_primary_key",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "f92819b0-9d0e-4e26-80ce-84debdf23af2",
+          "name" : "cap_detail_register_button_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "1ab1c76c-72ad-47a0-866c-28e0d875cff5",
+          "name" : "cap_detail_delete_button_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "41ad60a8-3292-475a-a54c-08082e3b906a",
+          "name" : "cap_detail_required_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "ae5c21b9-a2dd-430d-aeb6-58de916fb472",
+          "name" : "msg_required_field_usage_guide",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "b295541b-9150-4ad7-a2d9-09654e72796e",
+          "name" : "msg_zero_data",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "e945314c-669a-4f2f-b60e-d4f3385d216e",
+          "name" : "cap_delete_row_icon_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "dbc10095-941d-4648-9a30-c5ebfbe35f4a",
+          "name" : "cap_dialog_ok",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "0d042bc3-1841-47cf-a7a4-ed29627d6023",
+          "name" : "cap_dialog_cancel",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "6f19a46c-53d0-4eda-9830-e1dd7fd18da5",
+          "name" : "msg_header_back_to_list",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "90ccef70-3914-4f46-9126-499aee1e1d69",
+          "name" : "msg_validation_error",
+          "valueType" : "i18n",
+          "readonly" : true
+        } ]
+      }
+    },
+    "arguments" : {
+      "constant" : {
+        "version" : 1,
+        "uuid" : "50c5739b-b920-4741-a98d-4f476875eb67",
+        "type" : "object",
+        "value" : {
+          "mode" : {
+            "version" : 1,
+            "uuid" : "2e7d2aa4-8c5b-4296-9de8-bdaa6cb23053",
+            "type" : "object",
+            "value" : {
+              "register" : {
+                "version" : 1,
+                "uuid" : "331cdf4b-183a-4be9-801f-bb189a633b8f",
+                "type" : "string",
+                "value" : "register"
+              },
+              "refer" : {
+                "version" : 1,
+                "uuid" : "5b135c26-2adb-4d98-881b-e8b3c07dff97",
+                "type" : "string",
+                "value" : "refer"
+              },
+              "edit" : {
+                "version" : 1,
+                "uuid" : "4dcae122-aa4b-4705-8dd5-92795f36da93",
+                "type" : "string",
+                "value" : "edit"
+              }
+            }
+          },
+          "screenUrl" : {
+            "version" : 1,
+            "uuid" : "f12bf62c-9b45-4d1f-84c1-ca6ab3f5dd70",
+            "type" : "object",
+            "value" : {
+              "list" : {
+                "version" : 1,
+                "uuid" : "b7b13b12-ea09-4af7-be9e-acb5c885f119",
+                "type" : "string",
+                "value" : "accel-studio-app/q/list"
+              }
+            }
+          }
+        }
+      },
+      "variable" : {
+        "version" : 1,
+        "uuid" : "062897b1-4060-40ee-ab66-f2fe272a6107",
+        "type" : "object",
+        "value" : {
+          "state" : {
+            "version" : 1,
+            "uuid" : "78f2549b-b555-4b5d-89b6-88096c9714b0",
+            "type" : "object",
+            "value" : {
+              "entity" : {
+                "version" : 1,
+                "uuid" : "1e16865f-2172-4f88-9203-ad089155dfc1",
+                "type" : "object",
+                "value" : {
+                  "qqqq" : {
+                    "version" : 1,
+                    "uuid" : "12e93413-f720-41b9-b5aa-863a5c5daff2",
+                    "type" : "object",
+                    "value" : {
+                      "qq" : {
+                        "version" : 1,
+                        "uuid" : "5fc50c67-271e-4b9d-8d23-c75dbb8d57f3",
+                        "type" : "null",
+                        "value" : null
+                      },
+                      "qqqq" : {
+                        "version" : 1,
+                        "uuid" : "2f8e4c9e-e7d5-4a9e-a8ef-046fe2d981df",
+                        "type" : "null",
+                        "value" : null
+                      }
+                    }
+                  }
+                }
+              },
+              "key" : {
+                "version" : 1,
+                "uuid" : "5ae9a917-5ab9-4191-b852-5656e834bb3d",
+                "type" : "object",
+                "value" : {
+                  "qq" : {
+                    "version" : 1,
+                    "uuid" : "8763bcb7-adba-4a14-afad-c108af987e82",
+                    "type" : "string",
+                    "value" : null
+                  }
+                }
+              },
+              "isChanged" : {
+                "version" : 1,
+                "uuid" : "d6fd52a6-0f90-4654-9087-d8c22753f9fc",
+                "type" : "boolean",
+                "value" : "false"
+              },
+              "isLocked" : {
+                "version" : 1,
+                "uuid" : "93c86bab-b225-452a-9608-14d5cbb2bf70",
+                "type" : "boolean",
+                "value" : "false"
+              },
+              "confirmResult" : {
+                "version" : 1,
+                "uuid" : "72f8d539-190f-4bfb-aeaf-bbe1b6897bfe",
+                "type" : "boolean",
+                "value" : "false"
+              }
+            }
+          },
+          "endPoint" : {
+            "version" : 1,
+            "uuid" : "e743bdc0-2053-4ced-8b9f-fa58f78da3ec",
+            "type" : "object",
+            "value" : {
+              "refer" : {
+                "version" : 1,
+                "uuid" : "95b13650-0589-407d-9a8c-121dbf6fdfc7",
+                "type" : "object",
+                "value" : {
+                  "responseData" : {
+                    "version" : 1,
+                    "uuid" : "f2b6622d-0424-4090-b7cc-5f9fc69e6ef7",
+                    "type" : "object",
+                    "value" : {
+                      "entity" : {
+                        "version" : 1,
+                        "uuid" : "3593bddd-cb98-4330-92a6-5b394aebf698",
+                        "type" : "object",
+                        "value" : {
+                          "qqqq" : {
+                            "version" : 1,
+                            "uuid" : "6fe27628-8d15-414a-a3d4-b1be7d652fd5",
+                            "type" : "object",
+                            "value" : {
+                              "qq" : {
+                                "version" : 1,
+                                "uuid" : "16001a9b-4c34-4ca3-954d-853dfe7d997e",
+                                "type" : "null",
+                                "value" : null
+                              },
+                              "qqqq" : {
+                                "version" : 1,
+                                "uuid" : "6f1ae55a-1bc9-4f2c-9517-847b722d4f31",
+                                "type" : "null",
+                                "value" : null
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "requestParameter" : {
+                    "version" : 1,
+                    "uuid" : "65f40a96-c1b1-489f-972d-2b8b30fbf107",
+                    "type" : "object",
+                    "value" : {
+                      "qq" : {
+                        "version" : 1,
+                        "uuid" : "9277bf61-079b-46eb-9899-26e199755644",
+                        "type" : "string",
+                        "value" : null
+                      }
+                    }
+                  }
+                }
+              },
+              "edit" : {
+                "version" : 1,
+                "uuid" : "b8012d5f-8115-4274-bbcd-ac1502d5c352",
+                "type" : "object",
+                "value" : {
+                  "requestParameter" : {
+                    "version" : 1,
+                    "uuid" : "ad1962fc-19a6-4eee-b5af-c2e35d33c695",
+                    "type" : "object",
+                    "value" : {
+                      "entity" : {
+                        "version" : 1,
+                        "uuid" : "7145ad82-36d2-4509-8ca7-d717e5787122",
+                        "type" : "object",
+                        "value" : {
+                          "qqqq" : {
+                            "version" : 1,
+                            "uuid" : "e0e3e355-128f-4593-a966-c142b157ba28",
+                            "type" : "object",
+                            "value" : {
+                              "qq" : {
+                                "version" : 1,
+                                "uuid" : "62624c4d-8333-473c-a422-554cc70c3d30",
+                                "type" : "null",
+                                "value" : null
+                              },
+                              "qqqq" : {
+                                "version" : 1,
+                                "uuid" : "86dbecb7-9307-4954-88a7-968f741076be",
+                                "type" : "null",
+                                "value" : null
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "register" : {
+                "version" : 1,
+                "uuid" : "d6b12556-9174-4d8e-9e64-a7e0d65b7d6a",
+                "type" : "object",
+                "value" : {
+                  "requestParameter" : {
+                    "version" : 1,
+                    "uuid" : "5af49851-815b-4884-a42a-7a69450dc37f",
+                    "type" : "object",
+                    "value" : {
+                      "entity" : {
+                        "version" : 1,
+                        "uuid" : "25dd3f10-16d0-4d46-8c20-ea1030eb017c",
+                        "type" : "object",
+                        "value" : {
+                          "qqqq" : {
+                            "version" : 1,
+                            "uuid" : "415c4b33-867b-4a76-95f1-cbf75d877869",
+                            "type" : "object",
+                            "value" : {
+                              "qq" : {
+                                "version" : 1,
+                                "uuid" : "62624c4d-8333-473c-a422-554cc70c3d30",
+                                "type" : "null",
+                                "value" : null
+                              },
+                              "qqqq" : {
+                                "version" : 1,
+                                "uuid" : "86dbecb7-9307-4954-88a7-968f741076be",
+                                "type" : "null",
+                                "value" : null
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "responseData" : {
+                    "version" : 1,
+                    "uuid" : "aefc31a4-3d07-4d28-a88c-2d0f21446bcb",
+                    "type" : "object",
+                    "value" : {
+                      "duplicate" : {
+                        "version" : 1,
+                        "uuid" : "ed70e99c-d002-4988-96d3-3cc3016a575f",
+                        "type" : "null",
+                        "value" : null
+                      }
+                    }
+                  }
+                }
+              },
+              "delete" : {
+                "version" : 1,
+                "uuid" : "4ef36837-86fd-4388-8fa4-eec18fbc8b28",
+                "type" : "object",
+                "value" : {
+                  "requestParameter" : {
+                    "version" : 1,
+                    "uuid" : "cbf2edd8-3935-4f27-ba09-bfc2e731d9dc",
+                    "type" : "object",
+                    "value" : {
+                      "qq" : {
+                        "version" : 1,
+                        "uuid" : "4f0c0e96-fcf1-49bb-9b37-a179a75d85b0",
+                        "type" : "string",
+                        "value" : null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "businessKey" : {
+            "version" : 1,
+            "uuid" : "c9bc81a2-0182-43c2-b968-c9496ac310c7",
+            "type" : "null",
+            "value" : null
+          }
+        }
+      },
+      "input" : {
+        "version" : 1,
+        "uuid" : "fae2e6e1-8cce-408a-bc86-038129016110",
+        "type" : "object",
+        "value" : {
+          "__mode__" : {
+            "version" : 1,
+            "uuid" : "d3b32df3-602d-433e-80e9-54bd9b30b713",
+            "type" : "string",
+            "value" : "register"
+          },
+          "qq" : {
+            "version" : 1,
+            "uuid" : "3a23677f-33fc-42fb-a8b4-984f3f4a55fb",
+            "type" : "null",
+            "value" : null
+          }
+        }
+      },
+      "i18n" : {
+        "version" : 1,
+        "uuid" : "c6fce08c-4405-4222-9730-de030fc04bb6",
+        "type" : "object",
+        "value" : {
+          "msg_screen_transition_confirm" : {
+            "version" : 1,
+            "uuid" : "b153e58a-c994-4474-a4ce-d8d57e07bd1b",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "入力内容を破棄して画面遷移します。よろしいですか？",
+              "ja" : "入力内容を破棄して画面遷移します。よろしいですか？",
+              "en" : "Input contents will be discarded to move from the screen. Are you sure to continue?",
+              "zh_CN" : "放弃输入内容并跳转页面。确定吗？"
+            }
+          },
+          "entity_label_qq" : {
+            "version" : 1,
+            "uuid" : "18f6b65c-1f78-49e8-8a1b-91fa30935b2c",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "q"
+            }
+          },
+          "entity_label_qqqq" : {
+            "version" : 1,
+            "uuid" : "1734b488-bfb3-426e-a105-dd148c6f7837",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "qqq"
+            }
+          },
+          "msg_register_confirm" : {
+            "version" : 1,
+            "uuid" : "07b9a22e-f9b4-4b80-aff8-507c8672c690",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "登録します。よろしいですか？",
+              "ja" : "登録します。よろしいですか？",
+              "en" : "Registration will be performed. Are you sure to continue?",
+              "zh_CN" : "要登记。确定吗？"
+            }
+          },
+          "msg_delete_confirm" : {
+            "version" : 1,
+            "uuid" : "83044ac6-3ba4-49ea-a600-180313dbb009",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "削除します。よろしいですか？",
+              "ja" : "削除します。よろしいですか？",
+              "en" : "Deletion will be performed. Are you sure to continue?",
+              "zh_CN" : "要删除。确定吗？"
+            }
+          },
+          "msg_update_confirm" : {
+            "version" : 1,
+            "uuid" : "2131d27a-4884-4699-8e97-5b02c04efbce",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "更新します。よろしいですか？",
+              "ja" : "更新します。よろしいですか？",
+              "en" : "Update will be performed. Are you sure to continue?",
+              "zh_CN" : "要更新。确定吗？"
+            }
+          },
+          "cap_page_header_title_refer" : {
+            "version" : 1,
+            "uuid" : "f1455d5c-e504-4126-9aa6-0b8c1f5d6c3c",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "詳細画面",
+              "ja" : "詳細画面",
+              "en" : "Details Screen",
+              "zh_CN" : "详细页面"
+            }
+          },
+          "cap_page_header_title_edit" : {
+            "version" : 1,
+            "uuid" : "21e821ec-5a40-48fe-b794-0ccbbb8b50ae",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "編集画面",
+              "ja" : "編集画面",
+              "en" : "Edit Screen",
+              "zh_CN" : "编辑页面"
+            }
+          },
+          "cap_page_header_title_register" : {
+            "version" : 1,
+            "uuid" : "58e7b9bb-15b0-494e-b05a-facec917dcb5",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "登録画面",
+              "ja" : "登録画面",
+              "en" : "Registration Screen",
+              "zh_CN" : "登记页面"
+            }
+          },
+          "cap_page_header_label" : {
+            "version" : 1,
+            "uuid" : "226ee5c9-a8a9-4c76-a583-99296175338a",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "qqq"
+            }
+          },
+          "cap_update_button_label" : {
+            "version" : 1,
+            "uuid" : "9f0744ec-b4e6-4395-88e0-9271fc020cdd",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "更新",
+              "ja" : "更新",
+              "en" : "Update",
+              "zh_CN" : "更新"
+            }
+          },
+          "cap_delete_button_label" : {
+            "version" : 1,
+            "uuid" : "472a0916-b5d6-43e3-9669-10008b8affd0",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "削除",
+              "ja" : "削除",
+              "en" : "Delete",
+              "zh_CN" : "删除"
+            }
+          },
+          "cap_register_button_label" : {
+            "version" : 1,
+            "uuid" : "196a68c5-0172-498c-8f12-fa49f186b52d",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "登録",
+              "ja" : "登録",
+              "en" : "Register",
+              "zh_CN" : "登记"
+            }
+          },
+          "msg_update_record_failed" : {
+            "version" : 1,
+            "uuid" : "73c0d7dd-52e6-4a8f-a13c-4b7afe350ba9",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "更新処理に失敗しました。",
+              "ja" : "更新処理に失敗しました。",
+              "en" : "Failed to process update.",
+              "zh_CN" : "更新处理失败。"
+            }
+          },
+          "msg_register_record_failed" : {
+            "version" : 1,
+            "uuid" : "4a48f957-331d-4eef-9449-111c0bf7017b",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "登録処理に失敗しました。",
+              "ja" : "登録処理に失敗しました。",
+              "en" : "Failed to process registration.",
+              "zh_CN" : "登记处理失败。"
+            }
+          },
+          "msg_delete_record_failed" : {
+            "version" : 1,
+            "uuid" : "68782d19-48b6-4546-b2e8-78dc6d51736f",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "削除処理に失敗しました。",
+              "ja" : "削除処理に失敗しました。",
+              "en" : "Failed to process deletion.",
+              "zh_CN" : "删除处理失败。"
+            }
+          },
+          "msg_load_record_failed" : {
+            "version" : 1,
+            "uuid" : "254e90e5-9293-4ed8-95c1-be681d223dae",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "レコードの取得に失敗しました。",
+              "ja" : "レコードの取得に失敗しました。",
+              "en" : "Failed to acquire record.",
+              "zh_CN" : "记录获取失败。"
+            }
+          },
+          "msg_duplicate_primary_key" : {
+            "version" : 1,
+            "uuid" : "94529eee-7122-4c52-97c2-045b4bc49d4f",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "既にレコードが存在しています。",
+              "ja" : "既にレコードが存在しています。",
+              "en" : "The record already exists.",
+              "zh_CN" : "记录已存在。"
+            }
+          },
+          "cap_detail_register_button_label" : {
+            "version" : 1,
+            "uuid" : "c6ab3de9-de40-47ff-8f38-b844cef16a3c",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "追加",
+              "ja" : "追加",
+              "en" : "Add",
+              "zh_CN" : "添加"
+            }
+          },
+          "cap_detail_delete_button_label" : {
+            "version" : 1,
+            "uuid" : "fe643bdf-c2ac-43d9-8409-1c41a2685d0b",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "削除",
+              "ja" : "削除",
+              "en" : "Delete",
+              "zh_CN" : "删除"
+            }
+          },
+          "cap_detail_required_label" : {
+            "version" : 1,
+            "uuid" : "80537b57-d9ee-4760-9e47-ec8b723175d1",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "必須",
+              "ja" : "必須",
+              "en" : "Required",
+              "zh_CN" : "必须"
+            }
+          },
+          "msg_required_field_usage_guide" : {
+            "version" : 1,
+            "uuid" : "ec42e08b-6f7f-4b1e-bed1-4a7166719bf8",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "「*」は必須項目です。",
+              "ja" : "「*」は必須項目です。",
+              "en" : "\"*\" is a required item.",
+              "zh_CN" : "「*」是必须项目。"
+            }
+          },
+          "msg_zero_data" : {
+            "version" : 1,
+            "uuid" : "fe937cc8-6ee0-4fde-9c7d-685b612a51eb",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "データは0件です。",
+              "ja" : "データは0件です。",
+              "en" : "No data exists.",
+              "zh_CN" : "数据为0件。"
+            }
+          },
+          "cap_delete_row_icon_label" : {
+            "version" : 1,
+            "uuid" : "26e158d7-7946-4feb-ae88-c08e377fcd50",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "行を削除する",
+              "ja" : "行を削除する",
+              "en" : "Delete Row",
+              "zh_CN" : "删除行"
+            }
+          },
+          "cap_dialog_ok" : {
+            "version" : 1,
+            "uuid" : "67c92e93-24f1-434a-a152-5876c7962a62",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "OK",
+              "ja" : "OK",
+              "en" : "OK",
+              "zh_CN" : "OK"
+            }
+          },
+          "cap_dialog_cancel" : {
+            "version" : 1,
+            "uuid" : "63a62bb1-89d8-4c6c-bcb4-03f2d8ad9b1d",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "キャンセル",
+              "ja" : "キャンセル",
+              "en" : "Cancel",
+              "zh_CN" : "取消"
+            }
+          },
+          "msg_header_back_to_list" : {
+            "version" : 1,
+            "uuid" : "5c03ca60-f703-492b-b2f8-d577024d22ff",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "一覧画面に戻ります。",
+              "ja" : "一覧画面に戻ります。",
+              "en" : "Return to List Screen.",
+              "zh_CN" : "返回到列表页面。"
+            }
+          },
+          "msg_validation_error" : {
+            "version" : 1,
+            "uuid" : "2c55acd8-dba6-4a24-97ea-506733b490af",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "入力内容に誤りがあります。",
+              "ja" : "入力内容に誤りがあります。",
+              "en" : "There is an error in the input contents.",
+              "zh_CN" : "输入内容有错误。"
+            }
+          }
+        }
+      }
+    },
+    "aliases" : [ ],
+    "events" : {
+      "charts" : [ {
+        "version" : 1,
+        "uuid" : "44526f24-a9b8-4d65-b66c-6b8d82d37061",
+        "name" : "初期表示時",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "491cdb5d-510a-4e4d-85e9-3b5545940762",
+          "actionType" : "ImHideValidationErrorActionItem",
+          "enabled" : true
+        }, {
+          "version" : 1,
+          "uuid" : "f7294b4c-9964-4201-bfe7-933db010ffcb",
+          "actionType" : "ImEmptyActionItem",
+          "enabled" : true,
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "8c25235d-7043-4a28-bf4d-da43a0042c52",
+              "conditionType" : "UIContainerVariableEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "d43eaac8-0a31-4a58-bd53-4e8aa2a6100e",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$input.__mode__"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "dec6e22f-a79f-41f5-8802-b56846254fe4",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$constant.mode.register"
+                    }
+                  }
+                }
+              }
+            } ]
+          },
+          "exitAfterRun" : true
+        }, {
+          "version" : 1,
+          "uuid" : "0691b624-8678-49f7-a346-f2ca8d2fa2a6",
+          "actionType" : "UIContainerCustomScriptActionItem",
+          "comment" : "メインエンティティの主キーを、削除、排他制御用の変数にセットする。",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "script" : {
+                "version" : 1,
+                "uuid" : "d713221f-1937-45b3-8e33-4e754d528d12",
+                "type" : "script",
+                "value" : "const requestParameter = $im.resolve('$input');\ndelete requestParameter.__mode__;\n$variable.state.key = requestParameter;\n$variable.businessKey = requestParameter;\n"
+              },
+              "babel" : {
+                "version" : 1,
+                "uuid" : "f627db1c-ed22-4ca0-8399-38c121c3c65d",
+                "type" : "literal",
+                "value" : "\"use strict\";\n\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n$resolve(\n/*#__PURE__*/\n_asyncToGenerator(\n/*#__PURE__*/\nregeneratorRuntime.mark(function _callee() {\n  if (typeof _arguments !== \"undefined\") _arguments=void(0);\n\n  var requestParameter;\n  return regeneratorRuntime.wrap(function _callee$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          requestParameter = $im.resolve('$input');\n          delete requestParameter.__mode__;\n          $variable.state.key = requestParameter;\n          $variable.businessKey = requestParameter;\n\n        case 4:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  }, _callee);\n})));"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "a169c093-d810-4e27-9841-a184dcf9e108",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "c931b30a-7872-4b69-a0db-4e562bc37de9",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.key"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "36876ab5-8b06-446e-b2f9-c6977be4fda1",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.refer.requestParameter"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "3e1dd150-15a0-4a9f-80a1-ccf8e6c4d2fe",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "f19bd916-3a16-45a7-ac5f-f52a295673ca",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$env.const.false"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "0d114427-c6b6-46a3-92e4-97ac39305ffa",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.isChanged"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "280397d0-4d5c-4b1c-92c5-8a3c4ad45d00",
+          "actionType" : "SendRequestImLogicFlowRouteActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "routeId" : {
+                "version" : 1,
+                "uuid" : "d48313c5-d3d6-4a13-92cc-6b3ab0ba02c5",
+                "type" : "im-logic-flow-route",
+                "value" : "accel-studio-app/q"
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "25baa545-5475-481d-9940-b7f4b1428cb6",
+                "type" : "literal",
+                "value" : "GET"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "7d8449e4-99b3-4ef8-ba81-908b384b5aca",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.refer.requestParameter"
+                }
+              },
+              "requestHeaders" : {
+                "version" : 1,
+                "uuid" : "98d3fda6-9392-4a3e-b6d9-a40c6f113157",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "statusCode" : {
+                "version" : 1,
+                "uuid" : "28c4ae7c-0189-457a-b4ed-25abf82d3619",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "responseData" : {
+                "version" : 1,
+                "uuid" : "abc6624c-1688-4fd6-91d3-b4413c1a62fb",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.refer.responseData.entity"
+                }
+              },
+              "useSecureToken" : {
+                "version" : 1,
+                "uuid" : "cbc8bea0-0e1b-4713-a83b-3e162c12a881",
+                "type" : "checkbox",
+                "value" : "0"
+              },
+              "withoutEpoch" : {
+                "version" : 1,
+                "uuid" : "02bd4951-0275-46e5-b3d9-0ef4c2dadd2e",
+                "type" : "checkbox",
+                "value" : "0"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "470852a9-93da-4a8c-8c4b-e6acfc0e85f9",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "434d4679-f03e-4db9-8314-4eff577bc082",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.refer.responseData.entity"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "fd448440-758d-4fa1-9f50-bf668e2403b8",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.entity"
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ {
+          "version" : 1,
+          "uuid" : "e3328934-a9c2-4e16-b5ae-41185368ca0d",
+          "actionType" : "ImShowErrorDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "aeaf51b3-573c-4058-b23d-9b3ff5793464",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_load_record_failed"
+                }
+              }
+            }
+          }
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "087fd4d2-c870-484e-9485-485dce93c7dc",
+        "name" : "一覧画面へ遷移",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "20a546b6-6a3c-4426-a36f-ed8b9186cce2",
+          "actionType" : "PageTransitionActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "url" : {
+                "version" : 1,
+                "uuid" : "7cccc672-d3fb-4501-81b8-2b2595aafd15",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$constant.screenUrl.list"
+                }
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "64888f61-9eca-48a6-bc99-0ebdc2749b51",
+                "type" : "literal",
+                "value" : ""
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "3f42ebbe-84f8-4e7e-8be4-1b59d39d68cf",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "851362d3-ade4-4c60-99e0-bd3e3eae4e4b",
+        "name" : "登録ボタンが押されたとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "7ad9ac74-c252-4093-a77d-43f3231e3b88",
+          "actionType" : "ImShowValidationErrorActionItem",
+          "enabled" : true
+        }, {
+          "version" : 1,
+          "uuid" : "61fa2e57-fe2c-401a-9230-7cdf5ebfb03f",
+          "actionType" : "ImBulmaShowToastActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "8914bde2-31c5-4fae-a46c-059fcb69a324",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_validation_error"
+                }
+              },
+              "detailMessage" : {
+                "version" : 1,
+                "uuid" : "4a7b4928-5d6b-4221-8253-fc6b27078fce",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "type" : {
+                "version" : 1,
+                "uuid" : "c1fa5ade-daa9-46cc-9aea-73020f7ae6c4",
+                "type" : "literal",
+                "value" : "warning"
+              },
+              "duration" : {
+                "version" : 1,
+                "uuid" : "c217385e-d646-4bbb-a409-a78b475158d9",
+                "type" : "literal",
+                "value" : "5000"
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "94616cad-9b15-4dac-a7ef-c3b5ab1bcdc2",
+              "conditionType" : "UIContainerVariableValidationErrorCondition",
+              "parameter" : {
+                "arguments" : {
+                  "target" : {
+                    "version" : 1,
+                    "uuid" : "93b32238-5b5c-401a-bc15-17e00c315ebf",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.entity"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "c2dfcd8b-412d-4d63-b83c-660d7a77f350",
+          "actionType" : "ImEmptyActionItem",
+          "enabled" : true,
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "0dbe6426-93bf-44fd-83f7-5e310e1e2e7f",
+              "conditionType" : "UIContainerVariableValidationErrorCondition",
+              "parameter" : {
+                "arguments" : {
+                  "target" : {
+                    "version" : 1,
+                    "uuid" : "3c8b4919-65bc-4e6a-93b6-6cafee28f4d8",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.entity"
+                    }
+                  }
+                }
+              }
+            } ]
+          },
+          "exitAfterRun" : true
+        }, {
+          "version" : 1,
+          "uuid" : "abbee88f-e5f6-4cb4-a53d-d4d4fc354b1d",
+          "actionType" : "ImShowConfirmDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "481c5f73-9270-403d-b0f3-855c4db3e283",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_register_confirm"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "e33bd03f-e669-4f41-ae55-0524026bae9f",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.confirmResult"
+                }
+              },
+              "okButtonLabel" : {
+                "version" : 1,
+                "uuid" : "82cc73b6-6da6-4065-a9d2-668477595b1b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_ok"
+                }
+              },
+              "okButtonColor" : {
+                "version" : 1,
+                "uuid" : "fa48aba7-fdf1-40da-89b3-6fefc4132d2b",
+                "type" : "literal",
+                "value" : ""
+              },
+              "cancelButtonLabel" : {
+                "version" : 1,
+                "uuid" : "6a35e2c6-4a12-42bd-9c75-d40a5b9c3410",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_cancel"
+                }
+              },
+              "cancelButtonColor" : {
+                "version" : 1,
+                "uuid" : "cff630ad-e8a8-4426-ae6a-3052a7dc23fb",
+                "type" : "literal",
+                "value" : ""
+              },
+              "position" : {
+                "version" : 1,
+                "uuid" : "a5696d41-e99d-4bb2-acef-f3a6e9006d3a",
+                "type" : "literal",
+                "value" : "is-right"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "e805c710-7fca-41c3-9ea0-78f3c3530fb0",
+          "actionType" : "ImEmptyActionItem",
+          "enabled" : true,
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "a4f2168d-8be7-40e1-a540-9fe08ac44a30",
+              "conditionType" : "UIContainerVariableNotEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "d64494f9-55e9-48e9-8f9d-071193d71050",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.confirmResult"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "a3db473e-b93f-4c40-8f19-7ad41fd2cbb6",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.true"
+                    }
+                  }
+                }
+              }
+            } ]
+          },
+          "exitAfterRun" : true
+        }, {
+          "version" : 1,
+          "uuid" : "691c029c-b114-4459-84a9-464999b90630",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "a2734e0c-f73e-4f9e-896b-c6cd3f149b62",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.entity"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "2aa3659d-35b7-41dd-ae08-962ffebd70ab",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.register.requestParameter.entity"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "543fa552-9dc7-4da9-8b51-56181c59e24f",
+          "actionType" : "SendRequestImLogicFlowRouteActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "routeId" : {
+                "version" : 1,
+                "uuid" : "6c22a5a0-96bb-4743-91f2-c81c5cf29454",
+                "type" : "im-logic-flow-route",
+                "value" : "accel-studio-app/q"
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "9f1106ba-7fb4-44ce-8d7f-6ba225026dba",
+                "type" : "literal",
+                "value" : "POST"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "130b9904-bb6c-49af-a3df-c2101fa5208c",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.register.requestParameter.entity"
+                }
+              },
+              "requestHeaders" : {
+                "version" : 1,
+                "uuid" : "ebbd110d-845a-4adc-ae87-60531963716d",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "statusCode" : {
+                "version" : 1,
+                "uuid" : "4722c05b-99f1-4e24-8625-dbd8ccb60059",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "responseData" : {
+                "version" : 1,
+                "uuid" : "8a4fbfd0-0fb2-4185-889f-6968a9d19df2",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.register.responseData"
+                }
+              },
+              "useSecureToken" : {
+                "version" : 1,
+                "uuid" : "45ced680-f8d2-4b02-8256-60505084c6ed",
+                "type" : "checkbox",
+                "value" : "1"
+              },
+              "withoutEpoch" : {
+                "version" : 1,
+                "uuid" : "6fd84fce-4e07-4adf-9fad-5948537db986",
+                "type" : "checkbox",
+                "value" : "0"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "fdc3823e-2396-4385-9da8-f7b8b76bf8d4",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "564f877c-c10c-4589-a0ec-1b389f778a02",
+                "type" : "action",
+                "value" : "087fd4d2-c870-484e-9485-485dce93c7dc"
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "71f22006-3a6d-4403-a110-0185f22a3f7a",
+              "conditionType" : "UIContainerVariableNotEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "d69537c0-ac02-4196-8c92-7609efd0e34e",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.endPoint.register.responseData.duplicate"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "c73dba6a-b980-460f-a507-e6ea2a2cc32e",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.true"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "0989d7b7-4069-4a67-8f63-400086271cec",
+          "actionType" : "ImShowErrorDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "85ef0beb-3e0c-42c1-986e-4ec3d3b86fa4",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_duplicate_primary_key"
+                }
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "62393887-be27-4756-ab82-fc53f005cd88",
+              "conditionType" : "UIContainerVariableEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "c3206faa-02ff-47c9-ac0e-7a5ce8485908",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.endPoint.register.responseData.duplicate"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "e29739dc-6f9e-454a-8872-15b33f1ca012",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.true"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        } ],
+        "errorItems" : [ {
+          "version" : 1,
+          "uuid" : "4d3b9ca8-073e-40e6-a444-4b85dea7daf3",
+          "actionType" : "ImShowErrorDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "7711acc0-6bd5-4594-936f-b758ead68c6f",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_register_record_failed"
+                }
+              }
+            }
+          }
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "829e45d0-43d7-48f7-a011-3f39e9c44c04",
+        "name" : "更新ボタンが押されたとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "b7a6dde0-024f-4d3f-bb86-f05fc203f79c",
+          "actionType" : "ImShowValidationErrorActionItem",
+          "enabled" : true
+        }, {
+          "version" : 1,
+          "uuid" : "559d9aa5-6036-4834-be32-3f53e474c599",
+          "actionType" : "ImBulmaShowToastActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "38252002-1199-4a53-8781-1c89799940f3",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_validation_error"
+                }
+              },
+              "detailMessage" : {
+                "version" : 1,
+                "uuid" : "ff88667b-9a42-48d7-bce7-da37a13b6235",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "type" : {
+                "version" : 1,
+                "uuid" : "51b22c46-d6c3-4808-b8ee-7d0bb3896a81",
+                "type" : "literal",
+                "value" : "warning"
+              },
+              "duration" : {
+                "version" : 1,
+                "uuid" : "bc024090-acf3-48a0-86ff-afda8f3c52dc",
+                "type" : "literal",
+                "value" : "5000"
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "85514816-19d8-42a3-a9fe-289f6bc6c4a9",
+              "conditionType" : "UIContainerVariableValidationErrorCondition",
+              "parameter" : {
+                "arguments" : {
+                  "target" : {
+                    "version" : 1,
+                    "uuid" : "de644964-beb9-4af4-a29f-ac672bf7eb34",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.entity"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "6e6a9e42-9c01-4d5d-bcad-aab693c5b57c",
+          "actionType" : "ImEmptyActionItem",
+          "enabled" : true,
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "5bb33bd5-b035-4f56-8ce5-774c35ae2149",
+              "conditionType" : "UIContainerVariableValidationErrorCondition",
+              "parameter" : {
+                "arguments" : {
+                  "target" : {
+                    "version" : 1,
+                    "uuid" : "8d1bb4f6-6dc5-4082-b6c7-fdc3848ec6ca",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.entity"
+                    }
+                  }
+                }
+              }
+            } ]
+          },
+          "exitAfterRun" : true
+        }, {
+          "version" : 1,
+          "uuid" : "344e97c9-0820-491e-9b63-088860f2eb08",
+          "actionType" : "ImShowConfirmDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "78f67d32-fdfb-408b-9a5a-b4827a80f764",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_update_confirm"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "df077971-171a-45b4-a577-97bacfbf68cf",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.confirmResult"
+                }
+              },
+              "okButtonLabel" : {
+                "version" : 1,
+                "uuid" : "6a89ef41-795a-4f8b-a76f-9b028a108835",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_ok"
+                }
+              },
+              "okButtonColor" : {
+                "version" : 1,
+                "uuid" : "bab441a5-9036-4a2b-ae1d-d27a263179ad",
+                "type" : "literal",
+                "value" : ""
+              },
+              "cancelButtonLabel" : {
+                "version" : 1,
+                "uuid" : "064099b8-9467-4ed1-ac38-d35a936d211e",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_cancel"
+                }
+              },
+              "cancelButtonColor" : {
+                "version" : 1,
+                "uuid" : "1561373a-a421-452b-b182-86fc56332f0d",
+                "type" : "literal",
+                "value" : ""
+              },
+              "position" : {
+                "version" : 1,
+                "uuid" : "7734efd3-9253-4621-9a3a-87467fcb2361",
+                "type" : "literal",
+                "value" : "is-right"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "1e58d0d9-c9e7-4c69-b4da-6eeb8f066db2",
+          "actionType" : "ImEmptyActionItem",
+          "enabled" : true,
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "495601ac-d60f-4148-a907-f435cd617ef7",
+              "conditionType" : "UIContainerVariableNotEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "751ca81a-f1da-4cab-9feb-7a4bf6d0f2ad",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.confirmResult"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "e7669af6-6513-4e7b-b8c2-2e58eb2b59c8",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.true"
+                    }
+                  }
+                }
+              }
+            } ]
+          },
+          "exitAfterRun" : true
+        }, {
+          "version" : 1,
+          "uuid" : "0377d27f-9acc-488d-a298-e6f720fa768f",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "44d5b66b-bcee-4b65-8cb6-eb46906d9efd",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.entity"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "cda99a51-c0f3-4102-ad6c-bf3b794f4cf2",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.edit.requestParameter.entity"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "40d50b2f-8e75-440a-8efb-fb7d8830e06b",
+          "actionType" : "SendRequestImLogicFlowRouteActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "routeId" : {
+                "version" : 1,
+                "uuid" : "fa103675-db30-45e8-a617-e17d724da33a",
+                "type" : "im-logic-flow-route",
+                "value" : "accel-studio-app/q"
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "8d6e8e31-5560-47c6-90e7-daf0c98b69f2",
+                "type" : "literal",
+                "value" : "PUT"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "f36bef2e-ace0-47d8-bf69-1b2d5d4ef3e5",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.edit.requestParameter.entity"
+                }
+              },
+              "requestHeaders" : {
+                "version" : 1,
+                "uuid" : "18703b32-a7db-45c2-b641-0b5e0f71728b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "statusCode" : {
+                "version" : 1,
+                "uuid" : "50492bc6-eabf-439c-b070-76476af1c1c6",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "responseData" : {
+                "version" : 1,
+                "uuid" : "1e0da963-c97b-4a67-b917-87b327c8d5d0",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "useSecureToken" : {
+                "version" : 1,
+                "uuid" : "a5d843fa-f327-4643-a267-5842aa5ee0de",
+                "type" : "checkbox",
+                "value" : "1"
+              },
+              "withoutEpoch" : {
+                "version" : 1,
+                "uuid" : "6bb995e6-99a5-4221-a7c1-212662214df2",
+                "type" : "checkbox",
+                "value" : "0"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "edcebc47-c3d2-4fb7-b76b-9da604bf4c62",
+          "actionType" : "PageTransitionActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "url" : {
+                "version" : 1,
+                "uuid" : "fc79d963-2c14-4ea1-a509-5d7831e56154",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$constant.screenUrl.list"
+                }
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "79871c8d-816d-4b8c-925e-6316fb02a5df",
+                "type" : "literal",
+                "value" : ""
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "b943abab-b57f-44f8-b898-f067528a023b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ {
+          "version" : 1,
+          "uuid" : "93f30cc9-defb-4b2e-a52a-0a05b6e46ce8",
+          "actionType" : "ImShowErrorDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "e821cf8f-ecd9-48ed-810b-f2f58ff95ed8",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_update_record_failed"
+                }
+              }
+            }
+          }
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "b27a4cc4-1e93-4d05-8e69-0e5897352a96",
+        "name" : "削除ボタンが押されたとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "642f1893-7b70-4c41-9c04-cecabe930ab8",
+          "actionType" : "ImShowConfirmDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "785388ee-3732-4a91-b4d3-269a2d9c3af9",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_delete_confirm"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "de6415f6-e31d-415e-95d4-aae4c137880e",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.confirmResult"
+                }
+              },
+              "okButtonLabel" : {
+                "version" : 1,
+                "uuid" : "af06a98f-2cb0-43a1-9804-5182261e3a62",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_ok"
+                }
+              },
+              "okButtonColor" : {
+                "version" : 1,
+                "uuid" : "915c3699-6183-483b-8e74-fd2662ea7cfe",
+                "type" : "literal",
+                "value" : ""
+              },
+              "cancelButtonLabel" : {
+                "version" : 1,
+                "uuid" : "f6090e56-e48b-4e05-98e2-d947df2fd06b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_cancel"
+                }
+              },
+              "cancelButtonColor" : {
+                "version" : 1,
+                "uuid" : "22ff4819-18a5-46fd-869e-e6c60f977872",
+                "type" : "literal",
+                "value" : ""
+              },
+              "position" : {
+                "version" : 1,
+                "uuid" : "24bda3b5-58fe-4f81-9e4b-8ca5d91b0ba7",
+                "type" : "literal",
+                "value" : "is-right"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "2f03467c-ea27-4247-a1d0-467689d30116",
+          "actionType" : "ImEmptyActionItem",
+          "enabled" : true,
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "fe96a681-246c-456b-851d-2027d55bfede",
+              "conditionType" : "UIContainerVariableNotEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "d8e7eacb-7c73-4060-9e70-87dbccdedd53",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.confirmResult"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "351feb33-dfa7-426d-af11-45731ac712fd",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.true"
+                    }
+                  }
+                }
+              }
+            } ]
+          },
+          "exitAfterRun" : true
+        }, {
+          "version" : 1,
+          "uuid" : "1c408321-b94f-41c8-b6f4-9a1928b0b011",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "959d87e1-6e92-454c-afa5-a41524696958",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.key"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "b6b5348a-3f5b-4355-a2d8-1b7589e9e160",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.delete.requestParameter"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "f19d6a49-7cd1-4804-ade9-be938d1635a4",
+          "actionType" : "SendRequestImLogicFlowRouteActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "routeId" : {
+                "version" : 1,
+                "uuid" : "d9f8c5b2-b9d0-4765-b5f8-068b7df4cb4c",
+                "type" : "im-logic-flow-route",
+                "value" : "accel-studio-app/q"
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "b6d6f896-7078-42ca-9b89-97091294db48",
+                "type" : "literal",
+                "value" : "DELETE"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "e2e5e55c-7e3e-4413-b947-5029116a2aa7",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.endPoint.delete.requestParameter"
+                }
+              },
+              "requestHeaders" : {
+                "version" : 1,
+                "uuid" : "d2c8aaa2-6685-4757-b4e2-d5fbea70c0ec",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "statusCode" : {
+                "version" : 1,
+                "uuid" : "0accf7fc-b9ca-40c2-a80b-533d3e1fe9d6",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "responseData" : {
+                "version" : 1,
+                "uuid" : "83cc0e71-b48d-46e9-8524-cf12a84020bc",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : ""
+                }
+              },
+              "useSecureToken" : {
+                "version" : 1,
+                "uuid" : "418afa4d-8149-406d-b435-4474e5eabc14",
+                "type" : "checkbox",
+                "value" : "1"
+              },
+              "withoutEpoch" : {
+                "version" : 1,
+                "uuid" : "b3a94e51-0111-471f-8316-9bae0be21f07",
+                "type" : "checkbox",
+                "value" : "0"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "0f6efae2-c63e-485c-85cf-d835f74fd887",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "3b57c82e-cdea-460b-a11c-91c98a9e6d3d",
+                "type" : "action",
+                "value" : "087fd4d2-c870-484e-9485-485dce93c7dc"
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ {
+          "version" : 1,
+          "uuid" : "6bef8665-5670-43a9-a183-ca47ba2e8346",
+          "actionType" : "ImShowErrorDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "a44be3e2-d0f1-4997-8e06-ab9b769747da",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_delete_record_failed"
+                }
+              }
+            }
+          }
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "5a4bc6ac-b5db-4c1a-ab9e-52e6205577b9",
+        "name" : "戻るボタンが押されたとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "46b5f5f7-970c-45ab-abcd-5c158895f9e9",
+          "actionType" : "ImShowConfirmDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "af3bf83a-af55-4170-94a5-29317f7e000b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.msg_screen_transition_confirm"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "5e9f6851-52ea-4d7e-ba9b-7d58e00cb6ea",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.confirmResult"
+                }
+              },
+              "okButtonLabel" : {
+                "version" : 1,
+                "uuid" : "dd68b109-1b59-416f-a2e2-8bda5369b2ee",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_ok"
+                }
+              },
+              "okButtonColor" : {
+                "version" : 1,
+                "uuid" : "504785bf-e35f-478c-b9f9-aa8201af74a3",
+                "type" : "literal",
+                "value" : ""
+              },
+              "cancelButtonLabel" : {
+                "version" : 1,
+                "uuid" : "cb9dcc82-be78-4eed-a475-aff0ccfc9179",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$i18n.cap_dialog_cancel"
+                }
+              },
+              "cancelButtonColor" : {
+                "version" : 1,
+                "uuid" : "8b21643f-801b-438e-8951-faeba06d5cea",
+                "type" : "literal",
+                "value" : ""
+              },
+              "position" : {
+                "version" : 1,
+                "uuid" : "0ec3b789-799b-450c-89c0-f62e69db3ba5",
+                "type" : "literal",
+                "value" : "is-right"
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "edf66039-c99a-4197-ab68-5187e623ecba",
+              "conditionType" : "UIContainerVariableEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "ae27d95e-7764-4e06-9258-ec61ca36fb29",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.isChanged"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "e79d4b74-f364-45b3-afd5-297d1f345f13",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.true"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "88bbbffc-5af3-4f3a-adc9-1f3515169514",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "7b49d8db-a3ce-4a00-9e11-05c6372a6dbd",
+                "type" : "action",
+                "value" : "087fd4d2-c870-484e-9485-485dce93c7dc"
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "or",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "bcbf4aa5-a2fa-4b68-b2db-8771fbd6e5fe",
+              "conditionType" : "UIContainerVariableEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "add9c8ff-328d-49c8-b148-33d9bc4d54a7",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.confirmResult"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "ced8b925-4c07-4b10-8a26-7642b05b5076",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.true"
+                    }
+                  }
+                }
+              }
+            }, {
+              "version" : 1,
+              "uuid" : "4e371f17-e5cd-4d4b-b6d2-3acf046ef8ba",
+              "conditionType" : "UIContainerVariableEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "467e7e2d-52bd-4eef-83f6-7b92ed620bff",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$variable.state.isChanged"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "61b8434c-2456-4957-9f8d-783c8bf0a5cb",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                      "path" : "$env.const.false"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "efee4014-fa6c-460c-965b-926c01183852",
+        "name" : "入力フォームの値を編集したとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "fb413296-b070-4b72-8fa2-82812d3a6c3a",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "9e9108c1-fa2c-4782-98b1-47236fce4bdf",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$env.const.true"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "cde7c68f-6258-4f9f-9e78-fa9a95fa4600",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "79d320bd-fbea-45d9-85b1-5d77713b0061",
+                  "path" : "$variable.state.isChanged"
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      } ]
+    },
+    "children" : [ {
+      "version" : 1,
+      "uuid" : "c7a4a885-9e0a-4455-8894-b7ac149bb9ff",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "b39e3cc5-b8fe-4e0e-923c-1b710743d234",
+            "type" : "string",
+            "value" : "Main Page"
+          }
+        }
+      },
+      "elementId" : "im-element-1",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "04a06f83-0792-4a7a-961f-cc6e7cdacad8",
+        "elementTypeName" : "ImSideMenuContainer",
+        "properties" : {
+          "version" : 1,
+          "values" : { }
+        },
+        "elementId" : "im-element-2",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "b533fa17-f42b-4b71-a66d-cc4d789f01f1",
+          "elementTypeName" : "ImSideBar",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-3"
+        }, {
+          "version" : 1,
+          "uuid" : "932c179c-c089-48f7-bb33-412ceb2ebba7",
+          "elementTypeName" : "ImSideMenu",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-4"
+        }, {
+          "version" : 1,
+          "uuid" : "8356f684-21c7-41a0-b55c-b3920de3554a",
+          "elementTypeName" : "ImSideMenuContent",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "userClass" : {
+                "version" : 1,
+                "uuid" : "2420ec24-7246-4707-8724-7af0d6422658",
+                "type" : "string",
+                "value" : "has-background-white-ter"
+              },
+              "styleHeight" : {
+                "version" : 1,
+                "uuid" : "b2e9ae5e-9ca5-4a93-ace2-e3d4b2b5579d",
+                "type" : "string",
+                "value" : "100%"
+              }
+            }
+          },
+          "elementId" : "im-element-5",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "4c9adc70-b643-4222-acdb-a1291bab6c37",
+            "elementTypeName" : "ImContainerPageFrame",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "pageUUID" : {
+                  "version" : 1,
+                  "uuid" : "161c0771-ea96-4de9-a7b3-d4fe1c0ea153",
+                  "type" : "string",
+                  "value" : "8ceef89f-21b1-4ad8-aa14-6b3fc59b805c"
+                }
+              }
+            },
+            "elementId" : "im-element-6"
+          } ]
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "a9edcb0f-4bd3-4efd-a4f4-5a4316e4a7c2",
+        "elementTypeName" : "ImSharedResource",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "visibility" : {
+              "version" : 1,
+              "uuid" : "556bc7d2-01b4-428c-8f00-61c1832bcff0",
+              "type" : "formula",
+              "value" : {
+                "target" : "a9edcb0f-4bd3-4efd-a4f4-5a4316e4a7c2",
+                "formula" : " $input.__mode__ == $constant.mode.edit"
+              }
+            },
+            "application" : {
+              "version" : 1,
+              "uuid" : "bbfa7b5e-90b4-4068-8f81-bd145f40661a",
+              "type" : "string",
+              "value" : "q"
+            },
+            "businessKeys" : {
+              "version" : 1,
+              "uuid" : "6e8ef45a-8e0d-493c-9d88-b1e24be1b4da",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "a9edcb0f-4bd3-4efd-a4f4-5a4316e4a7c2",
+                "path" : "$variable.businessKey"
+              }
+            },
+            "maximumNumberOfDisplay" : {
+              "version" : 1,
+              "uuid" : "100a7ad1-4da8-40f5-843e-a82810877f72",
+              "type" : "string",
+              "value" : "5"
+            },
+            "lockedState" : {
+              "version" : 1,
+              "uuid" : "5f0493ff-e2d0-4670-a50c-5b3ae987689c",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "a9edcb0f-4bd3-4efd-a4f4-5a4316e4a7c2",
+                "path" : "$variable.state.isLocked"
+              }
+            },
+            "unlockOnLeave" : {
+              "version" : 1,
+              "uuid" : "08593d86-ba72-4f82-b750-2c05aa8b2936",
+              "type" : "boolean",
+              "value" : "true"
+            },
+            "onLockedEvent" : {
+              "version" : 1,
+              "uuid" : "34a247c3-5e32-4056-8df9-369f5b4cae80",
+              "type" : "string",
+              "value" : "44526f24-a9b8-4d65-b66c-6b8d82d37061"
+            },
+            "onUnlockedEvent" : {
+              "version" : 1,
+              "uuid" : "e4f3a2a2-009a-4009-b44c-02b7ca925adc",
+              "type" : "string",
+              "value" : "44526f24-a9b8-4d65-b66c-6b8d82d37061"
+            }
+          }
+        },
+        "elementId" : "im-element-7"
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "8ceef89f-21b1-4ad8-aa14-6b3fc59b805c",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "7609b0fb-1518-47bc-84e0-6c1376862581",
+            "type" : "string",
+            "value" : "Overall"
+          }
+        }
+      },
+      "elementId" : "im-element-8",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "247fff89-5325-4906-bd8a-9b10a37881aa",
+        "elementTypeName" : "ImBulmaColumns",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "51343cec-9529-475d-84f9-1d917c0410f8",
+              "type" : "string",
+              "value" : "mb-0 has-background-white"
+            },
+            "elementCount" : {
+              "version" : 1,
+              "uuid" : "2a661414-b728-4510-9a6e-2d9af1b3e710",
+              "type" : "string",
+              "value" : "1"
+            },
+            "centered" : {
+              "version" : 1,
+              "uuid" : "bd65e917-a05a-46cb-af9d-a2119b9b761b",
+              "type" : "boolean",
+              "value" : "true"
+            }
+          }
+        },
+        "elementId" : "im-element-9",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "4ee1ee5f-c45c-4244-b556-29050503c9b2",
+          "elementTypeName" : "ImBulmaColumn",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "userClass" : {
+                "version" : 1,
+                "uuid" : "2167d6c2-180b-455a-8e41-5a11fcb6ef7e",
+                "type" : "string",
+                "value" : "pb-0"
+              }
+            }
+          },
+          "elementId" : "im-element-10",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "80a8f35f-4983-4fd8-9e8e-fc8606bae862",
+            "elementTypeName" : "ImContainerPageFrame",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "pageUUID" : {
+                  "version" : 1,
+                  "uuid" : "490947e3-220e-46e8-935c-ef0cae631429",
+                  "type" : "string",
+                  "value" : "29dca5d5-abca-4a5f-a660-e573549dbb05"
+                }
+              }
+            },
+            "elementId" : "im-element-11"
+          } ]
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "846d84f4-9e0c-4a16-a9ef-437b9d1476f6",
+        "elementTypeName" : "ImBulmaColumns",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "93c89ecb-c454-4a12-af02-a3d41ba1c0c9",
+              "type" : "string",
+              "value" : "m-0"
+            },
+            "styleMinHeight" : {
+              "version" : 1,
+              "uuid" : "23fe872c-75f2-48b9-a309-d202d5ffa1cd",
+              "type" : "string",
+              "value" : "calc(100vh - 3.75rem)"
+            },
+            "elementCount" : {
+              "version" : 1,
+              "uuid" : "d474702b-bac2-4732-9de6-17bf114969e7",
+              "type" : "string",
+              "value" : "1"
+            },
+            "centered" : {
+              "version" : 1,
+              "uuid" : "5d453869-43b1-4da9-aeb6-63df52247558",
+              "type" : "boolean",
+              "value" : "true"
+            }
+          }
+        },
+        "elementId" : "im-element-12",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "3daa4deb-0170-4dd6-8cd4-6e59e9e06c93",
+          "elementTypeName" : "ImBulmaColumn",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "userClass" : {
+                "version" : 1,
+                "uuid" : "713d677f-0856-4cfb-bb72-cea0c1658bde",
+                "type" : "string",
+                "value" : "p-5"
+              },
+              "sizeForMobile" : {
+                "version" : 1,
+                "uuid" : "6f599060-f325-4b2c-ae10-3013e25c1b5a",
+                "type" : "string",
+                "value" : "is-full-mobile"
+              },
+              "sizeForTablet" : {
+                "version" : 1,
+                "uuid" : "c1b820fb-8aac-414f-a83f-793c2c8da6ce",
+                "type" : "string",
+                "value" : "is-full-tablet"
+              },
+              "sizeForDesktop" : {
+                "version" : 1,
+                "uuid" : "40458c9b-6725-49ac-895a-609104069917",
+                "type" : "string",
+                "value" : "is-full-desktop"
+              },
+              "sizeForWidescreen" : {
+                "version" : 1,
+                "uuid" : "33df6e48-6698-4003-999d-76ff2425081f",
+                "type" : "string",
+                "value" : "is-10-widescreen"
+              },
+              "sizeForFullhd" : {
+                "version" : 1,
+                "uuid" : "210ae2a7-96f9-4293-83e1-c9d5845176c8",
+                "type" : "string",
+                "value" : "is-9-fullhd"
+              }
+            }
+          },
+          "elementId" : "im-element-13",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "a120b711-2a3b-4e24-8684-8f1a27ee6c3f",
+            "elementTypeName" : "FlexBox",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "justifyContent" : {
+                  "version" : 1,
+                  "uuid" : "374a65b9-2e55-4374-9b98-ea2fb91ba543",
+                  "type" : "string",
+                  "value" : "center"
+                },
+                "alignItems" : {
+                  "version" : 1,
+                  "uuid" : "c3b1b057-6b03-4926-abbe-35f5f788e0ca",
+                  "type" : "string",
+                  "value" : "center"
+                },
+                "elementCount" : {
+                  "version" : 1,
+                  "uuid" : "c969d2a9-3bce-4c33-a040-6b83fda538dd",
+                  "type" : "string",
+                  "value" : "1"
+                }
+              }
+            },
+            "elementId" : "im-element-14",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "073fc1ae-b727-4213-bbc1-198196ca6bb5",
+              "elementTypeName" : "FlexItem",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleWidth" : {
+                    "version" : 1,
+                    "uuid" : "d6e03d15-26f4-4be0-95d8-9fc5bcc1332b",
+                    "type" : "string",
+                    "value" : "100%"
+                  },
+                  "flexBasis" : {
+                    "version" : 1,
+                    "uuid" : "983347bd-51ed-4411-b115-043b23436fd3",
+                    "type" : "string",
+                    "value" : "100%"
+                  }
+                }
+              },
+              "elementId" : "im-element-15",
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "4ec6df72-1fff-45b5-a982-3a6b943d1908",
+                "elementTypeName" : "Box",
+                "properties" : {
+                  "version" : 1,
+                  "values" : {
+                    "userClass" : {
+                      "version" : 1,
+                      "uuid" : "629f515c-8220-4279-86e7-11dd63ad9353",
+                      "type" : "string",
+                      "value" : "my-2"
+                    }
+                  }
+                },
+                "elementId" : "im-element-16",
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "a63edf24-a382-40e8-b32a-82e15f2b7445",
+                  "elementTypeName" : "ImBulmaContent",
+                  "properties" : {
+                    "version" : 1,
+                    "values" : {
+                      "userClass" : {
+                        "version" : 1,
+                        "uuid" : "d9aec39a-9fff-41b2-a988-2a00f06b4fda",
+                        "type" : "string",
+                        "value" : "has-text-danger imds-required-field-usage-guide"
+                      },
+                      "styleTextAlign" : {
+                        "version" : 1,
+                        "uuid" : "24d799af-87d0-4b1b-bddc-2c1df3e7dcab",
+                        "type" : "string",
+                        "value" : "right"
+                      },
+                      "size" : {
+                        "version" : 1,
+                        "uuid" : "1501e757-b945-4328-bb6d-89cba47f2aa1",
+                        "type" : "string",
+                        "value" : "is-small"
+                      }
+                    }
+                  },
+                  "elementId" : "im-element-17",
+                  "children" : [ {
+                    "version" : 1,
+                    "uuid" : "e0fd7162-9af5-4abd-8d64-13de52e3230b",
+                    "elementTypeName" : "Label",
+                    "properties" : {
+                      "version" : 1,
+                      "values" : {
+                        "textContent" : {
+                          "version" : 1,
+                          "uuid" : "dc4b83ef-8dd3-4558-b4d1-37f46c7f37dc",
+                          "type" : "parameter-path",
+                          "value" : {
+                            "target" : "e0fd7162-9af5-4abd-8d64-13de52e3230b",
+                            "path" : "$i18n.msg_required_field_usage_guide"
+                          }
+                        }
+                      }
+                    },
+                    "elementId" : "im-element-18"
+                  } ]
+                } ]
+              }, {
+                "version" : 1,
+                "uuid" : "e7fbf9d9-c81d-462e-b592-c9d6c8068e82",
+                "elementTypeName" : "FlexBox",
+                "properties" : {
+                  "version" : 1,
+                  "values" : {
+                    "userClass" : {
+                      "version" : 1,
+                      "uuid" : "8a6e22d0-b490-4248-aa37-503d45dbe57c",
+                      "type" : "string",
+                      "value" : "imds-form-area"
+                    },
+                    "styleBackgroundColor" : {
+                      "version" : 1,
+                      "uuid" : "dc6be501-4179-414e-aff6-208c2dda3dea",
+                      "type" : "string",
+                      "value" : "#fff"
+                    },
+                    "flexDirection" : {
+                      "version" : 1,
+                      "uuid" : "6ccb60fa-5e82-4112-9fed-6ee54c510480",
+                      "type" : "string",
+                      "value" : "column"
+                    },
+                    "elementCount" : {
+                      "version" : 1,
+                      "uuid" : "f504d16a-a6c3-4cc5-9170-7230d8f0ac0b",
+                      "type" : "string",
+                      "value" : "2"
+                    }
+                  }
+                },
+                "elementId" : "im-element-19",
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "4ffda5d0-9752-41db-b273-35adc511e6e0",
+                  "elementTypeName" : "FlexItem",
+                  "properties" : {
+                    "version" : 1,
+                    "values" : {
+                      "styleWidth" : {
+                        "version" : 1,
+                        "uuid" : "ae094b97-debc-42e3-83c8-ba0f657d9549",
+                        "type" : "string",
+                        "value" : "100%"
+                      }
+                    }
+                  },
+                  "elementId" : "im-element-20",
+                  "children" : [ {
+                    "version" : 1,
+                    "uuid" : "f009dae5-f397-4b51-ba47-a285b6c53d96",
+                    "elementTypeName" : "ImContainerPageFrame",
+                    "properties" : {
+                      "version" : 1,
+                      "values" : {
+                        "userClass" : {
+                          "version" : 1,
+                          "uuid" : "cf870979-9fd8-4ee5-b0b1-7c17fe2357b8",
+                          "type" : "string",
+                          "value" : "px-6 py-6 mt-2"
+                        },
+                        "pageUUID" : {
+                          "version" : 1,
+                          "uuid" : "d271e878-8f55-492c-a92f-093e710a9195",
+                          "type" : "string",
+                          "value" : "623b05b3-4b15-4a2b-9e61-cc47da6618fe"
+                        }
+                      }
+                    },
+                    "elementId" : "im-element-21"
+                  } ]
+                }, {
+                  "version" : 1,
+                  "uuid" : "b813922a-e601-40dc-a119-c9cd8dd13c44",
+                  "elementTypeName" : "FlexItem",
+                  "properties" : {
+                    "version" : 1,
+                    "values" : {
+                      "visibility" : {
+                        "version" : 1,
+                        "uuid" : "d474aa87-b3d6-40d9-9868-4442f2f9cc11",
+                        "type" : "formula",
+                        "value" : {
+                          "target" : "b813922a-e601-40dc-a119-c9cd8dd13c44",
+                          "formula" : " $input.__mode__ != $constant.mode.refer"
+                        }
+                      }
+                    }
+                  },
+                  "elementId" : "im-element-22",
+                  "children" : [ {
+                    "version" : 1,
+                    "uuid" : "495665f7-517e-4ba7-a2ed-ae03f4a75a44",
+                    "elementTypeName" : "HorizontalRule",
+                    "properties" : {
+                      "version" : 1,
+                      "values" : {
+                        "styleHeight" : {
+                          "version" : 1,
+                          "uuid" : "995e73a7-636c-43e5-a998-e9e4b56490d1",
+                          "type" : "string",
+                          "value" : "1px"
+                        }
+                      }
+                    },
+                    "elementId" : "im-element-23"
+                  }, {
+                    "version" : 1,
+                    "uuid" : "c0f42531-a952-4c07-a78f-78cadbf93718",
+                    "elementTypeName" : "ImContainerPageFrame",
+                    "properties" : {
+                      "version" : 1,
+                      "values" : {
+                        "userClass" : {
+                          "version" : 1,
+                          "uuid" : "4cda70fe-5657-4439-aff7-e47c239c38f8",
+                          "type" : "string",
+                          "value" : "pr-6 pl-6 pb-5"
+                        },
+                        "pageUUID" : {
+                          "version" : 1,
+                          "uuid" : "b991f3c4-f217-4436-9d51-bb15d3c754a1",
+                          "type" : "string",
+                          "value" : "a496c7df-36c0-4bf5-9dc8-6c28a213400c"
+                        }
+                      }
+                    },
+                    "elementId" : "im-element-24"
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "29dca5d5-abca-4a5f-a660-e573549dbb05",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "dd1e4f8e-a4f8-4083-806d-ff87caaa87ef",
+            "type" : "string",
+            "value" : "Header"
+          }
+        }
+      },
+      "elementId" : "im-element-25",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "111e7549-a8e8-487c-92de-139a2c8764cf",
+        "elementTypeName" : "FlexBox",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "a9daa5aa-df21-480d-85fe-9dc11376ec12",
+              "type" : "string",
+              "value" : "imds-page-title"
+            },
+            "flexWrap" : {
+              "version" : 1,
+              "uuid" : "9cbfd58a-86bc-4182-b347-fdfc6dfadc7b",
+              "type" : "string",
+              "value" : "nowrap"
+            },
+            "alignItems" : {
+              "version" : 1,
+              "uuid" : "9d92c8f8-0434-462f-bf37-06fb96454c58",
+              "type" : "string",
+              "value" : "center"
+            },
+            "elementCount" : {
+              "version" : 1,
+              "uuid" : "c9ba9eda-8930-417b-a860-e8d80eaf75c2",
+              "type" : "string",
+              "value" : "3"
+            }
+          }
+        },
+        "elementId" : "im-element-26",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "abf9eec3-733e-4d03-be4d-f21b6ea2e6c4",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "visibility" : {
+                "version" : 1,
+                "uuid" : "07788429-e7e7-4d81-9bf7-ff19c18c765a",
+                "type" : "boolean",
+                "value" : "true"
+              },
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "476390ef-6e77-4685-a360-bf78987f08a2",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-27",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "d7043c09-548f-4af6-b0f5-69a8b0d4f05a",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-28",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "c4380083-2137-44e9-9f2b-366b72c5d932",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "toolTip" : {
+                    "version" : 1,
+                    "uuid" : "10f37661-bd2c-492a-b543-d18d70956b18",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "c4380083-2137-44e9-9f2b-366b72c5d932",
+                      "path" : "$i18n.msg_header_back_to_list"
+                    }
+                  },
+                  "onClick" : {
+                    "version" : 1,
+                    "uuid" : "88573f9f-528c-43ae-a8a0-457126193f71",
+                    "type" : "string",
+                    "value" : "5a4bc6ac-b5db-4c1a-ab9e-52e6205577b9"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "65f08730-5706-4ab1-954c-99ae64b76703",
+                    "type" : "string",
+                    "value" : ""
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "840d6117-811a-4e76-83f8-eba3afe607bc",
+                    "type" : "string",
+                    "value" : "is-white"
+                  },
+                  "size" : {
+                    "version" : 1,
+                    "uuid" : "54f061be-0675-458d-91b8-1e63156d5c3c",
+                    "type" : "string",
+                    "value" : "is-medium"
+                  },
+                  "leftIconClass" : {
+                    "version" : 1,
+                    "uuid" : "cd7b5f0f-2d1e-461b-8063-d2ffc44ccdb5",
+                    "type" : "string",
+                    "value" : "fas fa-arrow-left"
+                  }
+                }
+              },
+              "elementId" : "im-element-29"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "9a8d764a-dc21-455f-8429-35626562096a",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "userClass" : {
+                "version" : 1,
+                "uuid" : "c4c924f6-2980-45be-a3b9-d0df96b0ec0d",
+                "type" : "string",
+                "value" : "pr-4"
+              },
+              "stylePaddingLeft" : {
+                "version" : 1,
+                "uuid" : "189f207e-d033-49fc-b645-c46b8fa8b126",
+                "type" : "string",
+                "value" : "1.14rem"
+              },
+              "stylePaddingRight" : {
+                "version" : 1,
+                "uuid" : "27fd3ce1-2119-4a66-bc30-afbffb174f80",
+                "type" : "string",
+                "value" : "0.6em"
+              },
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "72251437-bb11-4a4a-94f3-1d804e41281d",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-30",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "085966da-0803-4d16-85d1-070fb586acf2",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "cb331888-1d48-480c-96b9-f0e8c0e28983",
+                  "type" : "string",
+                  "value" : "imds-application-icon"
+                }
+              }
+            },
+            "elementId" : "im-element-31",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "fdb5cf26-6ca2-489f-adc0-7068e1ef056b",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "76f25d64-bedc-420f-b517-47ffe0d00a5e",
+                    "type" : "string",
+                    "value" : ""
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "4dc17284-39a2-4e5d-a168-0ed426574e71",
+                    "type" : "string",
+                    "value" : "is-white"
+                  },
+                  "disabled" : {
+                    "version" : 1,
+                    "uuid" : "af30721c-a0c5-4ace-a240-83fbdb59d013",
+                    "type" : "boolean",
+                    "value" : "true"
+                  },
+                  "leftIconClass" : {
+                    "version" : 1,
+                    "uuid" : "1c9e0a49-f578-4d68-a77d-d4113445f5ad",
+                    "type" : "string",
+                    "value" : "fas fa-th-large imds-iconfont imds-application fa-2x"
+                  }
+                }
+              },
+              "elementId" : "im-element-32"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "d2cd5710-dd7a-46c7-869c-960e6aeae62b",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "2269534a-b2d3-4921-a02f-13635819fa89",
+                "type" : "string",
+                "value" : "1"
+              },
+              "flexShrink" : {
+                "version" : 1,
+                "uuid" : "1e663557-16c8-4a07-b54c-ab83370a75e4",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-33",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "cf2794bb-5c8d-4953-8f93-4a26b5359cab",
+            "elementTypeName" : "Box",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "visibility" : {
+                  "version" : 1,
+                  "uuid" : "2648fc26-53e7-4a5d-94cf-2f91bc64e748",
+                  "type" : "formula",
+                  "value" : {
+                    "target" : "cf2794bb-5c8d-4953-8f93-4a26b5359cab",
+                    "formula" : " $input.__mode__ == $constant.mode.register"
+                  }
+                }
+              }
+            },
+            "elementId" : "im-element-34",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "2c1284c3-16fe-4cdf-a986-74a6d1200814",
+              "elementTypeName" : "Paragraph",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "toolTip" : {
+                    "version" : 1,
+                    "uuid" : "fe168f45-abe0-416a-a2ee-693583929f5e",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "2c1284c3-16fe-4cdf-a986-74a6d1200814",
+                      "path" : ""
+                    }
+                  },
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "557be9df-8f0e-4aee-be3e-f36002929441",
+                    "type" : "string",
+                    "value" : "subtitle is-7"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "0e4deb76-6142-43c3-b159-8e5a2bdab832",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "2c1284c3-16fe-4cdf-a986-74a6d1200814",
+                      "path" : "$i18n.cap_page_header_label"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-35"
+            }, {
+              "version" : 1,
+              "uuid" : "4b330268-a6e0-4195-8778-4180d32b2eac",
+              "elementTypeName" : "ImBulmaTitle1",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "dd883c85-443a-4464-8527-4e96461632b4",
+                    "type" : "string",
+                    "value" : "is-5"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "d1cb7e12-a7c1-46d0-afb6-e5a0e6b368ce",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "4b330268-a6e0-4195-8778-4180d32b2eac",
+                      "path" : "$i18n.cap_page_header_title_register"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-36"
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "4057a86a-5d15-495d-8929-11cb8c955b19",
+            "elementTypeName" : "Box",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "visibility" : {
+                  "version" : 1,
+                  "uuid" : "54bec1ef-38ed-400d-aa85-0093ef298d84",
+                  "type" : "formula",
+                  "value" : {
+                    "target" : "4057a86a-5d15-495d-8929-11cb8c955b19",
+                    "formula" : " $input.__mode__ == $constant.mode.edit"
+                  }
+                }
+              }
+            },
+            "elementId" : "im-element-37",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "d61cc946-0833-4239-921b-6f05c5a8224c",
+              "elementTypeName" : "Paragraph",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "a2e864ca-c37a-436f-8da2-0020db6f409f",
+                    "type" : "string",
+                    "value" : "subtitle is-7"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "35786f4f-3fbf-43ab-b5c3-d3083b65c3f0",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "d61cc946-0833-4239-921b-6f05c5a8224c",
+                      "path" : "$i18n.cap_page_header_label"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-38"
+            }, {
+              "version" : 1,
+              "uuid" : "a858a499-b019-49b3-8547-e0307fb4fac6",
+              "elementTypeName" : "ImBulmaTitle1",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "48e1bf89-3c3b-4d52-9b5e-5506fb808017",
+                    "type" : "string",
+                    "value" : "is-5"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "680b81ad-0564-45be-9086-3c4c359f5ad8",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "a858a499-b019-49b3-8547-e0307fb4fac6",
+                      "path" : "$i18n.cap_page_header_title_edit"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-39"
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "739265f5-b6d6-443f-836b-33cbea173408",
+            "elementTypeName" : "Box",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "visibility" : {
+                  "version" : 1,
+                  "uuid" : "4dd90793-7ed2-435c-ae6d-bf79c390e115",
+                  "type" : "formula",
+                  "value" : {
+                    "target" : "739265f5-b6d6-443f-836b-33cbea173408",
+                    "formula" : " $input.__mode__ == $constant.mode.refer"
+                  }
+                }
+              }
+            },
+            "elementId" : "im-element-40",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "75ef65c6-d94d-47eb-b8e3-49ab8eff67d6",
+              "elementTypeName" : "Paragraph",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "4a6d08da-b4fe-4d79-900c-54269e179863",
+                    "type" : "string",
+                    "value" : "subtitle is-7"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "b2617651-41a3-4bad-81be-41e004ea794f",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "75ef65c6-d94d-47eb-b8e3-49ab8eff67d6",
+                      "path" : "$i18n.cap_page_header_label"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-41"
+            }, {
+              "version" : 1,
+              "uuid" : "f700af9c-c7cf-4c07-8d20-76313c58b04e",
+              "elementTypeName" : "ImBulmaTitle1",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "23489bc1-dfe9-4d7f-b656-5111a20b78e7",
+                    "type" : "string",
+                    "value" : "is-5"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "86fe3145-18ca-43da-a32b-76572723fddd",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "f700af9c-c7cf-4c07-8d20-76313c58b04e",
+                      "path" : "$i18n.cap_page_header_title_refer"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-42"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "623b05b3-4b15-4a2b-9e61-cc47da6618fe",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "dec28ddb-8221-4b44-afbe-548bcc04e281",
+            "type" : "string",
+            "value" : "Input Area"
+          }
+        }
+      },
+      "elementId" : "im-element-43",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "bb51c4e7-b555-416b-9731-5595c5fe78b6",
+        "elementTypeName" : "ImBulmaField",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "857f03b5-5026-48cb-a7af-057330ef6fb2",
+              "type" : "string",
+              "value" : "imds-field imds-textbox"
+            },
+            "showLabel" : {
+              "version" : 1,
+              "uuid" : "ce0a5d74-794f-4d23-991c-81037a4351e0",
+              "type" : "boolean",
+              "value" : "true"
+            },
+            "showValidationErrorMessage" : {
+              "version" : 1,
+              "uuid" : "46b10bdc-9df5-4c50-a1b1-5f45a39bcad7",
+              "type" : "boolean",
+              "value" : "true"
+            }
+          }
+        },
+        "elementId" : "im-element-44",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "0979a498-9096-4a60-bf34-94ed39e5a00f",
+          "elementTypeName" : "ImBulmaFieldLabel",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "label" : {
+                "version" : 1,
+                "uuid" : "83e543dc-4b11-4951-8253-20a5eec4ccdf",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "0979a498-9096-4a60-bf34-94ed39e5a00f",
+                  "path" : "$i18n.entity_label_qq"
+                }
+              },
+              "requiredLabel" : {
+                "version" : 1,
+                "uuid" : "d3e14dd9-9859-4af3-966b-afc532820fc2",
+                "type" : "string",
+                "value" : "required-asterisk"
+              }
+            }
+          },
+          "elementId" : "im-element-45"
+        }, {
+          "version" : 1,
+          "uuid" : "b18fd333-a6f2-4998-b9fb-6e5b2febe4cd",
+          "elementTypeName" : "ImBulmaFieldInner",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-46",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "116956b6-9ffb-486f-8875-ec9c8cdc4b2c",
+            "elementTypeName" : "ImBulmaInputTextControl",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "visibility" : {
+                  "version" : 1,
+                  "uuid" : "3fb8ee16-00ad-4dc3-8d07-1e4887fa089e",
+                  "type" : "formula",
+                  "value" : {
+                    "target" : "116956b6-9ffb-486f-8875-ec9c8cdc4b2c",
+                    "formula" : " $input.__mode__ != $constant.mode.refer"
+                  }
+                },
+                "showLeftIcon" : {
+                  "version" : 1,
+                  "uuid" : "ffe4c0cc-9333-4178-ac91-c025c7a97d82",
+                  "type" : "boolean",
+                  "value" : "false"
+                }
+              }
+            },
+            "elementId" : "im-element-47",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "8da1ea78-b48c-4bd5-9944-b2ff1ad84ffc",
+              "elementTypeName" : "ImBulmaInputText",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "onChange" : {
+                    "version" : 1,
+                    "uuid" : "031565bc-25cd-4a65-abdd-81cc8a5f6fbf",
+                    "type" : "string",
+                    "value" : "efee4014-fa6c-460c-965b-926c01183852"
+                  },
+                  "disabled" : {
+                    "version" : 1,
+                    "uuid" : "03f9ac99-c20f-4516-9b67-12d400ce9a0d",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "8da1ea78-b48c-4bd5-9944-b2ff1ad84ffc",
+                      "formula" : " $input.__mode__ == $constant.mode.edit"
+                    }
+                  },
+                  "readonly" : {
+                    "version" : 1,
+                    "uuid" : "aac99040-e410-4e3d-9eb7-4b44e3330eda",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "8da1ea78-b48c-4bd5-9944-b2ff1ad84ffc",
+                      "formula" : " $input.__mode__ == $constant.mode.refer"
+                    }
+                  },
+                  "static" : {
+                    "version" : 1,
+                    "uuid" : "93ac7a32-ae43-4c03-9fa3-8cfa8cf2a08d",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "8da1ea78-b48c-4bd5-9944-b2ff1ad84ffc",
+                      "formula" : " $input.__mode__ == $constant.mode.refer"
+                    }
+                  },
+                  "value" : {
+                    "version" : 1,
+                    "uuid" : "6d4c8dd3-e631-4b51-8671-4c224d0b3a4b",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "8da1ea78-b48c-4bd5-9944-b2ff1ad84ffc",
+                      "path" : "$variable.state.entity.qqqq.qq"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-48"
+            }, {
+              "version" : 1,
+              "uuid" : "23e87e85-f4e0-455d-822d-e64a2b572c27",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "ce2c98e8-1d45-4d78-ac6a-c8784ad930f2",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "8d2f36e9-5610-450c-97b5-715377d663b4",
+                    "type" : "string",
+                    "value" : "fas fa-edit"
+                  },
+                  "iconArrangement" : {
+                    "version" : 1,
+                    "uuid" : "4ed53887-cf41-4ba0-8bd9-35538e08cd7e",
+                    "type" : "string",
+                    "value" : "is-left"
+                  }
+                }
+              },
+              "elementId" : "im-element-49"
+            }, {
+              "version" : 1,
+              "uuid" : "8ebe39d0-7b02-4304-a266-d90f7340b0b1",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "57f00165-0476-4460-a625-645dd490b3df",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconArrangement" : {
+                    "version" : 1,
+                    "uuid" : "6ce4f812-2a62-4b3d-b97e-04d9324eee5d",
+                    "type" : "string",
+                    "value" : "is-right"
+                  }
+                }
+              },
+              "elementId" : "im-element-50"
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "bbfff85d-8846-495f-9bc1-69492fd43794",
+            "elementTypeName" : "ImBulmaFieldDivision",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "visibility" : {
+                  "version" : 1,
+                  "uuid" : "c01e4c79-242a-4f30-8ad1-f2e934733fe2",
+                  "type" : "formula",
+                  "value" : {
+                    "target" : "bbfff85d-8846-495f-9bc1-69492fd43794",
+                    "formula" : " $input.__mode__ == $constant.mode.refer"
+                  }
+                }
+              }
+            },
+            "elementId" : "im-element-51",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "c945a2aa-ed7b-49f5-a6d9-6168bb4b9a8a",
+              "elementTypeName" : "Label",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "e434cd98-53c6-4606-afbf-54ce8507254f",
+                    "type" : "string",
+                    "value" : "imds-refer-field"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "18e69933-a6d1-41ba-b78b-967c65e61129",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "c945a2aa-ed7b-49f5-a6d9-6168bb4b9a8a",
+                      "path" : "$variable.state.entity.qqqq.qq"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-52"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "a2493bcf-21d8-4714-9236-a5107c1303b0",
+          "elementTypeName" : "ImBulmaFieldHelp",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-53",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "8a57487c-0330-400c-b843-d31ae6468735",
+            "elementTypeName" : "ImBulmaFieldHelpIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-54",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "f57bd1a1-1e6f-427e-8025-22313818d41d",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "a75aa67d-e5e1-470e-aa43-6b2419e616c4",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "069dd9bb-a750-458d-9bb0-e805115c3ac2",
+                    "type" : "string",
+                    "value" : "fas fa-info-circle"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "7db12287-6246-455c-80a3-da0c928fdf9f",
+                    "type" : "string",
+                    "value" : "has-text-info"
+                  }
+                }
+              },
+              "elementId" : "im-element-55"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "d3704c43-b303-41c2-aba7-a99e2bdc7b36",
+          "elementTypeName" : "ImBulmaValidationErrorMessage",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "variable" : {
+                "version" : 1,
+                "uuid" : "503fef5e-bfba-4894-8bdd-a2188f836ad4",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "d3704c43-b303-41c2-aba7-a99e2bdc7b36",
+                  "path" : "$variable.state.entity.qqqq.qq"
+                }
+              },
+              "caption" : {
+                "version" : 1,
+                "uuid" : "bf56ef3f-916b-44b2-bcc0-23b20ce2add1",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "d3704c43-b303-41c2-aba7-a99e2bdc7b36",
+                  "path" : "$i18n.entity_label_qq"
+                }
+              }
+            }
+          },
+          "elementId" : "im-element-56",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "22cbbcc8-7119-48ce-993c-94766b9fc6be",
+            "elementTypeName" : "ImBulmaValidationErrorMessageIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-57",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "d6da5e25-e321-4808-9521-f331ff9d5d72",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "4a40d63d-ceea-43a1-89e0-e44975d60e37",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "f074e602-43a7-46c9-9a16-c900cefdc76e",
+                    "type" : "string",
+                    "value" : "fas fa-ban"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "7db12287-6246-455c-80a3-da0c928fdf9f",
+                    "type" : "string",
+                    "value" : "has-text-danger"
+                  }
+                }
+              },
+              "elementId" : "im-element-58"
+            } ]
+          } ]
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "55066a33-6b99-43c3-8356-b6636e5a6edd",
+        "elementTypeName" : "ImBulmaField",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "44ee21ea-59b1-4982-9930-216cfa4e6c5f",
+              "type" : "formula",
+              "value" : {
+                "target" : "55066a33-6b99-43c3-8356-b6636e5a6edd",
+                "formula" : " $input.__mode__ == $constant.mode.refer ? \"imds-field imds-textbox imds-textbox-integer imds-static-field\" : \"imds-field imds-textbox imds-textbox-integer\""
+              }
+            },
+            "showLabel" : {
+              "version" : 1,
+              "uuid" : "775ae7c1-afca-4d62-bfb7-d2fa655932ca",
+              "type" : "boolean",
+              "value" : "true"
+            },
+            "showValidationErrorMessage" : {
+              "version" : 1,
+              "uuid" : "e7211122-68b4-4963-b952-6222275a9572",
+              "type" : "boolean",
+              "value" : "true"
+            }
+          }
+        },
+        "elementId" : "im-element-59",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "37888bd7-3180-4b38-a14b-4f36363b4820",
+          "elementTypeName" : "ImBulmaFieldLabel",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "label" : {
+                "version" : 1,
+                "uuid" : "351f10e0-0a25-4dfd-947a-95be3f9ba257",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "37888bd7-3180-4b38-a14b-4f36363b4820",
+                  "path" : "$i18n.entity_label_qqqq"
+                }
+              }
+            }
+          },
+          "elementId" : "im-element-60"
+        }, {
+          "version" : 1,
+          "uuid" : "86061f48-25a6-4b86-930a-120c11af3e34",
+          "elementTypeName" : "ImBulmaFieldInner",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-61",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "186aa5fa-ec40-4006-94f8-a41b69cea73c",
+            "elementTypeName" : "ImBulmaInputFormattedNumberControl",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "c2db9676-7c86-4ba5-8d21-ad70d2bad4b6",
+                  "type" : "string",
+                  "value" : "imds-refer-field"
+                },
+                "showLeftIcon" : {
+                  "version" : 1,
+                  "uuid" : "619434bf-b22c-4088-b2b5-47c4b110d66c",
+                  "type" : "boolean",
+                  "value" : "false"
+                }
+              }
+            },
+            "elementId" : "im-element-62",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "92b4f546-daa6-4bf7-b57b-373be3e6afc3",
+              "elementTypeName" : "ImBulmaInputFormattedNumber",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "onChange" : {
+                    "version" : 1,
+                    "uuid" : "09c98ded-8549-4883-8ccc-99b1ac366214",
+                    "type" : "string",
+                    "value" : "efee4014-fa6c-460c-965b-926c01183852"
+                  },
+                  "disabled" : {
+                    "version" : 1,
+                    "uuid" : "c8c51d3b-7960-4824-a66a-34e70123fb0a",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "92b4f546-daa6-4bf7-b57b-373be3e6afc3",
+                      "formula" : " $variable.state.isLocked && $input.__mode__ == $constant.mode.edit"
+                    }
+                  },
+                  "readonly" : {
+                    "version" : 1,
+                    "uuid" : "cc00650d-3bd1-43ba-84d6-c36a69742f48",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "92b4f546-daa6-4bf7-b57b-373be3e6afc3",
+                      "formula" : " $input.__mode__ == $constant.mode.refer"
+                    }
+                  },
+                  "static" : {
+                    "version" : 1,
+                    "uuid" : "151fd34e-6523-448b-8fea-13ed8bbe59a2",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "92b4f546-daa6-4bf7-b57b-373be3e6afc3",
+                      "formula" : " $input.__mode__ == $constant.mode.refer"
+                    }
+                  },
+                  "value" : {
+                    "version" : 1,
+                    "uuid" : "86a3c5ac-21c6-4d7f-a7da-d8150c897386",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "92b4f546-daa6-4bf7-b57b-373be3e6afc3",
+                      "path" : "$variable.state.entity.qqqq.qqqq"
+                    }
+                  },
+                  "decimalFormat" : {
+                    "version" : 1,
+                    "uuid" : "ef8bebbf-73a6-4d84-93f6-3f9951217ab6",
+                    "type" : "string",
+                    "value" : "account_context"
+                  },
+                  "round" : {
+                    "version" : 1,
+                    "uuid" : "27e05d86-d989-4816-adc3-7199bbfc6d0e",
+                    "type" : "string",
+                    "value" : "round_down"
+                  },
+                  "inputmode" : {
+                    "version" : 1,
+                    "uuid" : "1dd7c7b6-6200-430f-9fa7-55dfb3417399",
+                    "type" : "string",
+                    "value" : "numeric"
+                  }
+                }
+              },
+              "elementId" : "im-element-63"
+            }, {
+              "version" : 1,
+              "uuid" : "69b980b4-b3c0-4cea-a6d3-69014a7634cc",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "3a87d1a2-e470-42b2-b5fb-e3767256d0e2",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "b0d0fd02-65d3-46e2-9945-7db6a61c843f",
+                    "type" : "string",
+                    "value" : "fas fa-dollar-sign"
+                  },
+                  "iconArrangement" : {
+                    "version" : 1,
+                    "uuid" : "d4ff9acd-7024-4fe4-bde5-1a437c36ebc2",
+                    "type" : "string",
+                    "value" : "is-left"
+                  }
+                }
+              },
+              "elementId" : "im-element-64"
+            }, {
+              "version" : 1,
+              "uuid" : "b99c320a-f571-4611-a336-2bd8a6fd7cf6",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "22e3f137-183b-4e9e-b992-d764cf0415c2",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconArrangement" : {
+                    "version" : 1,
+                    "uuid" : "f2f88d3d-a5ed-4f6d-952e-495c5da68f86",
+                    "type" : "string",
+                    "value" : "is-right"
+                  }
+                }
+              },
+              "elementId" : "im-element-65"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "285f16c8-0bcd-4165-8f1b-93c401967aa7",
+          "elementTypeName" : "ImBulmaFieldHelp",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-66",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "209085fc-6f56-44f6-862e-b29cfcba800f",
+            "elementTypeName" : "ImBulmaFieldHelpIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-67",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "a083dbb6-f7b2-4090-a733-db16847137d8",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "06eac032-fced-4565-92ee-775541a377e2",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "5d725511-2a2f-40aa-945f-d693d5927235",
+                    "type" : "string",
+                    "value" : "fas fa-info-circle"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "91e29ae1-e15e-4b98-bdaa-3e021d306b83",
+                    "type" : "string",
+                    "value" : "has-text-info"
+                  }
+                }
+              },
+              "elementId" : "im-element-68"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "81a69064-321e-4675-b203-9d9e476bcb8d",
+          "elementTypeName" : "ImBulmaValidationErrorMessage",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "variable" : {
+                "version" : 1,
+                "uuid" : "6d9d4c0e-0125-4bff-bf36-61ec467b4a70",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "81a69064-321e-4675-b203-9d9e476bcb8d",
+                  "path" : "$variable.state.entity.qqqq.qqqq"
+                }
+              },
+              "caption" : {
+                "version" : 1,
+                "uuid" : "0300b087-aa78-45c1-8dd8-109d3b57f19c",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "81a69064-321e-4675-b203-9d9e476bcb8d",
+                  "path" : "$i18n.entity_label_qqqq"
+                }
+              }
+            }
+          },
+          "elementId" : "im-element-69",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "224a8178-a5a7-490e-8d30-1e676c000bb0",
+            "elementTypeName" : "ImBulmaValidationErrorMessageIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-70",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "d3463703-1b87-43e9-9043-5c8d755161c7",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "33c1bc5d-a645-4937-93e5-9cfb0909bab8",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "ea600e24-82fb-4ae8-975a-8437dd9b790c",
+                    "type" : "string",
+                    "value" : "fas fa-ban"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "91e29ae1-e15e-4b98-bdaa-3e021d306b83",
+                    "type" : "string",
+                    "value" : "has-text-danger"
+                  }
+                }
+              },
+              "elementId" : "im-element-71"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "a496c7df-36c0-4bf5-9dc8-6c28a213400c",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "3dbc6cd0-cd6e-4d3c-b673-03e9a94eb481",
+            "type" : "string",
+            "value" : "Button Area"
+          }
+        }
+      },
+      "elementId" : "im-element-72",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "228b8bee-6e0c-4aeb-abb5-8e19be73ec2b",
+        "elementTypeName" : "ImBulmaField",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "visibility" : {
+              "version" : 1,
+              "uuid" : "647ebf9c-6e34-4e98-a2be-4dfd6e9cd4af",
+              "type" : "formula",
+              "value" : {
+                "target" : "228b8bee-6e0c-4aeb-abb5-8e19be73ec2b",
+                "formula" : " $input.__mode__ == $constant.mode.register"
+              }
+            },
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "697513c9-84ea-4d1d-9b26-8929f873750e",
+              "type" : "string",
+              "value" : "imds-button-area"
+            },
+            "grouping" : {
+              "version" : 1,
+              "uuid" : "7967f7ee-0c09-4686-8f15-be78fb6b8b23",
+              "type" : "string",
+              "value" : "is-grouped"
+            }
+          }
+        },
+        "elementId" : "im-element-73",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "225380aa-6783-4032-b757-dfe793d5ec56",
+          "elementTypeName" : "ImBulmaFieldLabel",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-74"
+        }, {
+          "version" : 1,
+          "uuid" : "4f94dccc-632a-451f-b8e7-85b06d7cf4ce",
+          "elementTypeName" : "ImBulmaFieldInner",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "grouping" : {
+                "version" : 1,
+                "uuid" : "3af1bb77-b3c0-4cbb-8a94-513fc6696732",
+                "type" : "string",
+                "value" : "is-grouped"
+              }
+            }
+          },
+          "elementId" : "im-element-75",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "8ccfea10-0f60-47ce-9676-de367779e3a4",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-76",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "fa7b7476-287d-4f7c-be50-df2bca9c2c09",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "onClick" : {
+                    "version" : 1,
+                    "uuid" : "67d7570b-0cd4-49e9-9fc4-37a9ef816462",
+                    "type" : "string",
+                    "value" : "851362d3-ade4-4c60-99e0-bd3e3eae4e4b"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "b5d9e994-dc1b-441d-8cb3-a8b27c2868ae",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "fa7b7476-287d-4f7c-be50-df2bca9c2c09",
+                      "path" : "$i18n.cap_register_button_label"
+                    }
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "300356b3-1bdc-4949-be23-d0525c437b67",
+                    "type" : "string",
+                    "value" : "is-primary"
+                  }
+                }
+              },
+              "elementId" : "im-element-77"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "1d2fd259-2638-4e85-9151-39abb7cd2d67",
+          "elementTypeName" : "ImBulmaFieldHelp",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-78",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "4a3b3ca1-f892-472e-8447-32eac91e1d9b",
+            "elementTypeName" : "ImBulmaFieldHelpIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-79",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "f59d926a-1cd2-4dec-8ccc-f08db85c1777",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "04acdda2-27d8-48ae-b3ce-52875a2cbbbd",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "3e2cbb1d-4816-47b7-8099-0803db2af0b0",
+                    "type" : "string",
+                    "value" : "fas fa-info-circle"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "5a37bd2a-95b5-4beb-9895-43a7e98b17c9",
+                    "type" : "string",
+                    "value" : "has-text-info"
+                  }
+                }
+              },
+              "elementId" : "im-element-80"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "4025dceb-ec43-4fd5-a4f6-13bee9866da6",
+          "elementTypeName" : "ImBulmaValidationErrorMessage",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "variable" : {
+                "version" : 1,
+                "uuid" : "dd2770b0-b7eb-4fbe-8c06-f165e0f4a2ca",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "4025dceb-ec43-4fd5-a4f6-13bee9866da6",
+                  "path" : ""
+                }
+              }
+            }
+          },
+          "elementId" : "im-element-81",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "7728c682-5619-4799-a6a3-ea84f036af2d",
+            "elementTypeName" : "ImBulmaValidationErrorMessageIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-82",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "77fdb9bc-7235-465e-b56b-90ab73477bbe",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "9c3bd56b-826e-4078-9f8d-958ac96275ac",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "36272051-de36-410e-b2ab-8876c1db79f2",
+                    "type" : "string",
+                    "value" : "fas fa-ban"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "f2c076bb-dd77-49e5-9525-a7db32c68e78",
+                    "type" : "string",
+                    "value" : "has-text-danger"
+                  }
+                }
+              },
+              "elementId" : "im-element-83"
+            } ]
+          } ]
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "e12a068f-8535-406e-b863-dfc262720329",
+        "elementTypeName" : "ImBulmaField",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "visibility" : {
+              "version" : 1,
+              "uuid" : "0b5a5507-9e5b-433b-ad81-2d14297e9975",
+              "type" : "formula",
+              "value" : {
+                "target" : "e12a068f-8535-406e-b863-dfc262720329",
+                "formula" : " $input.__mode__ == $constant.mode.edit"
+              }
+            },
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "d09af99d-9e5b-43a0-b4bd-2d067c2fc60f",
+              "type" : "string",
+              "value" : "imds-button-area"
+            },
+            "grouping" : {
+              "version" : 1,
+              "uuid" : "cabae48f-e02c-47d4-91e8-90c3a58c1686",
+              "type" : "string",
+              "value" : "is-grouped"
+            }
+          }
+        },
+        "elementId" : "im-element-84",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "f176810f-7830-42e0-ab1c-658308d5f465",
+          "elementTypeName" : "ImBulmaFieldLabel",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-85"
+        }, {
+          "version" : 1,
+          "uuid" : "a4bc37fb-624e-450d-9957-568320a7f3d3",
+          "elementTypeName" : "ImBulmaFieldInner",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "grouping" : {
+                "version" : 1,
+                "uuid" : "a721519a-0578-4776-9f1e-c5dc41e41773",
+                "type" : "string",
+                "value" : "is-grouped"
+              }
+            }
+          },
+          "elementId" : "im-element-86",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "3f886bea-eb6c-4d33-9f98-3c5f1db75b66",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-87",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "61b222ca-9bef-4481-b364-c9ef3c23c9b3",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "onClick" : {
+                    "version" : 1,
+                    "uuid" : "cae2b27a-85d1-4148-82bc-ed8aa15f761f",
+                    "type" : "string",
+                    "value" : "829e45d0-43d7-48f7-a011-3f39e9c44c04"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "7cf952da-4dcf-4204-99ba-178f75c661b5",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "61b222ca-9bef-4481-b364-c9ef3c23c9b3",
+                      "path" : "$i18n.cap_update_button_label"
+                    }
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "fff45849-9eef-4af4-90a0-8e5bbb83de5c",
+                    "type" : "string",
+                    "value" : "is-primary"
+                  },
+                  "disabled" : {
+                    "version" : 1,
+                    "uuid" : "0b008abc-2446-4b1b-a0c7-c3aa51501e6a",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "61b222ca-9bef-4481-b364-c9ef3c23c9b3",
+                      "path" : "$variable.state.isLocked"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-88"
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "f10f6782-6d8f-44e1-a5a7-259a33addfce",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-89",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "35344f98-0024-4d14-a0bf-c24b50c7d9c9",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "onClick" : {
+                    "version" : 1,
+                    "uuid" : "63eb306b-b6c3-4add-b96d-a33920cbc5a4",
+                    "type" : "string",
+                    "value" : "b27a4cc4-1e93-4d05-8e69-0e5897352a96"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "4b616618-d1e7-4566-b804-7f659d01fec2",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "35344f98-0024-4d14-a0bf-c24b50c7d9c9",
+                      "path" : "$i18n.cap_delete_button_label"
+                    }
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "a57ff819-2c86-484c-bb9e-820de208b532",
+                    "type" : "string",
+                    "value" : "is-danger"
+                  },
+                  "outlined" : {
+                    "version" : 1,
+                    "uuid" : "bdf0f967-6b04-4c62-98bf-95ab223dc1b0",
+                    "type" : "boolean",
+                    "value" : "true"
+                  },
+                  "disabled" : {
+                    "version" : 1,
+                    "uuid" : "4a060647-0b2e-4810-9a31-cf9feb3a9fb7",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "35344f98-0024-4d14-a0bf-c24b50c7d9c9",
+                      "path" : "$variable.state.isLocked"
+                    }
+                  }
+                }
+              },
+              "elementId" : "im-element-90"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "b9e3f954-d7bf-4d4c-9ef5-4a644f538ae8",
+          "elementTypeName" : "ImBulmaFieldHelp",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-91",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "00f76397-8f9b-47bf-9ba6-76b00e23269b",
+            "elementTypeName" : "ImBulmaFieldHelpIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-92",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "a57dc092-7999-45f9-873b-7f44ffba97ac",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "08b15272-5890-4118-952b-b71f7dea5ece",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "e76ab16a-745f-496b-9d1c-6034cef92026",
+                    "type" : "string",
+                    "value" : "fas fa-info-circle"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "d07f0910-04ee-4f7f-b567-e900d85136c0",
+                    "type" : "string",
+                    "value" : "has-text-info"
+                  }
+                }
+              },
+              "elementId" : "im-element-93"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "596c8e37-88aa-406f-b396-6ef2404cc002",
+          "elementTypeName" : "ImBulmaValidationErrorMessage",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "variable" : {
+                "version" : 1,
+                "uuid" : "76d594db-dbbf-481c-b7a3-6ea50c84ea4c",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "596c8e37-88aa-406f-b396-6ef2404cc002",
+                  "path" : ""
+                }
+              }
+            }
+          },
+          "elementId" : "im-element-94",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "76d6abcb-0d68-4857-ad04-fa065e1d0ad2",
+            "elementTypeName" : "ImBulmaValidationErrorMessageIconWrap",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-95",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "efb645c7-bab1-4956-a03f-163153682af5",
+              "elementTypeName" : "ImBulmaFontAwesomeIconFixed",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "styleVerticalAlign" : {
+                    "version" : 1,
+                    "uuid" : "cfed7545-8275-4a4c-9b5e-45354550d8c7",
+                    "type" : "string",
+                    "value" : "top"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "02520a6c-088a-45a8-a57c-39073c55fb84",
+                    "type" : "string",
+                    "value" : "fas fa-ban"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "29927d70-6822-4c1b-b6e5-5aedfda48c78",
+                    "type" : "string",
+                    "value" : "has-text-danger"
+                  }
+                }
+              },
+              "elementId" : "im-element-96"
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  },
+  "sortNumber" : 0,
+  "adminFlag" : "0",
+  "localizes" : {
+    "zh_CN" : {
+      "contentId" : "q-crud",
+      "locale" : "zh_CN",
+      "contentName" : "qqq 登记/编辑/参照页面",
+      "description" : "根据「主数据维护」模板创建的登记/编辑/参照页面的内容。"
+    },
+    "en" : {
+      "contentId" : "q-crud",
+      "locale" : "en",
+      "contentName" : "qqq Registration/Edit/Reference Screen",
+      "description" : "This registration/edit/reference screen content is created from the \"Master Maintenance\" template."
+    },
+    "ja" : {
+      "contentId" : "q-crud",
+      "locale" : "ja",
+      "contentName" : "qqq 登録・編集・参照画面",
+      "description" : "「マスタメンテナンス」テンプレートから作成された登録・編集・参照画面のコンテンツです。"
+    }
+  },
+  "sourceTemplateId" : "",
+  "thumbnail" : null,
+  "comment" : null
+} ]

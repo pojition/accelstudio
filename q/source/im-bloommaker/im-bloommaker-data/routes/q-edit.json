@@ -1,0 +1,36 @@
+{
+  "routeId" : "q-edit",
+  "categoryId" : "as_q",
+  "url" : "accel-studio-app/q/edit",
+  "method" : "GET",
+  "contentId" : "q-crud",
+  "contentVersion" : -1,
+  "routeName" : "qqq 編集画面",
+  "description" : "「マスタメンテナンス」テンプレートから作成された編集画面のルーティング定義です。",
+  "sortNumber" : 1,
+  "localizes" : {
+    "zh_CN" : {
+      "routeId" : "q-edit",
+      "locale" : "zh_CN",
+      "routeName" : "qqq 编辑页面",
+      "description" : "根据「主数据维护」模板创建的编辑页面的路由定义。"
+    },
+    "en" : {
+      "routeId" : "q-edit",
+      "locale" : "en",
+      "routeName" : "qqq Edit Screen",
+      "description" : "This edit screen routing definition is created from the \"Master Maintenance\" template."
+    },
+    "ja" : {
+      "routeId" : "q-edit",
+      "locale" : "ja",
+      "routeName" : "qqq 編集画面",
+      "description" : "「マスタメンテナンス」テンプレートから作成された編集画面のルーティング定義です。"
+    }
+  },
+  "preprocesses" : [ {
+    "@class" : "jp.co.intra_mart.foundation.bloommaker.route.BMContentJavaPreprocess",
+    "routeId" : "q-edit",
+    "className" : "jp.co.intra_mart.foundation.craftsman.bloommaker.preprocess.ImbqEditScreenPreprocessor"
+  } ]
+}

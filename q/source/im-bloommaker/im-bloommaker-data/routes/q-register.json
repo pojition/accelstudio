@@ -1,0 +1,36 @@
+{
+  "routeId" : "q-register",
+  "categoryId" : "as_q",
+  "url" : "accel-studio-app/q/register",
+  "method" : "GET",
+  "contentId" : "q-crud",
+  "contentVersion" : -1,
+  "routeName" : "qqq 登録画面",
+  "description" : "「マスタメンテナンス」テンプレートから作成された登録画面のルーティング定義です。",
+  "sortNumber" : 0,
+  "localizes" : {
+    "zh_CN" : {
+      "routeId" : "q-register",
+      "locale" : "zh_CN",
+      "routeName" : "qqq 登记页面",
+      "description" : "根据「主数据维护」模板创建的登记页面的路由定义。"
+    },
+    "en" : {
+      "routeId" : "q-register",
+      "locale" : "en",
+      "routeName" : "qqq Registration Screen",
+      "description" : "This registration screen routing definition is created from the \"Master Maintenance\" template."
+    },
+    "ja" : {
+      "routeId" : "q-register",
+      "locale" : "ja",
+      "routeName" : "qqq 登録画面",
+      "description" : "「マスタメンテナンス」テンプレートから作成された登録画面のルーティング定義です。"
+    }
+  },
+  "preprocesses" : [ {
+    "@class" : "jp.co.intra_mart.foundation.bloommaker.route.BMContentJavaPreprocess",
+    "routeId" : "q-register",
+    "className" : "jp.co.intra_mart.foundation.craftsman.bloommaker.preprocess.ImbqRegisterScreenPreprocessor"
+  } ]
+}

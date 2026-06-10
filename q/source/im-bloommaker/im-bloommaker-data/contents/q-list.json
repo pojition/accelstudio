@@ -1,0 +1,3962 @@
+[ {
+  "contentId" : "q-list",
+  "version" : 1,
+  "categoryId" : "as_q",
+  "contentName" : "qqq 一覧画面",
+  "description" : "「マスタメンテナンス」テンプレートから作成された一覧画面のコンテンツです。",
+  "cssFramework" : "bulma_theme_color",
+  "contentData" : {
+    "version" : 1,
+    "uuid" : "597e0d52-349b-4aea-92b8-57380edab1de",
+    "properties" : {
+      "version" : 1,
+      "values" : {
+        "onLoad" : {
+          "version" : 1,
+          "uuid" : "58061823-3c17-426c-a1d4-f672df400c26",
+          "type" : "string",
+          "value" : "b385ef10-dadf-40e5-888f-8762517dfc5c"
+        },
+        "mainPage" : {
+          "version" : 1,
+          "uuid" : "11baa016-d26e-4c49-9fde-c272dcaf89d8",
+          "type" : "string",
+          "value" : "81b51c59-688e-4bbc-9ad8-1f1b676ff6ff"
+        },
+        "userStyle" : {
+          "version" : 1,
+          "uuid" : "bf69187a-0d9d-4672-aa0b-306181ad3eef",
+          "type" : "string",
+          "value" : "@import url(\"im_design_system/v0.1.0/css/common.css\");\n@import url('im_design_system/imds-iconfont/css/imds-iconfont.min.css');\n\n/* initialization and common styles */\nhtml {\n  font-size: 14px;\n  overflow-y: auto;\n}\n\n.imds-page-title {\n  min-height: 3.572rem;\n  padding: 0 1.14rem 0 0;\n  border-bottom: 1px solid #d5d5d5;\n}\n\n.imds-page-title .subtitle {\n  font-size: 0.86rem;\n}\n\n.imds-page-title .imds-back .button,\n.imds-page-title .imds-refresh .button {\n  width: 3.22rem;\n  height: 3.22rem;\n  font-size: 1.43rem;\n}\n\n/* show scrollbar when the search area is longer than the screen width */\n.search-box {\n  max-height: 100%;\n  overflow-y: auto;\n}\n\n/* fixed display position of the button area */\n.im-hichee-container.im-hichee-production-mode .search-button-area {\n  position: sticky;\n  bottom: 0;\n}\n\n/* Style start for overlay */\n/* Overlay parent element */\n.overlay-wrap-area {\n  position: relative;\n}\n\n/* Search area overlay display */\n.im-hichee-container.im-hichee-production-mode .search-area {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 9999;\n  margin-top: -1rem;\n}\n/* Style end for overlay */\n\n/* override imported css */\n.imds-table-operation-area .button,\n.imds-page-title .search-button .button,\n.search-box .button{\n  min-width: 8em;\n}\n\n.table-header-edge-centering th:first-of-type, .table-header-edge-centering th:last-of-type{\n  text-align: center;\n}\n\n.fa-angle-down {\n  padding-left: 1em;\n}"
+        },
+        "pageTitle" : {
+          "version" : 1,
+          "uuid" : "16e4fad9-a096-4dea-a9c6-64f268797d60",
+          "type" : "formula",
+          "value" : {
+            "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+            "formula" : " $i18n.cap_page_header_label + ' ' + $i18n.cap_page_header_title"
+          }
+        }
+      }
+    },
+    "parameters" : {
+      "constant" : {
+        "version" : 1,
+        "uuid" : "7ab15b0e-efc7-4a10-841c-c7501fbd3fca",
+        "name" : "$constant",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "1848ed7c-fd81-4257-9263-58697e77562c",
+          "name" : "mode",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "d7b73fed-4919-4b87-be37-310d417d24c0",
+            "name" : "register",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "3e620510-aa45-4b6a-834b-e6b48cd5e148",
+            "name" : "refer",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "07c6195f-02ab-4da0-a0b4-e0bd9918c43a",
+            "name" : "edit",
+            "valueType" : "string",
+            "readonly" : false
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "14b1c985-193d-41f6-b4bb-7ad8a6c0e7cb",
+          "name" : "screenUrl",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "08a77a72-b938-4d0d-9076-72865303c1b4",
+            "name" : "register",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "fe1b30f9-b43e-4c31-84c1-8f54cf489822",
+            "name" : "edit",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "3b099ce5-9674-42e6-aa4b-38f16e7b4ef6",
+            "name" : "refer",
+            "valueType" : "string",
+            "readonly" : false
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "0c7954b8-f8ba-4748-b73d-87524234e1e4",
+          "name" : "iconKey",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "4d20bbd1-9bbc-4c59-8c99-4247e513d26f",
+            "name" : "edit",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "a4e0f187-f102-4ed2-863f-2d5c90200064",
+            "name" : "refer",
+            "valueType" : "string",
+            "readonly" : false
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "1543d137-c3f0-422a-b85b-a53036c97f47",
+          "name" : "initCondition",
+          "valueType" : "object",
+          "readonly" : false,
+          "arraySize" : [ 0 ],
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "1db50581-ddfd-4f57-81f9-07b1ccb61192",
+            "name" : "searchCondition",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ ]
+          }, {
+            "version" : 1,
+            "uuid" : "237d7878-466e-462b-b43f-9ae088d86453",
+            "name" : "sortCondition",
+            "valueType" : "object",
+            "readonly" : false,
+            "arrayDepth" : 1,
+            "arraySize" : [ 1 ],
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "c8bda848-49ef-4482-9c51-1b881f8b5543",
+              "name" : "key",
+              "valueType" : "string",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "7501f211-f80b-421c-9adc-14e652f3ebe3",
+              "name" : "order",
+              "valueType" : "string",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "bdce3bc4-d83b-4c65-8317-48c8fffd0456",
+            "name" : "limit",
+            "valueType" : "integer",
+            "readonly" : false,
+            "arraySize" : [ 0 ]
+          }, {
+            "version" : 1,
+            "uuid" : "e858ea10-f425-4629-9834-5c17eb597a27",
+            "name" : "offset",
+            "valueType" : "integer",
+            "readonly" : false,
+            "arraySize" : [ 0 ]
+          } ]
+        } ]
+      },
+      "variable" : {
+        "version" : 1,
+        "uuid" : "6b106ca8-880d-4c93-95a0-998df85cd0de",
+        "name" : "$variable",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "1e47401b-c10b-4893-85cc-1cb03cda4525",
+          "name" : "state",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "4e5b3528-b99e-4a8a-b875-be2bcd8e94aa",
+            "name" : "tableData",
+            "valueType" : "object",
+            "readonly" : false,
+            "arrayDepth" : 1,
+            "arraySize" : [ 1 ],
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "9995641b-0f39-41f6-b4ef-84d74952b404",
+              "name" : "_edit",
+              "valueType" : "string",
+              "readonly" : false
+            }, {
+              "version" : 1,
+              "uuid" : "33605f98-600e-4fea-9964-a8a16c0230dd",
+              "name" : "qq",
+              "valueType" : "string",
+              "readonly" : false,
+              "validationRules" : [ ],
+              "repository" : {
+                "definitionType" : "item",
+                "identify" : "qq"
+              }
+            }, {
+              "version" : 1,
+              "uuid" : "44409856-69da-4e20-940a-d49b810bb701",
+              "name" : "qqqq",
+              "valueType" : "double",
+              "readonly" : false,
+              "validationRules" : [ ],
+              "repository" : {
+                "definitionType" : "item",
+                "identify" : "qqqq"
+              }
+            }, {
+              "version" : 1,
+              "uuid" : "339bf416-d739-41eb-aae2-31dfd30ecc7c",
+              "name" : "_refer",
+              "valueType" : "string",
+              "readonly" : false
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "fc62af0c-dd27-4c1f-9b46-5403b1df085b",
+            "name" : "transitionRequestParameter",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "ce460f14-fbcf-4ee3-935c-6224c2bc7697",
+              "name" : "qq",
+              "valueType" : "string",
+              "readonly" : false,
+              "validationRules" : [ ],
+              "repository" : {
+                "definitionType" : "item",
+                "identify" : "qq"
+              }
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "5e7a00a8-5eba-4988-96be-78a939375f29",
+            "name" : "clickedCell",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "272fea5a-0b49-404f-bcc5-9d143cdf3364",
+              "name" : "index",
+              "valueType" : "integer",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "c89982dc-8e75-49c9-8240-15362e4bdd63",
+              "name" : "key",
+              "valueType" : "string",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "fba7abe2-d94c-4eb0-9472-e29a3e558fde",
+            "name" : "pagination",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "0a752dce-5d3f-4690-a2d8-943018a44d34",
+              "name" : "total",
+              "valueType" : "integer",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "6e53f09a-94a3-498f-a141-7fcb314cfed5",
+              "name" : "rowPerPage",
+              "valueType" : "integer",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "e3da0d93-8ba4-49a9-b7d5-6558243a2b5c",
+              "name" : "current",
+              "valueType" : "integer",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "e41612ce-e030-43dd-a25c-7052984ed2c1",
+            "name" : "condition",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "15d3aa7a-d8b9-4851-83f6-a049a9884289",
+              "name" : "isOpenedCondition",
+              "valueType" : "boolean",
+              "readonly" : false
+            }, {
+              "version" : 1,
+              "uuid" : "e513659e-de48-4a59-8dcd-1b6031c2986e",
+              "name" : "searchCondition",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ ]
+            }, {
+              "version" : 1,
+              "uuid" : "26857b66-0c61-422f-9f91-1992a56caa5b",
+              "name" : "sortCondition",
+              "valueType" : "object",
+              "readonly" : false,
+              "arrayDepth" : 1,
+              "arraySize" : [ 1 ],
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "c7b23cb7-2d6c-4d0d-8b0d-3c7111721c72",
+                "name" : "key",
+                "valueType" : "string",
+                "readonly" : false,
+                "arraySize" : [ 0 ]
+              }, {
+                "version" : 1,
+                "uuid" : "dd1ed4e9-978f-43ed-be18-f6a14b80ddf4",
+                "name" : "order",
+                "valueType" : "string",
+                "readonly" : false,
+                "arraySize" : [ 0 ]
+              } ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "71768b21-8d7d-446c-a0e5-81b72af53323",
+            "name" : "prePagination",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "4ab5a609-fc07-484e-a3dc-dc9e02fcb93f",
+              "name" : "current",
+              "valueType" : "integer",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "d48385e7-c91d-48e2-b548-c80519dcd3fa",
+            "name" : "isFiltered",
+            "valueType" : "boolean",
+            "readonly" : false,
+            "arraySize" : [ 0 ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "869fe174-35b4-4625-a9be-45b308e18009",
+          "name" : "endPoint",
+          "valueType" : "object",
+          "readonly" : false,
+          "arraySize" : [ 0 ],
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "25ac42ff-d2dd-43fe-b650-848ff873392b",
+            "name" : "list",
+            "valueType" : "object",
+            "readonly" : false,
+            "arraySize" : [ 0 ],
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "3cda3211-4f8b-481e-8273-86a60ca05ec7",
+              "name" : "responseData",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "5394ee98-e40f-42da-9343-12af07502b52",
+                "name" : "data",
+                "valueType" : "object",
+                "readonly" : false,
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "53c07ae0-3490-45fe-9844-524cf392e93c",
+                  "name" : "records",
+                  "valueType" : "object",
+                  "readonly" : false,
+                  "arrayDepth" : 1,
+                  "arraySize" : [ 1 ],
+                  "children" : [ {
+                    "version" : 1,
+                    "uuid" : "de0a2c25-9a27-465e-9544-9d4062589148",
+                    "name" : "qq",
+                    "valueType" : "string",
+                    "readonly" : false,
+                    "validationRules" : [ {
+                      "version" : 1,
+                      "type" : "required"
+                    } ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qq"
+                    }
+                  }, {
+                    "version" : 1,
+                    "uuid" : "552d93cc-e91e-44b8-8584-638c5d73cc83",
+                    "name" : "qqqq",
+                    "valueType" : "double",
+                    "readonly" : false,
+                    "validationRules" : [ ],
+                    "repository" : {
+                      "definitionType" : "item",
+                      "identify" : "qqqq"
+                    }
+                  } ],
+                  "repository" : {
+                    "definitionType" : "entityset",
+                    "identify" : "q_qqqq_ENTITY_000_8i1h7rv7fptw819"
+                  }
+                }, {
+                  "version" : 1,
+                  "uuid" : "0d279610-2880-49a4-9dbb-2d387484946a",
+                  "name" : "total",
+                  "valueType" : "integer",
+                  "readonly" : false,
+                  "arraySize" : [ 0 ]
+                } ]
+              } ]
+            }, {
+              "version" : 1,
+              "uuid" : "c5d018f0-8b24-460f-9c81-4a5b57bdaaae",
+              "name" : "requestParameter",
+              "valueType" : "object",
+              "readonly" : false,
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "f5d59286-4677-4a9d-a260-ead6d0ea211a",
+                "name" : "searchCondition",
+                "valueType" : "object",
+                "readonly" : false,
+                "children" : [ ]
+              }, {
+                "version" : 1,
+                "uuid" : "eeeb8ff8-53e2-4200-8813-4e98a59265db",
+                "name" : "sortCondition",
+                "valueType" : "object",
+                "readonly" : false,
+                "arrayDepth" : 1,
+                "arraySize" : [ 1 ],
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "b09d89df-079a-448a-8dea-79d553ba1a6f",
+                  "name" : "key",
+                  "valueType" : "string",
+                  "readonly" : false,
+                  "arraySize" : [ 0 ]
+                }, {
+                  "version" : 1,
+                  "uuid" : "fc607f2b-aff6-42d0-8fbd-e14a1f77a870",
+                  "name" : "order",
+                  "valueType" : "string",
+                  "readonly" : false,
+                  "arraySize" : [ 0 ]
+                } ]
+              }, {
+                "version" : 1,
+                "uuid" : "6e149527-f2bc-4b64-b3ed-3f4f70dbd405",
+                "name" : "limit",
+                "valueType" : "integer",
+                "readonly" : false,
+                "arraySize" : [ 0 ]
+              }, {
+                "version" : 1,
+                "uuid" : "3b23d61d-0ab8-41ab-9622-ef4147bc1a5f",
+                "name" : "offset",
+                "valueType" : "integer",
+                "readonly" : false,
+                "arraySize" : [ 0 ]
+              } ]
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "4338a7df-23da-44cb-bdff-9d8bf658300f",
+          "name" : "headerRowString",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "d9ee416c-620a-4e36-ac47-c1435ad9d3a4",
+            "name" : "_edit",
+            "valueType" : "string",
+            "readonly" : false
+          }, {
+            "version" : 1,
+            "uuid" : "9ed8f5cd-d232-4389-a2c5-58a8fb5d6129",
+            "name" : "qq",
+            "valueType" : "string",
+            "readonly" : false,
+            "validationRules" : [ {
+              "version" : 1,
+              "type" : "required"
+            } ],
+            "repository" : {
+              "definitionType" : "item",
+              "identify" : "qq"
+            }
+          }, {
+            "version" : 1,
+            "uuid" : "5d8a94e6-157c-4fbe-9248-7ae5856d1b32",
+            "name" : "qqqq",
+            "valueType" : "double",
+            "readonly" : false,
+            "validationRules" : [ ],
+            "repository" : {
+              "definitionType" : "item",
+              "identify" : "qqqq"
+            }
+          }, {
+            "version" : 1,
+            "uuid" : "0c70af0c-6248-4d0b-b3c2-e2361dacf923",
+            "name" : "_refer",
+            "valueType" : "string",
+            "readonly" : false
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "79fb6fa2-40b3-47f4-8fc6-12be7c8ce750",
+          "name" : "columnSettings",
+          "valueType" : "object",
+          "readonly" : false,
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "7cbc4200-2349-442d-bdfe-70fd964d2c17",
+            "name" : "_edit",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "0c199fd1-2b6a-4ea4-9458-de0928f04233",
+              "name" : "type",
+              "valueType" : "string",
+              "readonly" : false
+            }, {
+              "version" : 1,
+              "uuid" : "082fdfd9-7f6a-484f-a2b0-11ce6b9d777b",
+              "name" : "iconClass",
+              "valueType" : "string",
+              "readonly" : false
+            }, {
+              "version" : 1,
+              "uuid" : "660dadb3-8a0d-4cf0-b9ee-eba7cbc762b7",
+              "name" : "color",
+              "valueType" : "string",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "eeb71c63-084c-4d8e-92e3-966c918cccd5",
+              "name" : "size",
+              "valueType" : "string",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "41dda243-9d12-4e55-adc6-d9751f4b6570",
+              "name" : "tooltip",
+              "valueType" : "string",
+              "readonly" : false
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "8c26bb97-ef95-4335-aace-2759e26c77df",
+            "name" : "qq",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "5e147edc-575d-449e-afc7-67d0b32c03b9",
+              "name" : "type",
+              "valueType" : "string",
+              "readonly" : false
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "07c29fa0-bc6c-4064-95d2-9ff2e666eae0",
+            "name" : "qqqq",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "646584c4-acec-4582-aedf-15d504b0e8dd",
+              "name" : "type",
+              "valueType" : "string",
+              "readonly" : false
+            } ]
+          }, {
+            "version" : 1,
+            "uuid" : "c1d9a3cd-23b0-467c-9e31-e109c290d496",
+            "name" : "_refer",
+            "valueType" : "object",
+            "readonly" : false,
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "7ca92c43-634c-4d76-a83b-7c59301f819a",
+              "name" : "type",
+              "valueType" : "string",
+              "readonly" : false
+            }, {
+              "version" : 1,
+              "uuid" : "4f3c7332-63a5-4759-acf9-fe2a293ae104",
+              "name" : "iconClass",
+              "valueType" : "string",
+              "readonly" : false
+            }, {
+              "version" : 1,
+              "uuid" : "6ecf9728-d3d5-4517-9ae9-a8de8d488c3b",
+              "name" : "color",
+              "valueType" : "string",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "5e611847-ae3c-42b2-a9a2-cb2175a632c0",
+              "name" : "size",
+              "valueType" : "string",
+              "readonly" : false,
+              "arraySize" : [ 0 ]
+            }, {
+              "version" : 1,
+              "uuid" : "d1bb79d5-7ec6-4ee9-b960-b38a59bc3ed8",
+              "name" : "tooltip",
+              "valueType" : "string",
+              "readonly" : false
+            } ]
+          } ]
+        } ]
+      },
+      "input" : {
+        "version" : 1,
+        "uuid" : "e76b3278-fa3e-4983-b239-c61b53e0e082",
+        "name" : "$input",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "e171f6c0-9209-4892-9299-55ecf2702a1a",
+          "name" : "__mode__",
+          "valueType" : "string",
+          "readonly" : false
+        } ]
+      },
+      "i18n" : {
+        "version" : 1,
+        "uuid" : "fab1dbcd-2a54-4226-a9a2-11d2709868b9",
+        "name" : "$i18n",
+        "valueType" : "object",
+        "readonly" : false,
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "c92be845-4e9f-4fcc-85d3-db7434a64745",
+          "name" : "cap_page_header_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "36f57b3f-8bc5-4c4c-bdfc-8c0c39b93a36",
+          "name" : "cap_page_header_title",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "66251ade-f074-48f6-b747-c340e7af845b",
+          "name" : "msg_page_header_back_icon",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "9ed8f5cd-d232-4389-a2c5-58a8fb5d6129",
+          "name" : "entity_label_qq",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "5d8a94e6-157c-4fbe-9248-7ae5856d1b32",
+          "name" : "entity_label_qqqq",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "57fe30a5-f7a0-4966-9b01-2194480d54fe",
+          "name" : "msg_page_header_reload_icon",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "6eeb415b-d155-444e-9a93-eb52a2204ac3",
+          "name" : "cap_table_operation_register_button_label",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "4c452d6f-5af1-4038-8173-4c33e4561a0f",
+          "name" : "msg_load_table_list_failed",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "bf2282b2-a9c3-47ea-8581-9dcef139b893",
+          "name" : "tooltip_show_menu",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "fe430661-dc78-4324-a417-ad61e09d82bb",
+          "name" : "entity_label_edit",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "c54dc639-f7bd-441b-9d30-803138c06583",
+          "name" : "entity_label_refer",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "d40e8b56-e263-4834-95dd-2c689d638aa9",
+          "name" : "cap_search_condition_search",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "55244be5-ebcc-452c-9573-f7776ae13d5b",
+          "name" : "cap_search_condition_clear",
+          "valueType" : "i18n",
+          "readonly" : true
+        }, {
+          "version" : 1,
+          "uuid" : "2a6e2510-c2f6-488c-9afc-4fb839df5523",
+          "name" : "cap_search_condition_searched",
+          "valueType" : "i18n",
+          "readonly" : true
+        } ]
+      }
+    },
+    "arguments" : {
+      "constant" : {
+        "version" : 1,
+        "uuid" : "b82e57ae-f958-4801-bd36-32706aaf6d93",
+        "type" : "object",
+        "value" : {
+          "mode" : {
+            "version" : 1,
+            "uuid" : "87341629-b076-480a-b8e6-910de455d1ee",
+            "type" : "object",
+            "value" : {
+              "register" : {
+                "version" : 1,
+                "uuid" : "6f9294a7-7073-4d4b-9d1d-04c9a063c1e3",
+                "type" : "string",
+                "value" : "register"
+              },
+              "refer" : {
+                "version" : 1,
+                "uuid" : "7b39f1c4-f815-4e53-89dc-5e80a98a4c3c",
+                "type" : "string",
+                "value" : "refer"
+              },
+              "edit" : {
+                "version" : 1,
+                "uuid" : "ea886cea-1a82-427b-816e-212ee8c38d3d",
+                "type" : "string",
+                "value" : "edit"
+              }
+            }
+          },
+          "screenUrl" : {
+            "version" : 1,
+            "uuid" : "3427a177-9dae-4851-8614-356cf3bd9397",
+            "type" : "object",
+            "value" : {
+              "register" : {
+                "version" : 1,
+                "uuid" : "7b2f3d38-2612-4554-8cc4-8a0fae625b27",
+                "type" : "string",
+                "value" : "accel-studio-app/q/register"
+              },
+              "edit" : {
+                "version" : 1,
+                "uuid" : "5a4eab73-41d1-4dcb-b030-db6d674f4c91",
+                "type" : "string",
+                "value" : "accel-studio-app/q/edit"
+              },
+              "refer" : {
+                "version" : 1,
+                "uuid" : "59222521-005c-4252-9ab3-6baad62b6a43",
+                "type" : "string",
+                "value" : "accel-studio-app/q/refer"
+              }
+            }
+          },
+          "iconKey" : {
+            "version" : 1,
+            "uuid" : "15c4e16f-3085-4d0d-850d-ab406255d0b7",
+            "type" : "object",
+            "value" : {
+              "edit" : {
+                "version" : 1,
+                "uuid" : "85cf3998-c011-44f5-94a9-6462a97dd3f0",
+                "type" : "string",
+                "value" : "_edit"
+              },
+              "refer" : {
+                "version" : 1,
+                "uuid" : "7377c7d6-85a0-44a2-8a98-9c5663fc79ef",
+                "type" : "string",
+                "value" : "_refer"
+              }
+            }
+          },
+          "initCondition" : {
+            "version" : 1,
+            "uuid" : "56e555fa-633b-4f3c-b470-382597379857",
+            "type" : "object",
+            "value" : {
+              "sortCondition" : {
+                "version" : 1,
+                "uuid" : "e9747353-da88-4c68-8dc6-ba6f22b667b8",
+                "type" : "array",
+                "value" : [ {
+                  "version" : 1,
+                  "uuid" : "701367e5-c0e7-4ffe-a0ae-17531409ccad",
+                  "type" : "object",
+                  "value" : {
+                    "key" : {
+                      "version" : 1,
+                      "uuid" : "00f5dc96-b269-4742-8822-9dcd1f342667",
+                      "type" : "null",
+                      "value" : null
+                    },
+                    "order" : {
+                      "version" : 1,
+                      "uuid" : "119e061b-2337-4f8b-850d-e06e411ced2d",
+                      "type" : "null",
+                      "value" : null
+                    }
+                  }
+                } ]
+              },
+              "searchCondition" : {
+                "version" : 1,
+                "uuid" : "e716b07b-8c8e-487e-b1ab-c80670dd1790",
+                "type" : "object",
+                "value" : { }
+              },
+              "limit" : {
+                "version" : 1,
+                "uuid" : "9aae32ff-426b-4103-b3a0-1715c9866376",
+                "type" : "integer",
+                "value" : "20"
+              },
+              "offset" : {
+                "version" : 1,
+                "uuid" : "464e5c3f-5677-4a9f-ac9b-7444e34fc866",
+                "type" : "integer",
+                "value" : "0"
+              }
+            }
+          }
+        }
+      },
+      "variable" : {
+        "version" : 1,
+        "uuid" : "02076ef5-160a-4f2d-bae7-8f12723cc8c2",
+        "type" : "object",
+        "value" : {
+          "state" : {
+            "version" : 1,
+            "uuid" : "66efdd3e-1c07-4c3e-bbde-ebe02215b73a",
+            "type" : "object",
+            "value" : {
+              "tableData" : {
+                "version" : 1,
+                "uuid" : "ea2269fe-93c4-4fc8-82ab-1847006ab157",
+                "type" : "array",
+                "value" : [ {
+                  "version" : 1,
+                  "uuid" : "74523c20-0824-4b83-b100-78fd24fd3574",
+                  "type" : "object",
+                  "value" : {
+                    "qq" : {
+                      "version" : 1,
+                      "uuid" : "f470f16d-0de7-4d61-9a27-65e76c62a659",
+                      "type" : "null",
+                      "value" : null
+                    },
+                    "qqqq" : {
+                      "version" : 1,
+                      "uuid" : "47eef08b-c786-4352-95c8-2e8a64e523fb",
+                      "type" : "null",
+                      "value" : null
+                    },
+                    "_edit" : {
+                      "version" : 1,
+                      "uuid" : "a8dd7c94-453e-4214-b732-3e66cf6dded4",
+                      "type" : "null",
+                      "value" : null
+                    },
+                    "_refer" : {
+                      "version" : 1,
+                      "uuid" : "3940915f-b4ca-4422-b7aa-05b010429590",
+                      "type" : "null",
+                      "value" : null
+                    }
+                  }
+                } ]
+              },
+              "transitionRequestParameter" : {
+                "version" : 1,
+                "uuid" : "1fa4cadf-536d-4270-a763-a60c4384909e",
+                "type" : "object",
+                "value" : {
+                  "qq" : {
+                    "version" : 1,
+                    "uuid" : "69b9d4cd-10c3-4fe2-96d6-18046fbe6d1c",
+                    "type" : "string",
+                    "value" : ""
+                  }
+                }
+              },
+              "clickedCell" : {
+                "version" : 1,
+                "uuid" : "19156c66-245a-49c1-aac7-a45cc0a9dec8",
+                "type" : "object",
+                "value" : {
+                  "index" : {
+                    "version" : 1,
+                    "uuid" : "cc4291bd-d488-469f-8bc2-6142bab6cf1d",
+                    "type" : "null",
+                    "value" : null
+                  },
+                  "key" : {
+                    "version" : 1,
+                    "uuid" : "66572046-2777-454f-8e84-04b71bcf39ef",
+                    "type" : "null",
+                    "value" : null
+                  }
+                }
+              },
+              "pagination" : {
+                "version" : 1,
+                "uuid" : "0d107130-1ce9-4f28-a243-18f909731558",
+                "type" : "object",
+                "value" : {
+                  "total" : {
+                    "version" : 1,
+                    "uuid" : "a3e192c2-637a-4868-99e9-0c94a829cad6",
+                    "type" : "null",
+                    "value" : null
+                  },
+                  "rowPerPage" : {
+                    "version" : 1,
+                    "uuid" : "0a33b8e7-a0b5-4254-b07d-6cf5c8f44347",
+                    "type" : "null",
+                    "value" : null
+                  },
+                  "current" : {
+                    "version" : 1,
+                    "uuid" : "b1d23a50-09ff-4101-ac57-1987c177d772",
+                    "type" : "null",
+                    "value" : null
+                  }
+                }
+              },
+              "condition" : {
+                "version" : 1,
+                "uuid" : "d5ce95fa-bd66-40cf-a6f3-4c75ebdb9ba8",
+                "type" : "object",
+                "value" : {
+                  "searchCondition" : {
+                    "version" : 1,
+                    "uuid" : "97158c14-720e-4c10-8afb-3f5c0679074b",
+                    "type" : "object",
+                    "value" : { }
+                  },
+                  "sortCondition" : {
+                    "version" : 1,
+                    "uuid" : "10acd689-5ae5-4971-894c-0f477eac66d6",
+                    "type" : "array",
+                    "value" : [ {
+                      "version" : 1,
+                      "uuid" : "8e778c1a-8393-4289-af82-928aabd5142d",
+                      "type" : "object",
+                      "value" : {
+                        "key" : {
+                          "version" : 1,
+                          "uuid" : "abd0923b-09e5-49f1-bd95-bba8566449f7",
+                          "type" : "null",
+                          "value" : null
+                        },
+                        "order" : {
+                          "version" : 1,
+                          "uuid" : "263bf336-8d64-41ac-8180-8e00e1b34d6f",
+                          "type" : "null",
+                          "value" : null
+                        }
+                      }
+                    } ]
+                  },
+                  "isOpenedCondition" : {
+                    "version" : 1,
+                    "uuid" : "09514953-a422-4e6e-9e63-aaa6a8e397b3",
+                    "type" : "boolean",
+                    "value" : "false"
+                  }
+                }
+              },
+              "prePagination" : {
+                "version" : 1,
+                "uuid" : "1aec274d-53a5-4519-87fb-7fa9b9a4a060",
+                "type" : "object",
+                "value" : {
+                  "current" : {
+                    "version" : 1,
+                    "uuid" : "e9af27c0-53f3-4a0a-be58-afa879052cc8",
+                    "type" : "null",
+                    "value" : null
+                  }
+                }
+              },
+              "isFiltered" : {
+                "version" : 1,
+                "uuid" : "985f5c38-ea4f-42ba-a261-4647b757f919",
+                "type" : "boolean",
+                "value" : "false"
+              }
+            }
+          },
+          "headerRowString" : {
+            "version" : 1,
+            "uuid" : "9b0a31aa-2eda-4ca0-96e1-3adb73fbed89",
+            "type" : "object",
+            "value" : {
+              "qq" : {
+                "version" : 1,
+                "uuid" : "b31eb362-10da-4aa0-9992-ba1037f7b2dd",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$i18n.entity_label_qq"
+                }
+              },
+              "qqqq" : {
+                "version" : 1,
+                "uuid" : "e67fa2c8-8503-45b4-9c71-b9db92e7b87c",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$i18n.entity_label_qqqq"
+                }
+              },
+              "_edit" : {
+                "version" : 1,
+                "uuid" : "cf1b0b25-29fd-4ec0-b22c-9b09a9b7d7b7",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$i18n.entity_label_edit"
+                }
+              },
+              "_refer" : {
+                "version" : 1,
+                "uuid" : "66f06965-6af0-4a35-b4ab-fbe5de64e9fa",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$i18n.entity_label_refer"
+                }
+              }
+            }
+          },
+          "columnSettings" : {
+            "version" : 1,
+            "uuid" : "0c833d78-603f-420a-baaf-3aaad261ba33",
+            "type" : "object",
+            "value" : {
+              "qq" : {
+                "version" : 1,
+                "uuid" : "9796f788-bdec-4fbc-afe1-fc06ce49318b",
+                "type" : "object",
+                "value" : {
+                  "type" : {
+                    "version" : 1,
+                    "uuid" : "279fa4b0-b3de-42ef-a3c0-1562309cf305",
+                    "type" : "string",
+                    "value" : "string"
+                  }
+                }
+              },
+              "qqqq" : {
+                "version" : 1,
+                "uuid" : "dccd1226-8525-44d0-92c2-6a2b079e68e7",
+                "type" : "object",
+                "value" : {
+                  "type" : {
+                    "version" : 1,
+                    "uuid" : "aa19817a-4f41-4707-833d-de14ba9cf552",
+                    "type" : "string",
+                    "value" : "double"
+                  }
+                }
+              },
+              "_edit" : {
+                "version" : 1,
+                "uuid" : "0fe5d78d-504b-44f4-9a04-9e048d5b8303",
+                "type" : "object",
+                "value" : {
+                  "type" : {
+                    "version" : 1,
+                    "uuid" : "90372c3a-f78d-476b-aa26-1f831ee51604",
+                    "type" : "string",
+                    "value" : "icon-action"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "a8d6a32b-051b-48ec-a999-fd6d9d4a058d",
+                    "type" : "string",
+                    "value" : "fas fa-pen fa-lg"
+                  },
+                  "tooltip" : {
+                    "version" : 1,
+                    "uuid" : "a2c6d0a5-a1b0-40e9-bb68-011d66d0b9de",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$i18n.entity_label_edit"
+                    }
+                  },
+                  "size" : {
+                    "version" : 1,
+                    "uuid" : "f4100a4d-70d9-4c23-b6f5-ba0230dafc4d",
+                    "type" : "string",
+                    "value" : "is-medium"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "532d316e-1211-4e03-b408-057f3f4c82ad",
+                    "type" : "string",
+                    "value" : "has-text-grey-dark"
+                  }
+                }
+              },
+              "_refer" : {
+                "version" : 1,
+                "uuid" : "8b854ec7-7533-4437-b1f4-63905b6dacbb",
+                "type" : "object",
+                "value" : {
+                  "type" : {
+                    "version" : 1,
+                    "uuid" : "701f5e83-4d86-44d3-a3e4-20fdc3cfa558",
+                    "type" : "string",
+                    "value" : "icon-action"
+                  },
+                  "iconClass" : {
+                    "version" : 1,
+                    "uuid" : "5fc5ebc6-d7c1-4098-8b27-398cce97d8a6",
+                    "type" : "string",
+                    "value" : "far fa-file-alt fa-lg"
+                  },
+                  "tooltip" : {
+                    "version" : 1,
+                    "uuid" : "01a0b359-a75e-4171-a751-d5de621c46b5",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$i18n.entity_label_refer"
+                    }
+                  },
+                  "size" : {
+                    "version" : 1,
+                    "uuid" : "7e6b2e8e-4045-4d7b-aeaa-ceec01009094",
+                    "type" : "string",
+                    "value" : "is-medium"
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "06808f5e-b55e-466c-8c7d-95d8c39220d6",
+                    "type" : "string",
+                    "value" : "has-text-grey-dark"
+                  }
+                }
+              }
+            }
+          },
+          "endPoint" : {
+            "version" : 1,
+            "uuid" : "fb5febf0-9968-4a99-8065-af30510124b1",
+            "type" : "object",
+            "value" : {
+              "list" : {
+                "version" : 1,
+                "uuid" : "1ec99423-50b5-484e-a2c4-671340e9d855",
+                "type" : "object",
+                "value" : {
+                  "responseData" : {
+                    "version" : 1,
+                    "uuid" : "9b4ed1eb-e812-4930-9ab7-1a3f49dd5d31",
+                    "type" : "object",
+                    "value" : {
+                      "data" : {
+                        "version" : 1,
+                        "uuid" : "ed835e1d-2626-4470-b683-f95c6157d966",
+                        "type" : "object",
+                        "value" : {
+                          "records" : {
+                            "version" : 1,
+                            "uuid" : "5e960303-8110-4666-9eb7-147862c5cfc4",
+                            "type" : "array",
+                            "value" : [ {
+                              "version" : 1,
+                              "uuid" : "e2af3514-aa7f-401e-8f3d-601aef80aafd",
+                              "type" : "object",
+                              "value" : {
+                                "qq" : {
+                                  "version" : 1,
+                                  "uuid" : "a5ffa506-b464-481f-91b9-378816e667c6",
+                                  "type" : "null",
+                                  "value" : null
+                                },
+                                "qqqq" : {
+                                  "version" : 1,
+                                  "uuid" : "386d46ed-ace5-4e20-93e8-2b85d8ad8f38",
+                                  "type" : "null",
+                                  "value" : null
+                                }
+                              }
+                            } ]
+                          },
+                          "total" : {
+                            "version" : 1,
+                            "uuid" : "c4bce0a0-6a8a-4de4-8e83-038fa7c242e6",
+                            "type" : "null",
+                            "value" : null
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "requestParameter" : {
+                    "version" : 1,
+                    "uuid" : "9d7a0845-fbd1-4e08-b6ef-b7f5eaba7b77",
+                    "type" : "object",
+                    "value" : {
+                      "limit" : {
+                        "version" : 1,
+                        "uuid" : "9261d2c1-cd9c-4725-883d-7e501f57e5ae",
+                        "type" : "null",
+                        "value" : null
+                      },
+                      "offset" : {
+                        "version" : 1,
+                        "uuid" : "9ff8e4d3-a784-45aa-81fb-5c0dae053c88",
+                        "type" : "null",
+                        "value" : null
+                      },
+                      "searchCondition" : {
+                        "version" : 1,
+                        "uuid" : "f7e5b475-79c6-4452-a887-3a61a5100aac",
+                        "type" : "object",
+                        "value" : { }
+                      },
+                      "sortCondition" : {
+                        "version" : 1,
+                        "uuid" : "4938ee38-239c-458f-a425-03611c7c2590",
+                        "type" : "array",
+                        "value" : [ {
+                          "version" : 1,
+                          "uuid" : "35e4d42d-033d-4d3e-927e-854a497e346e",
+                          "type" : "object",
+                          "value" : {
+                            "key" : {
+                              "version" : 1,
+                              "uuid" : "a25711ba-1847-4e45-9870-6fc68db428b1",
+                              "type" : "null",
+                              "value" : null
+                            },
+                            "order" : {
+                              "version" : 1,
+                              "uuid" : "4ed0ea34-c5b8-4078-8a2f-1f572f367986",
+                              "type" : "null",
+                              "value" : null
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "input" : {
+        "version" : 1,
+        "uuid" : "e62d4fdd-2746-48fb-a1f5-cbc4618baade",
+        "type" : "object",
+        "value" : {
+          "__mode__" : {
+            "version" : 1,
+            "uuid" : "044a1084-d818-465f-aafd-73830bd810aa",
+            "type" : "string",
+            "value" : "list"
+          }
+        }
+      },
+      "i18n" : {
+        "version" : 1,
+        "uuid" : "3706b0eb-4dab-43c5-9519-a8b4014429f1",
+        "type" : "object",
+        "value" : {
+          "msg_page_header_back_icon" : {
+            "version" : 1,
+            "uuid" : "0e1b838f-90cc-4f9a-b621-721fb5dff539",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "一覧画面に戻ります。",
+              "ja" : "一覧画面に戻ります。",
+              "en" : "Return to List Screen.",
+              "zh_CN" : "返回到列表页面。"
+            }
+          },
+          "msg_page_header_reload_icon" : {
+            "version" : 1,
+            "uuid" : "8fcf8895-7f65-4928-a605-1ff0822049d1",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "このページを再読み込みします。",
+              "ja" : "このページを再読み込みします。",
+              "en" : "Reload this page.",
+              "zh_CN" : "重新读取该页面。"
+            }
+          },
+          "entity_label_qq" : {
+            "version" : 1,
+            "uuid" : "79813df1-b306-4d57-a8e1-69d40af510a8",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "q"
+            }
+          },
+          "entity_label_qqqq" : {
+            "version" : 1,
+            "uuid" : "258db422-5494-453a-a449-e96f8efc6ab3",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "qqq"
+            }
+          },
+          "cap_page_header_label" : {
+            "version" : 1,
+            "uuid" : "6924d417-eff1-4b2f-b632-aa4b2c450eef",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "qqq"
+            }
+          },
+          "cap_page_header_title" : {
+            "version" : 1,
+            "uuid" : "4ef040ba-a6bd-4c45-9b2f-92654d5b8509",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "一覧画面",
+              "ja" : "一覧画面",
+              "en" : "List Screen",
+              "zh_CN" : "列表页面"
+            }
+          },
+          "cap_table_operation_register_button_label" : {
+            "version" : 1,
+            "uuid" : "2c2c16aa-3564-4932-a9c9-8ee6e05b2f44",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "新規作成",
+              "ja" : "新規作成",
+              "en" : "Create New",
+              "zh_CN" : "新建"
+            }
+          },
+          "msg_load_table_list_failed" : {
+            "version" : 1,
+            "uuid" : "bf8ab49d-cdbc-4fca-abf9-4b79e93c70ac",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "一覧の取得に失敗しました。",
+              "ja" : "一覧の取得に失敗しました。",
+              "en" : "Failed to acquire list.",
+              "zh_CN" : "列表获取失败。"
+            }
+          },
+          "tooltip_show_menu" : {
+            "version" : 1,
+            "uuid" : "ec23cb70-1a78-46e5-a2c3-3db9949bc1cd",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "メニューを表示する",
+              "ja" : "メニューを表示する",
+              "en" : "Display Menu",
+              "zh_CN" : "显示菜单"
+            }
+          },
+          "entity_label_edit" : {
+            "version" : 1,
+            "uuid" : "1ff26f3b-e288-4c05-aabb-efba80517d95",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "編集",
+              "ja" : "編集",
+              "en" : "Edit",
+              "zh_CN" : "编辑"
+            }
+          },
+          "entity_label_refer" : {
+            "version" : 1,
+            "uuid" : "18fa63e0-cc3c-455f-a189-116cc8fdb819",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "詳細",
+              "ja" : "詳細",
+              "en" : "Details",
+              "zh_CN" : "详细信息"
+            }
+          },
+          "cap_search_condition_search" : {
+            "version" : 1,
+            "uuid" : "db301ab3-9720-4b2c-bf6a-97a4165810ec",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "検索",
+              "ja" : "検索",
+              "en" : "Search",
+              "zh_CN" : "搜索"
+            }
+          },
+          "cap_search_condition_clear" : {
+            "version" : 1,
+            "uuid" : "05e8d7d4-6a10-4125-a5c0-6cb4c7b7148b",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "クリア",
+              "ja" : "クリア",
+              "en" : "Clear",
+              "zh_CN" : "清除"
+            }
+          },
+          "cap_search_condition_searched" : {
+            "version" : 1,
+            "uuid" : "12ab4df4-04c0-487a-96de-5714eea1966a",
+            "type" : "i18n",
+            "value" : {
+              "standard" : "検索(絞込み中)",
+              "ja" : "検索(絞込み中)",
+              "en" : "Search(Refining)",
+              "zh_CN" : "搜索(筛选中)"
+            }
+          }
+        }
+      }
+    },
+    "aliases" : [ ],
+    "events" : {
+      "charts" : [ {
+        "version" : 1,
+        "uuid" : "b385ef10-dadf-40e5-888f-8762517dfc5c",
+        "name" : "初期表示時",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "25a1a9b3-c343-45c1-8253-3b919ae6f479",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "dce341fb-6633-48fd-b8ad-5d8622177051",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.initCondition.limit"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "dab604dc-5341-4167-b2cf-c5422b42702b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.rowPerPage"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "0ba3f452-ed9e-495f-963a-df92c91334b5",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "fc59fc85-57e9-47ba-9f11-93698992349d",
+                "type" : "string",
+                "value" : "1"
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "1daeb232-9098-4af4-83af-e1271a3bb346",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.current"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "d8aea9b7-469e-48e3-879b-891633984311",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "fa41031e-a3ac-4872-9414-445bbb966180",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.initCondition.searchCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "d1ca6be5-17ec-48d5-9476-86282dff98c1",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.searchCondition"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "43665f69-4c2f-4792-8e8f-2d9551331a0e",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "c2656f9c-86ee-475d-9702-424aea508987",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.initCondition.sortCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "3bbe75d0-aa31-4565-8e02-6647a4016c44",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.sortCondition"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "8c844122-94d0-4944-b7ee-d9517c3d3c1b",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "a9df2d01-654c-4600-85bf-7d1238d3eb19",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.initCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "c5596399-a0ea-4bcc-9ac5-29f44275c3ed",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "c946d608-ade4-46c5-9442-8699f6358654",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "7c7814f6-3cf2-4552-9401-7b2719b7fdb2",
+                "type" : "action",
+                "value" : "2464ade5-714b-4a59-b348-23f128f4fedb"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "7a7e1049-590e-4c79-a0bc-2ca024565550",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "f621bc96-8750-4442-aae6-43692f7174b5",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.current"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "88f99a36-6347-4f09-9814-372e12304236",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.prePagination.current"
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "2464ade5-714b-4a59-b348-23f128f4fedb",
+        "name" : "一覧データを取得",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "3d125abb-24f7-4bc6-b8a2-3c21cb0b9bb1",
+          "actionType" : "SendRequestImLogicFlowRouteActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "routeId" : {
+                "version" : 1,
+                "uuid" : "27d0aace-5157-4ea5-bd25-40192013eb4d",
+                "type" : "im-logic-flow-route",
+                "value" : "accel-studio-app/q/list"
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "aeb6e589-a48d-4d84-a714-6d969b792a85",
+                "type" : "literal",
+                "value" : "POST"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "b8e22080-e283-47f3-a411-d454782ee6af",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter"
+                }
+              },
+              "requestHeaders" : {
+                "version" : 1,
+                "uuid" : "e839d98b-748c-45c1-b03a-4572a65e0ea4",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : ""
+                }
+              },
+              "statusCode" : {
+                "version" : 1,
+                "uuid" : "26306234-ada8-40f3-8c8a-02c3d2206ef9",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : ""
+                }
+              },
+              "responseData" : {
+                "version" : 1,
+                "uuid" : "342b01a3-b2d4-4777-91c4-178dbda0a762",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.responseData.data"
+                }
+              },
+              "useSecureToken" : {
+                "version" : 1,
+                "uuid" : "63e334f2-e7ac-4d11-b23b-56dc6b48e112",
+                "type" : "checkbox",
+                "value" : "1"
+              },
+              "withoutEpoch" : {
+                "version" : 1,
+                "uuid" : "e02f5966-37b8-4a33-afcb-e532cbda62ae",
+                "type" : "checkbox",
+                "value" : "0"
+              },
+              "forceAccountContextTimeZone" : {
+                "version" : 1,
+                "uuid" : "b7e6af03-86c7-43ac-9561-edc98e3e8f42",
+                "type" : "checkbox",
+                "value" : "1"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "5438ba80-2498-491d-aaa1-9aefb8554cfc",
+          "actionType" : "UIContainerCustomScriptActionItem",
+          "comment" : "APIで取得したデータを一覧表示用の変数に格納する。",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "script" : {
+                "version" : 1,
+                "uuid" : "b44a73b9-f6d7-4101-a578-27a3ae20e632",
+                "type" : "script",
+                "value" : "const records = $im.resolve('$variable.endPoint.list.responseData.data.records');\r\n\r\n$variable.state.tableData = records.map((record) => {\r\n  record._edit = null;\r\n  record._refer = null;\r\n  return record;\r\n});"
+              },
+              "babel" : {
+                "version" : 1,
+                "uuid" : "4f397d57-f502-4bff-a8f9-f30eb4d8c205",
+                "type" : "literal",
+                "value" : "\"use strict\";\n\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n$resolve(\n  /*#__PURE__*/\n_asyncToGenerator(\n  /*#__PURE__*/\nregeneratorRuntime.mark(function _callee() {\n    if (typeof _arguments !== \"undefined\") _arguments=void(0);\n\n  var records;\n  return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            records = $im.resolve('$variable.endPoint.list.responseData.data.records');\n          $variable.state.tableData = records.map(function (record) {\n            record._edit = null;\n            record._refer = null;\n            return record;\n          });\n\n        case 4:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  }, _callee);\n})));"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "97d9ab62-bfb0-4bd0-8cbb-a94ace11daab",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "62df7103-2e6c-46ad-9d10-80aec6ab3aa0",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.responseData.data.total"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "e91c5942-50eb-47bb-a5d9-b6312fc805f0",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.total"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "cae94807-9dcd-4fb9-87ea-62079735e2ef",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "0cece038-d422-4405-9563-1931ff9521f3",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$env.const.false"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "c0e6c996-c88b-4f47-b2cd-f8af77264635",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.isOpenedCondition"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "0fac0009-9e18-410c-bb07-d3fdcd3a5a85",
+          "actionType" : "UIContainerCustomScriptActionItem",
+          "comment" : "検索絞込み条件が設定されている場合、検索ボタンのラベルを「検索(絞込み中)」にする。",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "script" : {
+                "version" : 1,
+                "uuid" : "bde24bbd-2242-4806-b5f0-389563954dfe",
+                "type" : "script",
+                "value" : "const searchCondition = $im.resolve('$variable.endPoint.list.requestParameter.searchCondition');\r\n\r\nconst isNullOrEmpty = (obj) => {\r\n  for (const value of Object.values(obj)) {\r\n    if (Object.prototype.toString.call(value) === '[object Object]' && value !== null) {\r\n      if (isNullOrEmpty(value)) {\r\n        return true;\r\n      }\r\n    } else if (value !== null && value !== '') {\r\n      return true;\r\n    }\r\n  }\r\n  return false;\r\n};\r\n$variable.state.isFiltered = isNullOrEmpty(searchCondition);"
+              },
+              "babel" : {
+                "version" : 1,
+                "uuid" : "9cd8a7ab-635f-4408-af6a-c7144a088379",
+                "type" : "literal",
+                "value" : "\"use strict\";\n\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n$resolve(\n/*#__PURE__*/\n_asyncToGenerator(\n/*#__PURE__*/\nregeneratorRuntime.mark(function _callee() {\n  if (typeof _arguments !== \"undefined\") _arguments=void(0);\n\n  var searchCondition, isNullOrEmpty;\n  return regeneratorRuntime.wrap(function _callee$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          searchCondition = $im.resolve('$variable.endPoint.list.requestParameter.searchCondition');\n\n          isNullOrEmpty = function isNullOrEmpty(obj) {\n            var _arr = Object.values(obj);\n\n            for (var _i = 0; _i < _arr.length; _i++) {\n              var value = _arr[_i];\n\n              if (Object.prototype.toString.call(value) === '[object Object]' && value !== null) {\n                if (isNullOrEmpty(value)) {\n                  return true;\n                }\n              } else if (value !== null && value !== '') {\n                return true;\n              }\n            }\n\n            return false;\n          };\n\n          $variable.state.isFiltered = isNullOrEmpty(searchCondition);\n\n        case 3:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  }, _callee);\n})));"
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ {
+          "version" : 1,
+          "uuid" : "013d63c6-90e0-453b-8130-628d3c86aa7c",
+          "actionType" : "ImShowErrorDialogActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "message" : {
+                "version" : 1,
+                "uuid" : "f1497c74-8a7a-4de0-bec4-1de52306341e",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$i18n.msg_load_table_list_failed"
+                }
+              }
+            }
+          }
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "49a6f731-2358-4731-a37b-de3421881c55",
+        "name" : "登録画面へ遷移",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "d410911c-50f1-44c3-86ca-a7958ce77288",
+          "actionType" : "PageTransitionActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "url" : {
+                "version" : 1,
+                "uuid" : "995e79f5-86d5-43fc-b7da-2a64eabe0533",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.screenUrl.register"
+                }
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "60d7cc82-e4f3-4749-8857-64328e06d361",
+                "type" : "literal",
+                "value" : "GET"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "ad9d26cd-2164-43f4-b525-185afc0c7827",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : ""
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "7f8d03b0-5ddf-41bc-a2e9-0f78ea3c72a6",
+        "name" : "編集画面へ遷移",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "79c2eff2-0185-428f-83c6-8e7c80dd2ba5",
+          "actionType" : "PageTransitionActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "url" : {
+                "version" : 1,
+                "uuid" : "02cd537e-f5d6-47a9-8105-aebe6ec828a2",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.screenUrl.edit"
+                }
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "82a8d4dc-b68f-452a-a446-61a554fa68eb",
+                "type" : "literal",
+                "value" : "GET"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "491aec93-2e13-4ea5-badd-f6cd9ea64b14",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.transitionRequestParameter"
+                }
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "5e2e27d6-fd61-4a48-80a5-92be0abb190b",
+              "conditionType" : "UIContainerVariableNotEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "b97706b1-10de-49f0-b625-d44e328a86c9",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$variable.state.clickedCell.index"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "a189707a-ef2d-491e-ab9f-3f85e2c4dfab",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$env.const.null"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "f32aad56-58d8-4cd4-a51f-50dc3cd15667",
+        "name" : "参照画面へ遷移",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "104c0883-d884-465c-a7a1-3981fa399352",
+          "actionType" : "PageTransitionActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "url" : {
+                "version" : 1,
+                "uuid" : "55fac250-0809-4a9d-89e0-ffc91d611b9b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.screenUrl.refer"
+                }
+              },
+              "method" : {
+                "version" : 1,
+                "uuid" : "11144fed-fa3b-45de-9924-c7882597d9b8",
+                "type" : "literal",
+                "value" : "GET"
+              },
+              "requestParameters" : {
+                "version" : 1,
+                "uuid" : "a0fb3d69-e8dc-4ad7-8971-0115a23f2cf0",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.transitionRequestParameter"
+                }
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "d5fcfe50-e01d-4888-8f70-56a5447d24f3",
+              "conditionType" : "UIContainerVariableNotEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "bc5194a5-47de-4830-b575-b85b2e646d5d",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$variable.state.clickedCell.index"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "d8aec2aa-af0a-43ae-9975-c17b5d4bc966",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$env.const.null"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "bd1fbfc6-a78c-4ee4-9bb8-4cbb2689eeda",
+        "name" : "編集/参照アイコンが押されたとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "ee304514-b647-4642-8be9-3ed0fc9e6f35",
+          "actionType" : "UIContainerCustomScriptActionItem",
+          "comment" : "選択した行のデータを、画面遷移用のリクエストパラメータ用の変数にセットする。",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "script" : {
+                "version" : 1,
+                "uuid" : "1340a0fd-8bd8-4e28-8101-50c501a4808e",
+                "type" : "script",
+                "value" : "const requestParameter = $im.resolve('$variable.state.transitionRequestParameter');\r\nconst clickedCellData = $im.resolve('$variable.state.tableData[$variable.state.clickedCell.index]');\r\nfor (const key in clickedCellData) {\r\n  if (key in requestParameter) {\r\n    requestParameter[key] = clickedCellData[key];\r\n  }\r\n}\r\n$variable.state.transitionRequestParameter = requestParameter;"
+              },
+              "babel" : {
+                "version" : 1,
+                "uuid" : "2093c642-256d-4240-b6ae-7b09fd48e855",
+                "type" : "literal",
+                "value" : "\"use strict\";\n\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n$resolve(\n/*#__PURE__*/\n_asyncToGenerator(\n/*#__PURE__*/\nregeneratorRuntime.mark(function _callee() {\n  if (typeof _arguments !== \"undefined\") _arguments=void(0);\n\n  var requestParameter, clickedCellData, key;\n  return regeneratorRuntime.wrap(function _callee$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          requestParameter = $im.resolve('$variable.state.transitionRequestParameter');\n          clickedCellData = $im.resolve('$variable.state.tableData[$variable.state.clickedCell.index]');\n\n          for (key in clickedCellData) {\n            if (key in requestParameter) {\n              requestParameter[key] = clickedCellData[key];\n            }\n          }\n\n          $variable.state.transitionRequestParameter = requestParameter;\n\n        case 4:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  }, _callee);\n})));"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "49dd80c1-4a53-4943-bf8c-cb41bf6da40f",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "0034d3f7-acdb-4298-bbcd-026a0493bc38",
+                "type" : "action",
+                "value" : "7f8d03b0-5ddf-41bc-a2e9-0f78ea3c72a6"
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "0f74f22c-cf68-4923-aaa0-e8b7bd25dca6",
+              "conditionType" : "UIContainerVariableEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "6f9883e7-02cd-4fa9-9c21-ee9a131a31b8",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$variable.state.clickedCell.key"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "f1978779-0fea-4480-bb62-812bb4786efe",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$constant.iconKey.edit"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "832bdfb1-c9ba-4ebf-b449-fdf085dbd7db",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "d5f87d37-55fb-42f3-864f-fa0905d844d2",
+                "type" : "action",
+                "value" : "f32aad56-58d8-4cd4-a51f-50dc3cd15667"
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "48716e78-9ed8-4e99-a676-a9d5e483f5f1",
+              "conditionType" : "UIContainerVariableEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "8f227cce-2a32-47c6-b8fb-dcd1309b05f0",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$variable.state.clickedCell.key"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "2dceaf40-e85b-42e2-a7d0-734edf3b2a05",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$constant.iconKey.refer"
+                    }
+                  }
+                }
+              }
+            } ]
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "dd48b811-c3d2-4678-8a1b-394481f51997",
+        "name" : "検索ボタンが押されたとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "46282b37-9eb4-47b3-a197-c2f2f0d76a14",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "ecd503d3-7cd7-4513-a7e9-11a11212434c",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.searchCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "caddf10c-cf7e-4385-81e2-bb569030cf80",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.searchCondition"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "3b2d0072-609b-41e0-921c-ae6c14d997b7",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "67982044-f735-444f-80fd-ea6ee7587bf5",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.sortCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "efc183ce-3ca7-4a29-a224-2d3a32588c5f",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.sortCondition"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "9e49281f-39ef-4228-92f0-24290cdb79b1",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "871a1d2c-1c61-42cd-9c16-5d062c4a93cd",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.rowPerPage"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "90f36d71-81fa-4a0a-8d1e-5778ab5d6571",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.limit"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "0567e92d-3ddd-43a7-bd1e-18374d750079",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "37192df4-cd28-466a-a5bf-379997095582",
+                "type" : "string",
+                "value" : "0"
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "c1edd2d6-486a-40cf-bff2-422acc43bb6b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.offset"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "a3d5af25-2c56-4ff7-a2d5-c8e7222e2398",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "e1e7fda3-b203-4655-8a82-7131916a5ff8",
+                "type" : "string",
+                "value" : "1"
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "9f2b93cb-44cc-4724-82bd-f060ce819263",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.current"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "9ac5c9e3-34f4-4935-beb0-709cf4b0a27d",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "a803d27b-4c28-403c-86f2-22d446ef89ac",
+                "type" : "action",
+                "value" : "2464ade5-714b-4a59-b348-23f128f4fedb"
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "f9ab520a-c44c-4740-b01c-c328f0aea50b",
+        "name" : "検索条件をクリア",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "fade1003-8683-46e6-9519-f7f586d58d7e",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "470ce093-c4a8-4aa3-b0a1-93712fff96aa",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$constant.initCondition.searchCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "790d46ea-b9d1-41ab-8271-031519d082be",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.searchCondition"
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "5a95c3d5-e36b-4932-ba01-48082dca21e6",
+        "name" : "リッチテーブルのinteractiveNavigationEventを実行したとき",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "6faa0629-2c73-4fa1-897e-b914ff601f8d",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "c1fdf6da-aa8c-446e-aeb0-9bf12f28c325",
+                "type" : "action",
+                "value" : "a1d3f7a3-8d1e-44d0-a01b-2a31041afbcc"
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "f1b82b78-b0e9-4751-a848-1484267c5459",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "9b99eb57-4363-4c83-80b0-e02cd730e571",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.current"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "ef81e4e0-1b3b-477e-bfc3-2cb76b7c6b8f",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.prePagination.current"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "54f1e95b-8a2d-4de4-83df-1e862f405399",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "9dce65ca-0eac-4572-94d8-e1e0e359225f",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.sortCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "1d5528bc-c395-460a-9461-35ab20006697",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.sortCondition"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "34be3dde-d711-4f2f-bbe3-8627dc98b01c",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "45fb2763-b8f4-4130-88d8-acf9626da933",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.rowPerPage"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "7db25634-fa55-4ead-9e07-61e06c9a602e",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.limit"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "f6b36956-41ad-4a60-844c-c75ea6509942",
+          "actionType" : "RunSubroutineActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "action" : {
+                "version" : 1,
+                "uuid" : "417ed438-1fa4-4366-b48d-bb3cf151272d",
+                "type" : "action",
+                "value" : "2464ade5-714b-4a59-b348-23f128f4fedb"
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "a1d3f7a3-8d1e-44d0-a01b-2a31041afbcc",
+        "name" : "ページング/ソート処理",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "5b4143bb-cb87-4653-8df3-678945e083b0",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "381e3e88-8607-4089-b3f3-238e087d1ba2",
+                "type" : "formula",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "formula" : " $variable.state.pagination.rowPerPage * ($variable.state.pagination.current - 1) + 1"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "add5a3a1-e601-4c22-9dfa-f7dbba43406b",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.offset"
+                }
+              }
+            }
+          },
+          "condition" : {
+            "matchType" : "and",
+            "conditions" : [ {
+              "version" : 1,
+              "uuid" : "8e732fe3-d05a-4764-952b-2f68b62ea345",
+              "conditionType" : "UIContainerVariableNotEqualsCondition",
+              "parameter" : {
+                "arguments" : {
+                  "expected" : {
+                    "version" : 1,
+                    "uuid" : "7f5d6bbe-af07-47cc-94a6-f89f4de63ea4",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$variable.state.pagination.current"
+                    }
+                  },
+                  "actual" : {
+                    "version" : 1,
+                    "uuid" : "7ed2d68f-427a-4e65-9881-621e8bd76489",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                      "path" : "$variable.state.prePagination.current"
+                    }
+                  }
+                }
+              }
+            } ]
+          },
+          "exitAfterRun" : true
+        }, {
+          "version" : 1,
+          "uuid" : "ee666105-1447-416b-abc1-b542d6ee0292",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "0dd244fe-ef2b-45e7-b610-d8dd7c65d161",
+                "type" : "string",
+                "value" : "0"
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "076d4e46-c822-481e-9b7e-2d7750049947",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.endPoint.list.requestParameter.offset"
+                }
+              }
+            }
+          }
+        }, {
+          "version" : 1,
+          "uuid" : "50cb8521-9768-4433-bbce-92fbacabc28a",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "68e042ee-d8ce-4e6e-b400-33256388de57",
+                "type" : "string",
+                "value" : "1"
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "f36f661e-b38b-4944-bbb1-255e5e0e8654",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.pagination.current"
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      }, {
+        "version" : 1,
+        "uuid" : "39fece67-1059-441b-80b3-b8b3cf53c85a",
+        "name" : "検索エリアの表示/非表示を切り替え",
+        "items" : [ {
+          "version" : 1,
+          "uuid" : "9e44ce21-03ba-4b0a-aed3-bb419cab1fd2",
+          "actionType" : "UIContainerVariableSetActionItem",
+          "enabled" : true,
+          "parameter" : {
+            "arguments" : {
+              "source" : {
+                "version" : 1,
+                "uuid" : "8067f15b-f963-4f84-a594-2160f46bf582",
+                "type" : "formula",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "formula" : " !$variable.state.condition.isOpenedCondition"
+                }
+              },
+              "target" : {
+                "version" : 1,
+                "uuid" : "0990053e-2070-48f0-b31f-97cad969ef28",
+                "type" : "parameter-path",
+                "value" : {
+                  "target" : "597e0d52-349b-4aea-92b8-57380edab1de",
+                  "path" : "$variable.state.condition.isOpenedCondition"
+                }
+              }
+            }
+          }
+        } ],
+        "errorItems" : [ ]
+      } ]
+    },
+    "children" : [ {
+      "version" : 1,
+      "uuid" : "81b51c59-688e-4bbc-9ad8-1f1b676ff6ff",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "28eae7bb-6dc7-4a9c-9de9-22294ad96e00",
+            "type" : "string",
+            "value" : "Main Page"
+          }
+        }
+      },
+      "elementId" : "im-element-1",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "04499f4b-ca93-4ab2-b4ed-8fbcc965f10d",
+        "elementTypeName" : "ImSideMenuContainer",
+        "properties" : {
+          "version" : 1,
+          "values" : { }
+        },
+        "elementId" : "im-element-2",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "ee1df785-a806-44a2-b615-5c236118747a",
+          "elementTypeName" : "ImSideBar",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-3"
+        }, {
+          "version" : 1,
+          "uuid" : "988422dc-b89b-42c7-a971-34a14dd5f282",
+          "elementTypeName" : "ImSideMenu",
+          "properties" : {
+            "version" : 1,
+            "values" : { }
+          },
+          "elementId" : "im-element-4"
+        }, {
+          "version" : 1,
+          "uuid" : "54b2cf0e-1dc4-4353-a43b-959e6979f570",
+          "elementTypeName" : "ImSideMenuContent",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "styleHeight" : {
+                "version" : 1,
+                "uuid" : "9b1713f1-7137-4dc2-8384-26e6912409bb",
+                "type" : "string",
+                "value" : "100%"
+              }
+            }
+          },
+          "elementId" : "im-element-5",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "61ce3dad-a8da-4aa2-a33e-298cdab540fc",
+            "elementTypeName" : "ImContainerPageFrame",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "pageUUID" : {
+                  "version" : 1,
+                  "uuid" : "e835459b-24cf-4884-8b03-76e3da7a3dde",
+                  "type" : "string",
+                  "value" : "8512a5bd-4e7b-4411-9d92-f0c40c6b121f"
+                }
+              }
+            },
+            "elementId" : "im-element-6"
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "8512a5bd-4e7b-4411-9d92-f0c40c6b121f",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "cf0fd4c6-10fd-4280-8466-d153b9bf24a0",
+            "type" : "string",
+            "value" : "Overall"
+          }
+        }
+      },
+      "elementId" : "im-element-7",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "cc39183a-02ee-4af7-a75c-0f5eacbba76b",
+        "elementTypeName" : "ImBulmaColumns",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "5e6aab66-f464-4fad-a43c-e2670797cce7",
+              "type" : "string",
+              "value" : "mb-0"
+            },
+            "elementCount" : {
+              "version" : 1,
+              "uuid" : "90b86c8e-bc0c-4943-bb44-fbba3c6929b3",
+              "type" : "string",
+              "value" : "1"
+            },
+            "centered" : {
+              "version" : 1,
+              "uuid" : "f04e2323-5d98-4c39-9094-2e8feafa0d6f",
+              "type" : "boolean",
+              "value" : "true"
+            }
+          }
+        },
+        "elementId" : "im-element-8",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "5c1abde2-7ac4-4792-bf0a-423aa7cc3605",
+          "elementTypeName" : "ImBulmaColumn",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "userClass" : {
+                "version" : 1,
+                "uuid" : "f63147e6-cdcc-433d-866a-add1c4d51233",
+                "type" : "string",
+                "value" : "pb-0"
+              }
+            }
+          },
+          "elementId" : "im-element-9",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "40edf8bc-5dd2-4c6d-a168-2162ba9a3421",
+            "elementTypeName" : "ImContainerPageFrame",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "pageUUID" : {
+                  "version" : 1,
+                  "uuid" : "6faba659-0b77-4317-b7cd-ce85a7fa5fe6",
+                  "type" : "string",
+                  "value" : "aa5e9f80-b58e-459d-9497-fe2ea6962379"
+                }
+              }
+            },
+            "elementId" : "im-element-10"
+          } ]
+        } ]
+      }, {
+        "version" : 1,
+        "uuid" : "174fd75f-13d9-4f10-89f3-22fdb476df4f",
+        "elementTypeName" : "ImBulmaColumns",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "1546560b-2b39-4037-9e15-d6e0098e0861",
+              "type" : "string",
+              "value" : "p-5"
+            },
+            "styleHeight" : {
+              "version" : 1,
+              "uuid" : "958377fd-51ea-4812-ac63-4866edf660fd",
+              "type" : "string",
+              "value" : "calc(100vh - 3rem)"
+            },
+            "elementCount" : {
+              "version" : 1,
+              "uuid" : "e29eb50b-d875-4383-a292-1a9164cad63a",
+              "type" : "string",
+              "value" : "1"
+            },
+            "responsive" : {
+              "version" : 1,
+              "uuid" : "21d22a13-4c7b-4e2f-9f87-ea17cdf6ec8d",
+              "type" : "string",
+              "value" : "is-desktop"
+            },
+            "centered" : {
+              "version" : 1,
+              "uuid" : "a1330117-a8d8-47cd-8834-716cff3f291e",
+              "type" : "boolean",
+              "value" : "true"
+            }
+          }
+        },
+        "elementId" : "im-element-11",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "a2bd0de0-498b-4bc1-bc12-e7c4e0d0f996",
+          "elementTypeName" : "ImBulmaColumn",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "styleHeight" : {
+                "version" : 1,
+                "uuid" : "6b8e6ae4-530f-42ac-9ee6-1e986d4fa858",
+                "type" : "string",
+                "value" : "100%"
+              },
+              "sizeForMobile" : {
+                "version" : 1,
+                "uuid" : "bfa42b8e-de13-4b03-986e-ed9d30efc54d",
+                "type" : "string",
+                "value" : "is-full-mobile"
+              },
+              "sizeForTablet" : {
+                "version" : 1,
+                "uuid" : "1b97f7db-2140-4b45-af1c-6211d7504235",
+                "type" : "string",
+                "value" : "is-full-tablet"
+              },
+              "sizeForDesktop" : {
+                "version" : 1,
+                "uuid" : "e7f40359-94de-4af7-bfbe-68e51c020616",
+                "type" : "string",
+                "value" : "is-12-desktop"
+              },
+              "sizeForWidescreen" : {
+                "version" : 1,
+                "uuid" : "35b03028-160d-41a7-876a-fe755ce96049",
+                "type" : "string",
+                "value" : "is-12-widescreen"
+              },
+              "sizeForFullhd" : {
+                "version" : 1,
+                "uuid" : "e0eb0695-02dd-4e8f-a55c-cff6aca4b68e",
+                "type" : "string",
+                "value" : "is-12-fullhd"
+              }
+            }
+          },
+          "elementId" : "im-element-12",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "cb675e8c-2c5a-401c-95b0-a07a02e1fa48",
+            "elementTypeName" : "ImContainerPageFrame",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "4d57c5a1-1d55-43ee-baa5-410d0cfb1f16",
+                  "type" : "string",
+                  "value" : "mb-4"
+                },
+                "pageUUID" : {
+                  "version" : 1,
+                  "uuid" : "9a409436-0cb3-47f5-9057-eb22579ed936",
+                  "type" : "string",
+                  "value" : "39ee238e-5663-488e-948d-e90d353c99c1"
+                }
+              }
+            },
+            "elementId" : "im-element-13"
+          }, {
+            "version" : 1,
+            "uuid" : "43c9b2cb-0e21-4270-ba75-1ebb2dbfd77d",
+            "elementTypeName" : "Box",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-14",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "1ccd618f-06a0-4eea-9a4d-c23f29875af4",
+              "elementTypeName" : "Box",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "visibility" : {
+                    "version" : 1,
+                    "uuid" : "fd54f423-bcde-43da-8b59-92bf8c38eb04",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "1ccd618f-06a0-4eea-9a4d-c23f29875af4",
+                      "path" : "$variable.state.condition.isOpenedCondition"
+                    }
+                  },
+                  "userClass" : {
+                    "version" : 1,
+                    "uuid" : "cc48fd82-2699-44d8-90f6-1d6c994dc609",
+                    "type" : "string",
+                    "value" : "search-area"
+                  },
+                  "styleMinWidth" : {
+                    "version" : 1,
+                    "uuid" : "90406462-b4c8-4464-b13f-a81810980d93",
+                    "type" : "string",
+                    "value" : "30%"
+                  }
+                }
+              },
+              "elementId" : "im-element-15",
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "1c727c90-2169-4d6f-b851-84aae6b4301e",
+                "elementTypeName" : "ImContainerPageFrame",
+                "properties" : {
+                  "version" : 1,
+                  "values" : {
+                    "styleWidth" : {
+                      "version" : 1,
+                      "uuid" : "72b47a36-5e9e-4bac-bec9-691d69135f1e",
+                      "type" : "string",
+                      "value" : "28rem"
+                    },
+                    "styleHeight" : {
+                      "version" : 1,
+                      "uuid" : "6c61da3a-a98e-4522-9408-990b7c8d9360",
+                      "type" : "string",
+                      "value" : "100%"
+                    },
+                    "pageUUID" : {
+                      "version" : 1,
+                      "uuid" : "47b6d501-f0de-4b1c-b032-051a62a7bae2",
+                      "type" : "string",
+                      "value" : "fd9ae1c7-a71e-4d52-b7e8-49e2f3414a67"
+                    }
+                  }
+                },
+                "elementId" : "im-element-16"
+              } ]
+            }, {
+              "version" : 1,
+              "uuid" : "804c23e1-2cba-4b0b-84eb-50d4dbfc575d",
+              "elementTypeName" : "ImContainerPageFrame",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "pageUUID" : {
+                    "version" : 1,
+                    "uuid" : "932037a5-2417-4022-a16f-24c9873d2240",
+                    "type" : "string",
+                    "value" : "d69d01ac-d89a-4607-b253-0106292ef15a"
+                  }
+                }
+              },
+              "elementId" : "im-element-17"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "aa5e9f80-b58e-459d-9497-fe2ea6962379",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "96958e07-9498-44f4-9b61-c80ed7e79915",
+            "type" : "string",
+            "value" : "Header"
+          }
+        }
+      },
+      "elementId" : "im-element-18",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "5500f11d-34d7-4c99-a89e-819fbac9978e",
+        "elementTypeName" : "FlexBox",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "f664405e-5fa4-455e-ba8b-7519c27b3947",
+              "type" : "string",
+              "value" : "imds-page-title"
+            },
+            "flexWrap" : {
+              "version" : 1,
+              "uuid" : "76a325dc-99e3-420e-9c33-e1170559ef1f",
+              "type" : "string",
+              "value" : "nowrap"
+            },
+            "alignItems" : {
+              "version" : 1,
+              "uuid" : "c8335711-82f9-4d61-bb70-b41e62b8b11c",
+              "type" : "string",
+              "value" : "center"
+            },
+            "elementCount" : {
+              "version" : 1,
+              "uuid" : "e1949962-ecd6-48b7-9fc8-94e9d42688b1",
+              "type" : "string",
+              "value" : "3"
+            }
+          }
+        },
+        "elementId" : "im-element-19",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "951eb186-53fb-43ac-87fb-2bbc439a7ed9",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "stylePaddingLeft" : {
+                "version" : 1,
+                "uuid" : "c79ef9d8-4165-4474-8d91-bc8b7da7b7b4",
+                "type" : "string",
+                "value" : "1.14rem"
+              },
+              "stylePaddingRight" : {
+                "version" : 1,
+                "uuid" : "1f47a8c2-1dec-48aa-baa7-f7b6def6ee37",
+                "type" : "string",
+                "value" : "0.6em"
+              },
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "7c284acc-b824-4161-9bc8-96749de58bfb",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-20",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "54df4b03-71fb-4d79-a67c-d6a22cabea76",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "69477bf3-cf26-4eb6-a63e-5b0d50efe322",
+                  "type" : "string",
+                  "value" : "imds-application-icon"
+                }
+              }
+            },
+            "elementId" : "im-element-21",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "77807be6-7bcc-4232-ad85-aef23fa4c045",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "b9726aec-6512-4115-82a9-81d87fc3a452",
+                    "type" : "string",
+                    "value" : ""
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "0a823000-0e49-4e40-9cd3-e322891aadfe",
+                    "type" : "string",
+                    "value" : "is-white"
+                  },
+                  "disabled" : {
+                    "version" : 1,
+                    "uuid" : "3bf4779a-ec03-48c1-a71c-b1dd560655f7",
+                    "type" : "boolean",
+                    "value" : "true"
+                  },
+                  "leftIconClass" : {
+                    "version" : 1,
+                    "uuid" : "6c17101b-4ef1-4d82-a279-258f1c99f55f",
+                    "type" : "string",
+                    "value" : "fas fa-th-large imds-iconfont imds-application fa-2x"
+                  }
+                }
+              },
+              "elementId" : "im-element-22"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "2c53f58e-df9c-4af4-8988-95980f72c0b7",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "37c76045-8009-4129-81fc-1dc4d126b4be",
+                "type" : "string",
+                "value" : "1"
+              },
+              "flexShrink" : {
+                "version" : 1,
+                "uuid" : "c248f1f9-7340-4909-a016-64d4c0217fca",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-23",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "1f47a8c2-1dec-48aa-baa7-f7b6def6ee37",
+            "elementTypeName" : "Paragraph",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "6377376e-ed7c-4a05-9f20-fd89b9b5c181",
+                  "type" : "string",
+                  "value" : "subtitle is-7"
+                },
+                "textContent" : {
+                  "version" : 1,
+                  "uuid" : "4cfc1bf5-4fda-4c5f-88e3-2436f7a783fa",
+                  "type" : "parameter-path",
+                  "value" : {
+                    "target" : "4441b980-ddc7-4f23-91d1-fb4ff983902b",
+                    "path" : "$i18n.cap_page_header_label"
+                  }
+                }
+              }
+            },
+            "elementId" : "im-element-24"
+          }, {
+            "version" : 1,
+            "uuid" : "7409cf09-d9f9-4224-9cf4-22df817434e6",
+            "elementTypeName" : "ImBulmaTitle1",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "11a6df04-1688-47f0-bcf5-1826f6818a61",
+                  "type" : "string",
+                  "value" : "is-5"
+                },
+                "textContent" : {
+                  "version" : 1,
+                  "uuid" : "96894af2-69f9-40a3-a2a5-e38797bb1aba",
+                  "type" : "parameter-path",
+                  "value" : {
+                    "target" : "7409cf09-d9f9-4224-9cf4-22df817434e6",
+                    "path" : "$i18n.cap_page_header_title"
+                  }
+                }
+              }
+            },
+            "elementId" : "im-element-25"
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "0f2cb10e-8ee4-4bfe-b615-bbcff2243ff7",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "visibility" : {
+                "version" : 1,
+                "uuid" : "84f07905-eff4-4b8c-ba65-da33a9fe878e",
+                "type" : "boolean",
+                "value" : "true"
+              },
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "e3710434-b2cc-41cc-a736-05ce96917426",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-26",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "af375053-f072-411e-870f-5ea3e73bca13",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : { }
+            },
+            "elementId" : "im-element-27",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "81824af1-82f9-420b-a7b0-3b5e5f003db4",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "toolTip" : {
+                    "version" : 1,
+                    "uuid" : "d92edf1c-f0aa-4a8e-939d-74381e55f7c1",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "81824af1-82f9-420b-a7b0-3b5e5f003db4",
+                      "path" : "$i18n.msg_page_header_reload_icon"
+                    }
+                  },
+                  "onClick" : {
+                    "version" : 1,
+                    "uuid" : "e9a0d32f-1766-442e-9d00-11c8cf6923fd",
+                    "type" : "string",
+                    "value" : "b385ef10-dadf-40e5-888f-8762517dfc5c"
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "d5497061-a0b8-4feb-97fb-51de30cda3e4",
+                    "type" : "string",
+                    "value" : ""
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "92cf5e84-2b16-45e6-8d08-dc9d3091dbd3",
+                    "type" : "string",
+                    "value" : "is-white"
+                  },
+                  "size" : {
+                    "version" : 1,
+                    "uuid" : "0145df05-f42b-425a-8590-d9e15da458e1",
+                    "type" : "string",
+                    "value" : "is-medium"
+                  },
+                  "leftIconClass" : {
+                    "version" : 1,
+                    "uuid" : "eb9e36e6-8213-4f7b-bc2c-3cf567d8f8ee",
+                    "type" : "string",
+                    "value" : "fas fa-redo"
+                  }
+                }
+              },
+              "elementId" : "im-element-28"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "39ee238e-5663-488e-948d-e90d353c99c1",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "b27d784d-4b7d-400c-99b4-82c4d3046c09",
+            "type" : "string",
+            "value" : "Table Operation"
+          }
+        }
+      },
+      "elementId" : "im-element-29",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "99716222-eeab-4db6-9af6-9f768f13a7a9",
+        "elementTypeName" : "FlexBox",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "dabcce03-0270-4125-bebc-64ff86f90f0d",
+              "type" : "string",
+              "value" : "is-4 imds-table-operation-area"
+            },
+            "elementCount" : {
+              "version" : 1,
+              "uuid" : "e5783d5d-84f8-4467-8374-1e7b09b9d7f7",
+              "type" : "string",
+              "value" : "3"
+            }
+          }
+        },
+        "elementId" : "im-element-30",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "95d34ab9-ce20-4d75-b99a-f81efd4e2af0",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "visibility" : {
+                "version" : 1,
+                "uuid" : "3462b9d4-5a49-48c9-8dd4-64ec171c8630",
+                "type" : "boolean",
+                "value" : "false"
+              },
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "4b90aedf-a4fd-438f-bdbd-8d27f46623aa",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-31",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "b07d15a0-faf2-4670-aa50-bd83e0e5c990",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "onClick" : {
+                  "version" : 1,
+                  "uuid" : "b621fe9f-b6fd-481a-8ae8-f7e8d276011b",
+                  "type" : "string",
+                  "value" : "39fece67-1059-441b-80b3-b8b3cf53c85a"
+                },
+                "twiceClickCanceller" : {
+                  "version" : 1,
+                  "uuid" : "06390d3e-8305-440f-84cc-593ab751b592",
+                  "type" : "boolean",
+                  "value" : "false"
+                },
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "8f6fd723-478d-4c3a-80a9-4063194f3e19",
+                  "type" : "string",
+                  "value" : "search-button"
+                }
+              }
+            },
+            "elementId" : "im-element-32",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "dd2a145a-6192-4145-a895-e9216b5273e1",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "toolTip" : {
+                    "version" : 1,
+                    "uuid" : "2dd09ffd-af8a-42f8-939e-ca1d7116ed62",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "dd2a145a-6192-4145-a895-e9216b5273e1",
+                      "path" : "$i18n.cap_search_condition_search"
+                    }
+                  },
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "71972865-506a-4be9-9037-d020940f750d",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "dd2a145a-6192-4145-a895-e9216b5273e1",
+                      "formula" : " $variable.state.isFiltered ? $i18n.cap_search_condition_searched : $i18n.cap_search_condition_search"
+                    }
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "defb7272-9feb-4223-b85b-455f24639cf6",
+                    "type" : "formula",
+                    "value" : {
+                      "target" : "dd2a145a-6192-4145-a895-e9216b5273e1",
+                      "formula" : " $variable.state.isFiltered ? 'is-primary' : ''"
+                    }
+                  },
+                  "outlined" : {
+                    "version" : 1,
+                    "uuid" : "89b4e2ed-f75f-4af4-b6cf-acdae1b02d4f",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "dd2a145a-6192-4145-a895-e9216b5273e1",
+                      "path" : "$variable.state.isFiltered"
+                    }
+                  },
+                  "leftIconClass" : {
+                    "version" : 1,
+                    "uuid" : "bff92107-1b22-42ca-be6f-0a7aa362e5b6",
+                    "type" : "string",
+                    "value" : "fas fa-search"
+                  },
+                  "rightIconClass" : {
+                    "version" : 1,
+                    "uuid" : "019b3ada-5840-4be7-a77f-32161783771e",
+                    "type" : "string",
+                    "value" : "fas fa-angle-down"
+                  }
+                }
+              },
+              "elementId" : "im-element-33"
+            } ]
+          } ]
+        }, {
+          "version" : 1,
+          "uuid" : "43d77ab5-7df3-4c3e-aac7-ff8202bfc0d5",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "e448f3e4-337c-47d0-aa5a-660eeb3ea969",
+                "type" : "string",
+                "value" : "1"
+              }
+            }
+          },
+          "elementId" : "im-element-34"
+        }, {
+          "version" : 1,
+          "uuid" : "1987fbf9-a5f5-477c-97ed-4fe3438e8ceb",
+          "elementTypeName" : "FlexItem",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "flexGrow" : {
+                "version" : 1,
+                "uuid" : "79b9b1ff-f9e3-4336-80c7-b04678824e08",
+                "type" : "string",
+                "value" : "0"
+              }
+            }
+          },
+          "elementId" : "im-element-35",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "fe7a56ca-318e-44e6-91c6-06c3bf803a18",
+            "elementTypeName" : "ImBulmaButtonControl",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "onClick" : {
+                  "version" : 1,
+                  "uuid" : "fbd75674-caf0-4c84-b498-e9f7895e4c9b",
+                  "type" : "string",
+                  "value" : "49a6f731-2358-4731-a37b-de3421881c55"
+                },
+                "userClass" : {
+                  "version" : 1,
+                  "uuid" : "429112b2-e75e-4e39-a248-5877c4d10a23",
+                  "type" : "string",
+                  "value" : "imds-table-operation-left-button"
+                }
+              }
+            },
+            "elementId" : "im-element-36",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "50448f17-a580-472c-b6ea-2913d60cda59",
+              "elementTypeName" : "ImBulmaButton",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "textContent" : {
+                    "version" : 1,
+                    "uuid" : "486f7f85-4986-4313-a23a-1df718814a85",
+                    "type" : "parameter-path",
+                    "value" : {
+                      "target" : "50448f17-a580-472c-b6ea-2913d60cda59",
+                      "path" : "$i18n.cap_table_operation_register_button_label"
+                    }
+                  },
+                  "color" : {
+                    "version" : 1,
+                    "uuid" : "0be76458-fe63-4dfb-a95d-e8a2ab1d1fa8",
+                    "type" : "string",
+                    "value" : "is-primary"
+                  },
+                  "leftIconClass" : {
+                    "version" : 1,
+                    "uuid" : "eae352c1-5609-44b8-91fd-0fead5adc9e3",
+                    "type" : "string",
+                    "value" : "fas fa-plus"
+                  }
+                }
+              },
+              "elementId" : "im-element-37"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "fd9ae1c7-a71e-4d52-b7e8-49e2f3414a67",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "0c06a545-be49-4b0d-b89d-2e2c92542536",
+            "type" : "string",
+            "value" : "Search Condition"
+          }
+        }
+      },
+      "elementId" : "im-element-38",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "f8031a10-fe29-4121-90ff-de59c8191278",
+        "elementTypeName" : "ImBulmaBox",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "2be4da1e-50a6-492b-a1c3-556a15f411e8",
+              "type" : "string",
+              "value" : "mb-5 pb-0 search-box imds-scrollbar"
+            }
+          }
+        },
+        "elementId" : "im-element-39",
+        "children" : [ {
+          "version" : 1,
+          "uuid" : "ccfb76e5-6586-4efe-a18a-e2a1c9b184af",
+          "elementTypeName" : "Box",
+          "properties" : {
+            "version" : 1,
+            "values" : {
+              "userClass" : {
+                "version" : 1,
+                "uuid" : "fd8b5a0f-4262-4d6a-9d60-723006747e7d",
+                "type" : "string",
+                "value" : "pb-3 search-button-area has-background-white"
+              },
+              "styleMarginLeft" : {
+                "version" : 1,
+                "uuid" : "cce86c8e-ea6e-462c-b475-6539f218f854",
+                "type" : "string",
+                "value" : "-0.75rem"
+              },
+              "styleMarginRight" : {
+                "version" : 1,
+                "uuid" : "86ae3d09-03cc-4488-a606-2bf3a91f3d81",
+                "type" : "string",
+                "value" : "-0.75rem"
+              }
+            }
+          },
+          "elementId" : "im-element-40",
+          "children" : [ {
+            "version" : 1,
+            "uuid" : "eb67057d-609b-44be-8e9f-6d9552781df9",
+            "elementTypeName" : "HorizontalRule",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "styleHeight" : {
+                  "version" : 1,
+                  "uuid" : "c74b3b76-bded-4f05-a941-bcbf17d8e6be",
+                  "type" : "string",
+                  "value" : "1px"
+                }
+              }
+            },
+            "elementId" : "im-element-41"
+          }, {
+            "version" : 1,
+            "uuid" : "9f71a114-e88f-46c5-b64d-af747fb9d726",
+            "elementTypeName" : "FlexBox",
+            "properties" : {
+              "version" : 1,
+              "values" : {
+                "flexWrap" : {
+                  "version" : 1,
+                  "uuid" : "859aef83-ee61-4f89-94e3-c1243c9b7511",
+                  "type" : "string",
+                  "value" : "nowrap"
+                },
+                "justifyContent" : {
+                  "version" : 1,
+                  "uuid" : "bbe16431-8969-45d4-a952-fd506b4b86f1",
+                  "type" : "string",
+                  "value" : "flex-end"
+                },
+                "elementCount" : {
+                  "version" : 1,
+                  "uuid" : "ba4c6502-1512-4a88-9106-c8874ff83e2f",
+                  "type" : "string",
+                  "value" : "2"
+                }
+              }
+            },
+            "elementId" : "im-element-42",
+            "children" : [ {
+              "version" : 1,
+              "uuid" : "d38cc701-7a29-48c4-91c3-a969536e72aa",
+              "elementTypeName" : "FlexItem",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "flexGrow" : {
+                    "version" : 1,
+                    "uuid" : "0800c3ef-a2c9-4ca6-a87b-68f79dd84cbf",
+                    "type" : "string",
+                    "value" : "0"
+                  },
+                  "flexShrink" : {
+                    "version" : 1,
+                    "uuid" : "c5e0f9c6-f7f6-4967-abdc-59c79e849dd1",
+                    "type" : "string",
+                    "value" : "0"
+                  },
+                  "flexBasis" : {
+                    "version" : 1,
+                    "uuid" : "2b88222f-d96c-4b21-a2c9-7784a997168f",
+                    "type" : "string",
+                    "value" : "10rem"
+                  }
+                }
+              },
+              "elementId" : "im-element-43",
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "7367089f-6abc-4a22-8167-fe44e7735a52",
+                "elementTypeName" : "ImBulmaButtonControl",
+                "properties" : {
+                  "version" : 1,
+                  "values" : {
+                    "onClick" : {
+                      "version" : 1,
+                      "uuid" : "64150cef-6e5f-4511-ae22-76eb76e95975",
+                      "type" : "string",
+                      "value" : "f9ab520a-c44c-4740-b01c-c328f0aea50b"
+                    },
+                    "userClass" : {
+                      "version" : 1,
+                      "uuid" : "6e2a2c7e-e08b-43d2-8a4b-6812bfad3a87",
+                      "type" : "string",
+                      "value" : "pl-2 pr-2"
+                    }
+                  }
+                },
+                "elementId" : "im-element-44",
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "00d8ca28-6eee-46d7-b77a-16a3bd40d3d3",
+                  "elementTypeName" : "ImBulmaButton",
+                  "properties" : {
+                    "version" : 1,
+                    "values" : {
+                      "toolTip" : {
+                        "version" : 1,
+                        "uuid" : "1413be3e-9ce8-4cd0-9ddd-34356933dd1f",
+                        "type" : "parameter-path",
+                        "value" : {
+                          "target" : "00d8ca28-6eee-46d7-b77a-16a3bd40d3d3",
+                          "path" : "$i18n.cap_search_condition_clear"
+                        }
+                      },
+                      "textContent" : {
+                        "version" : 1,
+                        "uuid" : "0df650a0-656c-444f-9182-99256a6a4480",
+                        "type" : "parameter-path",
+                        "value" : {
+                          "target" : "00d8ca28-6eee-46d7-b77a-16a3bd40d3d3",
+                          "path" : "$i18n.cap_search_condition_clear"
+                        }
+                      },
+                      "fullwidth" : {
+                        "version" : 1,
+                        "uuid" : "8088de10-8c0b-4c7f-b477-41c38235971a",
+                        "type" : "boolean",
+                        "value" : "true"
+                      },
+                      "inverted" : {
+                        "version" : 1,
+                        "uuid" : "fb6617f0-a2d7-4964-826b-1550da3b752c",
+                        "type" : "boolean",
+                        "value" : "true"
+                      }
+                    }
+                  },
+                  "elementId" : "im-element-45"
+                } ]
+              } ]
+            }, {
+              "version" : 1,
+              "uuid" : "dc0b06eb-9aae-47aa-a1e9-75464c39a5d5",
+              "elementTypeName" : "FlexItem",
+              "properties" : {
+                "version" : 1,
+                "values" : {
+                  "flexGrow" : {
+                    "version" : 1,
+                    "uuid" : "69da198d-bb14-4e99-8957-d14615ae841c",
+                    "type" : "string",
+                    "value" : "0"
+                  },
+                  "flexShrink" : {
+                    "version" : 1,
+                    "uuid" : "61b73fe2-94a4-4598-98b5-ca083b68b043",
+                    "type" : "string",
+                    "value" : "0"
+                  },
+                  "flexBasis" : {
+                    "version" : 1,
+                    "uuid" : "f5c06cab-ca05-4291-b86b-fd664b298391",
+                    "type" : "string",
+                    "value" : "10rem"
+                  }
+                }
+              },
+              "elementId" : "im-element-46",
+              "children" : [ {
+                "version" : 1,
+                "uuid" : "1ed3cc29-8663-4331-8bc4-4872a8f730c0",
+                "elementTypeName" : "ImBulmaButtonControl",
+                "properties" : {
+                  "version" : 1,
+                  "values" : {
+                    "onClick" : {
+                      "version" : 1,
+                      "uuid" : "c45040b6-c3dd-4f02-93df-6a049c8cd3eb",
+                      "type" : "string",
+                      "value" : "dd48b811-c3d2-4678-8a1b-394481f51997"
+                    },
+                    "userClass" : {
+                      "version" : 1,
+                      "uuid" : "56f90fc5-45cd-47d2-9c0c-eb4eac981689",
+                      "type" : "string",
+                      "value" : "pl-2 pr-2 mb-3"
+                    }
+                  }
+                },
+                "elementId" : "im-element-47",
+                "children" : [ {
+                  "version" : 1,
+                  "uuid" : "d839c381-5d96-4626-aa05-9f791f982c48",
+                  "elementTypeName" : "ImBulmaButton",
+                  "properties" : {
+                    "version" : 1,
+                    "values" : {
+                      "toolTip" : {
+                        "version" : 1,
+                        "uuid" : "b3ae1aaa-7878-4ba8-ab7f-6176dde1972a",
+                        "type" : "parameter-path",
+                        "value" : {
+                          "target" : "d839c381-5d96-4626-aa05-9f791f982c48",
+                          "path" : "$i18n.cap_search_condition_search"
+                        }
+                      },
+                      "textContent" : {
+                        "version" : 1,
+                        "uuid" : "6d7c9426-911e-4e9e-ac98-3f16a218575f",
+                        "type" : "parameter-path",
+                        "value" : {
+                          "target" : "d839c381-5d96-4626-aa05-9f791f982c48",
+                          "path" : "$i18n.cap_search_condition_search"
+                        }
+                      },
+                      "color" : {
+                        "version" : 1,
+                        "uuid" : "db6a7cc2-1a8a-4b9b-88fd-e8a380ab6ef9",
+                        "type" : "string",
+                        "value" : "is-primary"
+                      },
+                      "fullwidth" : {
+                        "version" : 1,
+                        "uuid" : "d92375bb-2b2f-4d55-a08b-9305ffbab447",
+                        "type" : "boolean",
+                        "value" : "true"
+                      },
+                      "outlined" : {
+                        "version" : 1,
+                        "uuid" : "29c2cf0e-4a6f-40d5-b1e0-f6eefab1cc71",
+                        "type" : "boolean",
+                        "value" : "true"
+                      }
+                    }
+                  },
+                  "elementId" : "im-element-48"
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "version" : 1,
+      "uuid" : "d69d01ac-d89a-4607-b253-0106292ef15a",
+      "elementTypeName" : "ContainerPage",
+      "properties" : {
+        "version" : 1,
+        "values" : {
+          "name" : {
+            "version" : 1,
+            "uuid" : "0f082a61-3712-4887-8fb3-45a59ee6dcf3",
+            "type" : "string",
+            "value" : "Table"
+          }
+        }
+      },
+      "elementId" : "im-element-49",
+      "children" : [ {
+        "version" : 1,
+        "uuid" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+        "elementTypeName" : "ImRichTable",
+        "properties" : {
+          "version" : 1,
+          "values" : {
+            "userClass" : {
+              "version" : 1,
+              "uuid" : "391257be-4121-46a3-8005-cfc875c89674",
+              "type" : "string",
+              "value" : "imds-table table-header-edge-centering"
+            },
+            "styleWidth" : {
+              "version" : 1,
+              "uuid" : "5efb2a76-d37e-4366-956c-a618e2984c55",
+              "type" : "string",
+              "value" : "100%"
+            },
+            "styleHeight" : {
+              "version" : 1,
+              "uuid" : "c1736043-ffd9-4242-882e-0deceee9d5df",
+              "type" : "string",
+              "value" : "calc(100vh - 140px)"
+            },
+            "headerRowString" : {
+              "version" : 1,
+              "uuid" : "1ca2b087-c35b-4e43-9dc4-2428eb2362fd",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.headerRowString"
+              }
+            },
+            "dataSource" : {
+              "version" : 1,
+              "uuid" : "6043c2a8-31e6-4be2-9099-4c2c61524494",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.state.tableData"
+              }
+            },
+            "sortConditions" : {
+              "version" : 1,
+              "uuid" : "8dc6fce3-fe05-4b65-9f84-94fc48428ee4",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.state.condition.sortCondition[0]"
+              }
+            },
+            "pagingType" : {
+              "version" : 1,
+              "uuid" : "a0fabd2d-7ccf-4632-9db8-20592021d6cd",
+              "type" : "string",
+              "value" : "manual"
+            },
+            "currentPage" : {
+              "version" : 1,
+              "uuid" : "dff6034e-47cf-421c-a460-c967e2bc2ab3",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.state.pagination.current"
+              }
+            },
+            "rowsPerPage" : {
+              "version" : 1,
+              "uuid" : "32499d9e-1dcc-4d98-9b63-49d38c65856f",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.state.pagination.rowPerPage"
+              }
+            },
+            "rowsPerPageOptions" : {
+              "version" : 1,
+              "uuid" : "75e0fdce-47a9-42d7-a713-7524cc15b3a4",
+              "type" : "string",
+              "value" : "20,50,100"
+            },
+            "totalCount" : {
+              "version" : 1,
+              "uuid" : "8646fbb6-19f0-4a42-9dc7-73d90724e02b",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.state.pagination.total"
+              }
+            },
+            "simpleSearchText" : {
+              "version" : 1,
+              "uuid" : "b6ea9002-4963-42f7-984a-8b64d3239699",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : ""
+              }
+            },
+            "selected" : {
+              "version" : 1,
+              "uuid" : "b0bb2303-6d59-4bc1-9755-8493d9a9448b",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : ""
+              }
+            },
+            "interactiveNavigationEvent" : {
+              "version" : 1,
+              "uuid" : "0fffc676-a51e-4f1e-88df-c4c8dfadc79d",
+              "type" : "string",
+              "value" : "5a95c3d5-e36b-4932-ba01-48082dca21e6"
+            },
+            "tableDataClickEvent" : {
+              "version" : 1,
+              "uuid" : "02ae8f02-fc69-4c6a-b82d-cc3660b8bff9",
+              "type" : "string",
+              "value" : "bd1fbfc6-a78c-4ee4-9bb8-4cbb2689eeda"
+            },
+            "columnWidth" : {
+              "version" : 1,
+              "uuid" : "9518ad82-08bc-4121-b4d4-389c7dd9f69e",
+              "type" : "string",
+              "value" : "4.5rem,*,*,4.5rem"
+            },
+            "columnSettings" : {
+              "version" : 1,
+              "uuid" : "74d178ee-eb9a-403f-9c39-55b684ca9113",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.columnSettings"
+              }
+            },
+            "clickedCell" : {
+              "version" : 1,
+              "uuid" : "f7680895-5c3c-4230-9526-88b2b624cfa5",
+              "type" : "parameter-path",
+              "value" : {
+                "target" : "e8845a03-7458-47fc-84dd-120c8eb274a0",
+                "path" : "$variable.state.clickedCell"
+              }
+            }
+          }
+        },
+        "elementId" : "im-element-50"
+      } ]
+    } ]
+  },
+  "sortNumber" : 1,
+  "adminFlag" : "0",
+  "localizes" : {
+    "zh_CN" : {
+      "contentId" : "q-list",
+      "locale" : "zh_CN",
+      "contentName" : "qqq 列表页面",
+      "description" : "根据「主数据维护」模板创建的列表页面的内容。"
+    },
+    "en" : {
+      "contentId" : "q-list",
+      "locale" : "en",
+      "contentName" : "qqq List Screen",
+      "description" : "This list screen content is created from the \"Master Maintenance\" template."
+    },
+    "ja" : {
+      "contentId" : "q-list",
+      "locale" : "ja",
+      "contentName" : "qqq 一覧画面",
+      "description" : "「マスタメンテナンス」テンプレートから作成された一覧画面のコンテンツです。"
+    }
+  },
+  "sourceTemplateId" : "",
+  "thumbnail" : null,
+  "comment" : null
+} ]
